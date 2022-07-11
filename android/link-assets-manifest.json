@@ -1,0 +1,93 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/Mont-Black.ttf",
+      "sha1": "3d669e623a6e7b848add67a10b452dd68ddf052d"
+    },
+    {
+      "path": "assets/fonts/Mont-BlackItalic.ttf",
+      "sha1": "b186c618adae64148e72db77cdd80103917be769"
+    },
+    {
+      "path": "assets/fonts/Mont-Bold.ttf",
+      "sha1": "c86f6208c18bc951b5f3c84e5915c342347d5fb9"
+    },
+    {
+      "path": "assets/fonts/Mont-BoldItalic.ttf",
+      "sha1": "a305dc7f473eeaa8db7beab1fea5db7e308b797e"
+    },
+    {
+      "path": "assets/fonts/Mont-Book.ttf",
+      "sha1": "4f65021d5f32f3a290540cc2600da41f9f190359"
+    },
+    {
+      "path": "assets/fonts/Mont-BookItalic.ttf",
+      "sha1": "9419723c0a481eb73e95a340b8faf18fc566fa19"
+    },
+    {
+      "path": "assets/fonts/Mont-DEMOExtraLight.ttf",
+      "sha1": "80e5cee80c6ca7e39b83ec64f822fa851f5020f9"
+    },
+    {
+      "path": "assets/fonts/Mont-DEMOHeavy.ttf",
+      "sha1": "eebc757ab445b8d9ddf4082dd4bbc5d2d8c9b376"
+    },
+    {
+      "path": "assets/fonts/Mont-ExtraLight.ttf",
+      "sha1": "fa2eac35a558dd5e77bd693852a6559ae25759ea"
+    },
+    {
+      "path": "assets/fonts/Mont-ExtraLightItalic.ttf",
+      "sha1": "349fe771d0f08805de62f1408168576fbbe7695c"
+    },
+    {
+      "path": "assets/fonts/Mont-Hairline.ttf",
+      "sha1": "345e33aad3ef10cf030aa91f775cb96c955fa021"
+    },
+    {
+      "path": "assets/fonts/Mont-HairlineItalic.ttf",
+      "sha1": "48b25c932bc9f27710e4fffe1e0f002918c6d465"
+    },
+    {
+      "path": "assets/fonts/Mont-Heavy.ttf",
+      "sha1": "5314d7b1b3734f6ee8eded249260bae3ebcda443"
+    },
+    {
+      "path": "assets/fonts/Mont-HeavyItalic.ttf",
+      "sha1": "2b7ba8e3023d83eef829110c878d4336d67bae82"
+    },
+    {
+      "path": "assets/fonts/Mont-Light.ttf",
+      "sha1": "e74930201e96dc4aa71406575fbf816371efece7"
+    },
+    {
+      "path": "assets/fonts/Mont-LightItalic.ttf",
+      "sha1": "e190d165452295d2aef83615acd10fc763ebc867"
+    },
+    {
+      "path": "assets/fonts/Mont-Regular.ttf",
+      "sha1": "14939f00b10e5c02664c07a82bacd430fab9c66e"
+    },
+    {
+      "path": "assets/fonts/Mont-RegularItalic.ttf",
+      "sha1": "47184d9bf78b6bc20becf353d985c01f52abc1ea"
+    },
+    {
+      "path": "assets/fonts/Mont-SemiBold.ttf",
+      "sha1": "2faa4b275d9a40c8555ed206566591b3890e5019"
+    },
+    {
+      "path": "assets/fonts/Mont-SemiBoldItalic.ttf",
+      "sha1": "c3d28e5bfda20d63d1ed91005138604e597c8509"
+    },
+    {
+      "path": "assets/fonts/Mont-Thin.ttf",
+      "sha1": "8ed66bdc62de91813528b34aca2e2ad6c9a50e6e"
+    },
+    {
+      "path": "assets/fonts/Mont-ThinItalic.ttf",
+      "sha1": "b1856faa1144f2f65b93408897c43ed7c0fea06c"
+    }
+  ]
+}
