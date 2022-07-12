@@ -8,34 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* NepaliCongressAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NepaliCongressAppTests.m */; };
-		0799191F8B8447E79CB2A275 /* Mont-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 66600405C81740A48EF3292E /* Mont-Black.ttf */; };
+		078E68403D4E4B7ABE29F550 /* Mont-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3608076B0AE34F7C92787987 /* Mont-Bold.ttf */; };
+		079A1C39ADFB4C9685468604 /* Mont-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E4FF7B78C374FBC91506B08 /* Mont-Heavy.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-NepaliCongressApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-NepaliCongressApp.a */; };
+		0DE9B3CCBDAA4F48A632A368 /* Mont-DEMOHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 96FEB40974C44D34A842909E /* Mont-DEMOHeavy.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		1A840010092342D192A58FD4 /* Mont-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0DD0C527DC846CD995B45F3 /* Mont-HeavyItalic.ttf */; };
-		29D6E6BFEDEA453A84273AFF /* Mont-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D53A57B7BC947C0BD9A50C3 /* Mont-ThinItalic.ttf */; };
-		57648CDE10DC4834A6EE0377 /* Mont-DEMOExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 974F7F2B23554CE1A4D406CC /* Mont-DEMOExtraLight.ttf */; };
-		5C7BDDF33E654095A486039A /* Mont-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87F125625CEF4778AEE443E9 /* Mont-BookItalic.ttf */; };
-		5EB8D866113648E18821964C /* Mont-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 649A947B23F94B1E88116609 /* Mont-ExtraLightItalic.ttf */; };
-		64B642F2C0624C7FA58DDC05 /* Mont-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DCA20664C0E64BC59CD1529C /* Mont-BoldItalic.ttf */; };
+		2513CF8D75CD454EA5900FEE /* Mont-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A0229B7C59C341C598BB484C /* Mont-BlackItalic.ttf */; };
+		31CAAE5AF3DA437188FAA91E /* Mont-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 00725BE2A9AE4EC6B53886E1 /* Mont-HairlineItalic.ttf */; };
+		3DB7588428744A129A809BAF /* Mont-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98863DB5955A40C08D5D1F87 /* Mont-Light.ttf */; };
+		40B26693B11A4FEDB0E98543 /* Mont-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C1001EFAAF0D432C816CC4DD /* Mont-Hairline.ttf */; };
+		47A8993128494B1E8353DA64 /* Mont-HeavyItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F33D0A61036B4C68A3ACD8C0 /* Mont-HeavyItalic.ttf */; };
+		600D4E41E0E247EBB763579C /* Mont-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5638627BF574B219C0E6387 /* Mont-Black.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-NepaliCongressApp-NepaliCongressAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-NepaliCongressApp-NepaliCongressAppTests.a */; };
-		7DAA4A95C27F40608A1C1B4A /* Mont-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 39D1B63ED2DD41BB82384EE4 /* Mont-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		842C24F781204E6BA4E34B67 /* Mont-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D326173E6C44AD090BACE83 /* Mont-SemiBold.ttf */; };
-		8A5EE2C2444E46EC928EA290 /* Mont-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 272603B77E474543ABA882A4 /* Mont-HairlineItalic.ttf */; };
-		9C567EC7C08C4922907A2648 /* Mont-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA03A659454040AE98239D44 /* Mont-Thin.ttf */; };
-		9E49BCC39B634173A082094B /* Mont-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E5CB12750AA47198AD4AAAE /* Mont-BlackItalic.ttf */; };
-		AC020483C99F4D12A3F019DE /* Mont-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 592B97F42A80487DA67AC8C2 /* Mont-Hairline.ttf */; };
-		BECB5F70BD7A4E3DA1F27EB5 /* Mont-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6AB8F16880FB45B8A1F3C937 /* Mont-SemiBoldItalic.ttf */; };
-		CDF7AAD55FDE49548D8544EB /* Mont-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BFECF6429764A05AC980497 /* Mont-RegularItalic.ttf */; };
-		D17AA6AE70FE4FA0BA6F6CE5 /* Mont-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D6C4A49719E4A98A8448888 /* Mont-ExtraLight.ttf */; };
-		D95C9CD9A9C843AE84200EE8 /* Mont-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 63365D47C54E4F30A8A0BE16 /* Mont-LightItalic.ttf */; };
-		DD65A832CC434781B620E926 /* Mont-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4C1A97D67F94607A096FDE3 /* Mont-Book.ttf */; };
-		E5B1C84BD3AF4DF9872021B0 /* Mont-DEMOHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46FBBB4662DD4B148E290DAF /* Mont-DEMOHeavy.ttf */; };
-		E9E834E79C0C4D7A8A7CEE79 /* Mont-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6665607E9BAC4A0FB2570897 /* Mont-Light.ttf */; };
-		EB38EF9BAF6B4F3782650FF7 /* Mont-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1F1602D966FA4D4AB360143D /* Mont-Bold.ttf */; };
-		F98A0D7913DA4C769E98FF73 /* Mont-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EBF49DB9EE0E421095EC7F58 /* Mont-Heavy.ttf */; };
+		867E69F6A755459DB9D96351 /* Mont-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29876D05BB494DBEA8DAABAA /* Mont-ExtraLightItalic.ttf */; };
+		8CB5F4A2AAFD4611A55BDADF /* Mont-BookItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E31F5C4C92B84A64BC3C12E5 /* Mont-BookItalic.ttf */; };
+		982FCA4CB3DB42BE8ACC25B3 /* Mont-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4A1BC5E058144A26A272F9AF /* Mont-LightItalic.ttf */; };
+		9B8142D1199A44CC94B6F7C6 /* Mont-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA7F7B4023994EDFBB03B9B1 /* Mont-Regular.ttf */; };
+		9F97A94B76784E32849D533C /* Mont-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F3AE01A267AE4AE1B9965461 /* Mont-SemiBold.ttf */; };
+		B7E0794E22084DF8B37B5282 /* Mont-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A75D37C6EB44746A4929054 /* Mont-BoldItalic.ttf */; };
+		C800C5F7E4394575A35CA5E1 /* Mont-DEMOExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA3814B10E4C461086B84820 /* Mont-DEMOExtraLight.ttf */; };
+		D9E8E3B60AA14190AE5E148D /* Mont-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 886E63A5C3D0462CA91FE8EC /* Mont-Book.ttf */; };
+		DA4826FFE5194EA588A9945B /* Mont-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0832250802E4B03A2B4F8FE /* Mont-Thin.ttf */; };
+		DEB72684FBBA416DA871ECCD /* Mont-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3BC46808868E4720A11EE115 /* Mont-RegularItalic.ttf */; };
+		E3EC965C81FB40548D84FF0C /* Mont-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2A41578CD5934CD6998E474C /* Mont-ExtraLight.ttf */; };
+		E411F167847549E08C66A44D /* Mont-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 15CEE57F17794E7A8DF7FC3F /* Mont-ThinItalic.ttf */; };
+		E54E12A0446C432C9FBF8ED7 /* Mont-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 960D63DB696B44C888526B58 /* Mont-SemiBoldItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00725BE2A9AE4EC6B53886E1 /* Mont-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-HairlineItalic.ttf"; path = "../src/assets/fonts/Mont-HairlineItalic.ttf"; sourceTree = "<group>"; };
 		00E356EE1AD99517003FC87E /* NepaliCongressAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NepaliCongressAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* NepaliCongressAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NepaliCongressAppTests.m; sourceTree = "<group>"; };
@@ -58,36 +59,35 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = NepaliCongressApp/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NepaliCongressApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NepaliCongressApp/main.m; sourceTree = "<group>"; };
+		15CEE57F17794E7A8DF7FC3F /* Mont-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ThinItalic.ttf"; path = "../src/assets/fonts/Mont-ThinItalic.ttf"; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-NepaliCongressApp-NepaliCongressAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NepaliCongressApp-NepaliCongressAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D326173E6C44AD090BACE83 /* Mont-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-SemiBold.ttf"; path = "../assets/fonts/Mont-SemiBold.ttf"; sourceTree = "<group>"; };
-		1F1602D966FA4D4AB360143D /* Mont-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Bold.ttf"; path = "../assets/fonts/Mont-Bold.ttf"; sourceTree = "<group>"; };
-		272603B77E474543ABA882A4 /* Mont-HairlineItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-HairlineItalic.ttf"; path = "../assets/fonts/Mont-HairlineItalic.ttf"; sourceTree = "<group>"; };
-		39D1B63ED2DD41BB82384EE4 /* Mont-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Regular.ttf"; path = "../assets/fonts/Mont-Regular.ttf"; sourceTree = "<group>"; };
+		29876D05BB494DBEA8DAABAA /* Mont-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Mont-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		2A41578CD5934CD6998E474C /* Mont-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ExtraLight.ttf"; path = "../src/assets/fonts/Mont-ExtraLight.ttf"; sourceTree = "<group>"; };
+		3608076B0AE34F7C92787987 /* Mont-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Bold.ttf"; path = "../src/assets/fonts/Mont-Bold.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-NepaliCongressApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCongressApp.debug.xcconfig"; path = "Target Support Files/Pods-NepaliCongressApp/Pods-NepaliCongressApp.debug.xcconfig"; sourceTree = "<group>"; };
-		3D53A57B7BC947C0BD9A50C3 /* Mont-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ThinItalic.ttf"; path = "../assets/fonts/Mont-ThinItalic.ttf"; sourceTree = "<group>"; };
-		46FBBB4662DD4B148E290DAF /* Mont-DEMOHeavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-DEMOHeavy.ttf"; path = "../assets/fonts/Mont-DEMOHeavy.ttf"; sourceTree = "<group>"; };
-		4BFECF6429764A05AC980497 /* Mont-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-RegularItalic.ttf"; path = "../assets/fonts/Mont-RegularItalic.ttf"; sourceTree = "<group>"; };
+		3BC46808868E4720A11EE115 /* Mont-RegularItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-RegularItalic.ttf"; path = "../src/assets/fonts/Mont-RegularItalic.ttf"; sourceTree = "<group>"; };
+		4A1BC5E058144A26A272F9AF /* Mont-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-LightItalic.ttf"; path = "../src/assets/fonts/Mont-LightItalic.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-NepaliCongressApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCongressApp.release.xcconfig"; path = "Target Support Files/Pods-NepaliCongressApp/Pods-NepaliCongressApp.release.xcconfig"; sourceTree = "<group>"; };
-		592B97F42A80487DA67AC8C2 /* Mont-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Hairline.ttf"; path = "../assets/fonts/Mont-Hairline.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-NepaliCongressApp-NepaliCongressAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCongressApp-NepaliCongressAppTests.debug.xcconfig"; path = "Target Support Files/Pods-NepaliCongressApp-NepaliCongressAppTests/Pods-NepaliCongressApp-NepaliCongressAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-NepaliCongressApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NepaliCongressApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		63365D47C54E4F30A8A0BE16 /* Mont-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-LightItalic.ttf"; path = "../assets/fonts/Mont-LightItalic.ttf"; sourceTree = "<group>"; };
-		649A947B23F94B1E88116609 /* Mont-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ExtraLightItalic.ttf"; path = "../assets/fonts/Mont-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		66600405C81740A48EF3292E /* Mont-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Black.ttf"; path = "../assets/fonts/Mont-Black.ttf"; sourceTree = "<group>"; };
-		6665607E9BAC4A0FB2570897 /* Mont-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Light.ttf"; path = "../assets/fonts/Mont-Light.ttf"; sourceTree = "<group>"; };
-		6AB8F16880FB45B8A1F3C937 /* Mont-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-SemiBoldItalic.ttf"; path = "../assets/fonts/Mont-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		6E4FF7B78C374FBC91506B08 /* Mont-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Heavy.ttf"; path = "../src/assets/fonts/Mont-Heavy.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NepaliCongressApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87F125625CEF4778AEE443E9 /* Mont-BookItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BookItalic.ttf"; path = "../assets/fonts/Mont-BookItalic.ttf"; sourceTree = "<group>"; };
+		886E63A5C3D0462CA91FE8EC /* Mont-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Book.ttf"; path = "../src/assets/fonts/Mont-Book.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NepaliCongressApp-NepaliCongressAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NepaliCongressApp-NepaliCongressAppTests.release.xcconfig"; path = "Target Support Files/Pods-NepaliCongressApp-NepaliCongressAppTests/Pods-NepaliCongressApp-NepaliCongressAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		974F7F2B23554CE1A4D406CC /* Mont-DEMOExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-DEMOExtraLight.ttf"; path = "../assets/fonts/Mont-DEMOExtraLight.ttf"; sourceTree = "<group>"; };
-		9D6C4A49719E4A98A8448888 /* Mont-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-ExtraLight.ttf"; path = "../assets/fonts/Mont-ExtraLight.ttf"; sourceTree = "<group>"; };
-		9E5CB12750AA47198AD4AAAE /* Mont-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BlackItalic.ttf"; path = "../assets/fonts/Mont-BlackItalic.ttf"; sourceTree = "<group>"; };
-		A0DD0C527DC846CD995B45F3 /* Mont-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-HeavyItalic.ttf"; path = "../assets/fonts/Mont-HeavyItalic.ttf"; sourceTree = "<group>"; };
-		BA03A659454040AE98239D44 /* Mont-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Thin.ttf"; path = "../assets/fonts/Mont-Thin.ttf"; sourceTree = "<group>"; };
-		DCA20664C0E64BC59CD1529C /* Mont-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BoldItalic.ttf"; path = "../assets/fonts/Mont-BoldItalic.ttf"; sourceTree = "<group>"; };
-		EBF49DB9EE0E421095EC7F58 /* Mont-Heavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Heavy.ttf"; path = "../assets/fonts/Mont-Heavy.ttf"; sourceTree = "<group>"; };
+		960D63DB696B44C888526B58 /* Mont-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Mont-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		96FEB40974C44D34A842909E /* Mont-DEMOHeavy.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-DEMOHeavy.ttf"; path = "../src/assets/fonts/Mont-DEMOHeavy.ttf"; sourceTree = "<group>"; };
+		98863DB5955A40C08D5D1F87 /* Mont-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Light.ttf"; path = "../src/assets/fonts/Mont-Light.ttf"; sourceTree = "<group>"; };
+		9A75D37C6EB44746A4929054 /* Mont-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BoldItalic.ttf"; path = "../src/assets/fonts/Mont-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A0229B7C59C341C598BB484C /* Mont-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BlackItalic.ttf"; path = "../src/assets/fonts/Mont-BlackItalic.ttf"; sourceTree = "<group>"; };
+		B5638627BF574B219C0E6387 /* Mont-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Black.ttf"; path = "../src/assets/fonts/Mont-Black.ttf"; sourceTree = "<group>"; };
+		C1001EFAAF0D432C816CC4DD /* Mont-Hairline.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Hairline.ttf"; path = "../src/assets/fonts/Mont-Hairline.ttf"; sourceTree = "<group>"; };
+		E31F5C4C92B84A64BC3C12E5 /* Mont-BookItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-BookItalic.ttf"; path = "../src/assets/fonts/Mont-BookItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F4C1A97D67F94607A096FDE3 /* Mont-Book.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Book.ttf"; path = "../assets/fonts/Mont-Book.ttf"; sourceTree = "<group>"; };
+		F0832250802E4B03A2B4F8FE /* Mont-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Thin.ttf"; path = "../src/assets/fonts/Mont-Thin.ttf"; sourceTree = "<group>"; };
+		F33D0A61036B4C68A3ACD8C0 /* Mont-HeavyItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-HeavyItalic.ttf"; path = "../src/assets/fonts/Mont-HeavyItalic.ttf"; sourceTree = "<group>"; };
+		F3AE01A267AE4AE1B9965461 /* Mont-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-SemiBold.ttf"; path = "../src/assets/fonts/Mont-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA3814B10E4C461086B84820 /* Mont-DEMOExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-DEMOExtraLight.ttf"; path = "../src/assets/fonts/Mont-DEMOExtraLight.ttf"; sourceTree = "<group>"; };
+		FA7F7B4023994EDFBB03B9B1 /* Mont-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Mont-Regular.ttf"; path = "../src/assets/fonts/Mont-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,28 +185,28 @@
 		92DB61EC200C4DF3AA7383A1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				66600405C81740A48EF3292E /* Mont-Black.ttf */,
-				9E5CB12750AA47198AD4AAAE /* Mont-BlackItalic.ttf */,
-				1F1602D966FA4D4AB360143D /* Mont-Bold.ttf */,
-				DCA20664C0E64BC59CD1529C /* Mont-BoldItalic.ttf */,
-				F4C1A97D67F94607A096FDE3 /* Mont-Book.ttf */,
-				87F125625CEF4778AEE443E9 /* Mont-BookItalic.ttf */,
-				974F7F2B23554CE1A4D406CC /* Mont-DEMOExtraLight.ttf */,
-				46FBBB4662DD4B148E290DAF /* Mont-DEMOHeavy.ttf */,
-				9D6C4A49719E4A98A8448888 /* Mont-ExtraLight.ttf */,
-				649A947B23F94B1E88116609 /* Mont-ExtraLightItalic.ttf */,
-				592B97F42A80487DA67AC8C2 /* Mont-Hairline.ttf */,
-				272603B77E474543ABA882A4 /* Mont-HairlineItalic.ttf */,
-				EBF49DB9EE0E421095EC7F58 /* Mont-Heavy.ttf */,
-				A0DD0C527DC846CD995B45F3 /* Mont-HeavyItalic.ttf */,
-				6665607E9BAC4A0FB2570897 /* Mont-Light.ttf */,
-				63365D47C54E4F30A8A0BE16 /* Mont-LightItalic.ttf */,
-				39D1B63ED2DD41BB82384EE4 /* Mont-Regular.ttf */,
-				4BFECF6429764A05AC980497 /* Mont-RegularItalic.ttf */,
-				1D326173E6C44AD090BACE83 /* Mont-SemiBold.ttf */,
-				6AB8F16880FB45B8A1F3C937 /* Mont-SemiBoldItalic.ttf */,
-				BA03A659454040AE98239D44 /* Mont-Thin.ttf */,
-				3D53A57B7BC947C0BD9A50C3 /* Mont-ThinItalic.ttf */,
+				B5638627BF574B219C0E6387 /* Mont-Black.ttf */,
+				A0229B7C59C341C598BB484C /* Mont-BlackItalic.ttf */,
+				3608076B0AE34F7C92787987 /* Mont-Bold.ttf */,
+				9A75D37C6EB44746A4929054 /* Mont-BoldItalic.ttf */,
+				886E63A5C3D0462CA91FE8EC /* Mont-Book.ttf */,
+				E31F5C4C92B84A64BC3C12E5 /* Mont-BookItalic.ttf */,
+				FA3814B10E4C461086B84820 /* Mont-DEMOExtraLight.ttf */,
+				96FEB40974C44D34A842909E /* Mont-DEMOHeavy.ttf */,
+				2A41578CD5934CD6998E474C /* Mont-ExtraLight.ttf */,
+				29876D05BB494DBEA8DAABAA /* Mont-ExtraLightItalic.ttf */,
+				C1001EFAAF0D432C816CC4DD /* Mont-Hairline.ttf */,
+				00725BE2A9AE4EC6B53886E1 /* Mont-HairlineItalic.ttf */,
+				6E4FF7B78C374FBC91506B08 /* Mont-Heavy.ttf */,
+				F33D0A61036B4C68A3ACD8C0 /* Mont-HeavyItalic.ttf */,
+				98863DB5955A40C08D5D1F87 /* Mont-Light.ttf */,
+				4A1BC5E058144A26A272F9AF /* Mont-LightItalic.ttf */,
+				FA7F7B4023994EDFBB03B9B1 /* Mont-Regular.ttf */,
+				3BC46808868E4720A11EE115 /* Mont-RegularItalic.ttf */,
+				F3AE01A267AE4AE1B9965461 /* Mont-SemiBold.ttf */,
+				960D63DB696B44C888526B58 /* Mont-SemiBoldItalic.ttf */,
+				F0832250802E4B03A2B4F8FE /* Mont-Thin.ttf */,
+				15CEE57F17794E7A8DF7FC3F /* Mont-ThinItalic.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -318,28 +318,28 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				0799191F8B8447E79CB2A275 /* Mont-Black.ttf in Resources */,
-				9E49BCC39B634173A082094B /* Mont-BlackItalic.ttf in Resources */,
-				EB38EF9BAF6B4F3782650FF7 /* Mont-Bold.ttf in Resources */,
-				64B642F2C0624C7FA58DDC05 /* Mont-BoldItalic.ttf in Resources */,
-				DD65A832CC434781B620E926 /* Mont-Book.ttf in Resources */,
-				5C7BDDF33E654095A486039A /* Mont-BookItalic.ttf in Resources */,
-				57648CDE10DC4834A6EE0377 /* Mont-DEMOExtraLight.ttf in Resources */,
-				E5B1C84BD3AF4DF9872021B0 /* Mont-DEMOHeavy.ttf in Resources */,
-				D17AA6AE70FE4FA0BA6F6CE5 /* Mont-ExtraLight.ttf in Resources */,
-				5EB8D866113648E18821964C /* Mont-ExtraLightItalic.ttf in Resources */,
-				AC020483C99F4D12A3F019DE /* Mont-Hairline.ttf in Resources */,
-				8A5EE2C2444E46EC928EA290 /* Mont-HairlineItalic.ttf in Resources */,
-				F98A0D7913DA4C769E98FF73 /* Mont-Heavy.ttf in Resources */,
-				1A840010092342D192A58FD4 /* Mont-HeavyItalic.ttf in Resources */,
-				E9E834E79C0C4D7A8A7CEE79 /* Mont-Light.ttf in Resources */,
-				D95C9CD9A9C843AE84200EE8 /* Mont-LightItalic.ttf in Resources */,
-				7DAA4A95C27F40608A1C1B4A /* Mont-Regular.ttf in Resources */,
-				CDF7AAD55FDE49548D8544EB /* Mont-RegularItalic.ttf in Resources */,
-				842C24F781204E6BA4E34B67 /* Mont-SemiBold.ttf in Resources */,
-				BECB5F70BD7A4E3DA1F27EB5 /* Mont-SemiBoldItalic.ttf in Resources */,
-				9C567EC7C08C4922907A2648 /* Mont-Thin.ttf in Resources */,
-				29D6E6BFEDEA453A84273AFF /* Mont-ThinItalic.ttf in Resources */,
+				600D4E41E0E247EBB763579C /* Mont-Black.ttf in Resources */,
+				2513CF8D75CD454EA5900FEE /* Mont-BlackItalic.ttf in Resources */,
+				078E68403D4E4B7ABE29F550 /* Mont-Bold.ttf in Resources */,
+				B7E0794E22084DF8B37B5282 /* Mont-BoldItalic.ttf in Resources */,
+				D9E8E3B60AA14190AE5E148D /* Mont-Book.ttf in Resources */,
+				8CB5F4A2AAFD4611A55BDADF /* Mont-BookItalic.ttf in Resources */,
+				C800C5F7E4394575A35CA5E1 /* Mont-DEMOExtraLight.ttf in Resources */,
+				0DE9B3CCBDAA4F48A632A368 /* Mont-DEMOHeavy.ttf in Resources */,
+				E3EC965C81FB40548D84FF0C /* Mont-ExtraLight.ttf in Resources */,
+				867E69F6A755459DB9D96351 /* Mont-ExtraLightItalic.ttf in Resources */,
+				40B26693B11A4FEDB0E98543 /* Mont-Hairline.ttf in Resources */,
+				31CAAE5AF3DA437188FAA91E /* Mont-HairlineItalic.ttf in Resources */,
+				079A1C39ADFB4C9685468604 /* Mont-Heavy.ttf in Resources */,
+				47A8993128494B1E8353DA64 /* Mont-HeavyItalic.ttf in Resources */,
+				3DB7588428744A129A809BAF /* Mont-Light.ttf in Resources */,
+				982FCA4CB3DB42BE8ACC25B3 /* Mont-LightItalic.ttf in Resources */,
+				9B8142D1199A44CC94B6F7C6 /* Mont-Regular.ttf in Resources */,
+				DEB72684FBBA416DA871ECCD /* Mont-RegularItalic.ttf in Resources */,
+				9F97A94B76784E32849D533C /* Mont-SemiBold.ttf in Resources */,
+				E54E12A0446C432C9FBF8ED7 /* Mont-SemiBoldItalic.ttf in Resources */,
+				DA4826FFE5194EA588A9945B /* Mont-Thin.ttf in Resources */,
+				E411F167847549E08C66A44D /* Mont-ThinItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,4 +1,4 @@
-import Home from '@screens/Home/Home';
+import EntryNavigator from '@navigation/EntryNavigator';
 import React, {FC} from 'react';
 
 interface IProps {}
@@ -9,7 +9,7 @@ interface IProps {}
  **/
 
 const Entry: FC<IProps> = () => {
-  return <Home />;
+  return <EntryNavigator />;
 };
 
 export default Entry;
