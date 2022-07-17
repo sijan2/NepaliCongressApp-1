@@ -1,23 +1,14 @@
-import React, {FC} from 'react';
 import {StyleSheet, FlatList, View} from 'react-native';
+import React from 'react';
 import ListNews from '@components/ListNews/ListNews';
-import {latestNews} from '@models/latestNews';
-
+import {latestNews} from '@models/latestData';
 import Colors from '@assets/colors/colors';
 
-interface IProps {}
-
-/**
- * @author
- * @function @LatestNews
- **/
-
-const LatestNews: FC<IProps> = () => {
-  const {first, secondFlatlist} = styles;
+const LatestNews = () => {
   const data = latestNews;
   return (
-    <View style={first}>
-      <View style={secondFlatlist}>
+    <View style={styles.first}>
+      <View style={styles.secondFlatlist}>
         <FlatList
           data={data}
           keyExtractor={(show, index) => 'key' + index}
@@ -41,13 +32,12 @@ const LatestNews: FC<IProps> = () => {
 
 const styles = StyleSheet.create({
   first: {
-    backgroundColor: Colors.gray,
+    backgroundColor: Colors.offWhite,
     marginTop: 10,
   },
   secondFlatlist: {
     marginTop: 10,
     marginHorizontal: 10,
-    backgroundColor: Colors.gray,
   },
 });
 

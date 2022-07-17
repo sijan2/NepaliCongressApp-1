@@ -1,28 +1,77 @@
-import React, {FC} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @NewsDetails
- **/
-
-const NewsDetails: FC<IProps> = () => {
-  const {container} = styles;
+import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import DetailHeader from '@components/CustomHeader/DetailsHeader';
+import Colors from '@assets/colors/colors';
+const DetailScreen = ({route}: any) => {
+  console.log('Route=>', route.params);
   return (
-    <View style={container}>
-      <Text>NewsDetails</Text>
-    </View>
+    <ScrollView style={styles.scroll}>
+      <View>
+        <DetailHeader />
+        <View style={styles.mainContainer}>
+          <View style={styles.container}>
+            <Text style={styles.textTitle}>{route.params?.title}</Text>
+            <View style={styles.rowData}>
+              <Text style={styles.text1}>{route.params?.name}</Text>
+              <Text style={styles.text2}>{route.params?.date}</Text>
+            </View>
+            <View>
+              <Image style={styles.image} source={route.params?.image} />
+            </View>
+            <Text style={styles.details}>{route.params?.description}</Text>
+          </View>
+        </View>
+      </View>
+    </ScrollView>
   );
 };
 
 const styles = StyleSheet.create({
+  scroll: {
+    backgroundColor: Colors.white,
+    height: '100%',
+  },
+  mainContainer: {
+    backgroundColor: Colors.white,
+    height: '100%',
+  },
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    marginHorizontal: 20,
+  },
+  textTitle: {
+    marginTop: 20,
+    fontSize: 20,
+    fontFamily: 'Mont-SemiBold',
+    color: Colors.black,
+  },
+  rowData: {
+    flexDirection: 'row',
+    marginTop: 10,
+    marginBottom: 10,
+  },
+  text1: {
+    fontSize: 12,
+    marginRight: 20,
+    fontFamily: 'Mont-Regular',
+    color: Colors.red,
+  },
+  text2: {
+    fontSize: 12,
+    fontFamily: 'Mont-Regular',
+    color: Colors.red,
+  },
+  image: {
+    width: '100%',
+    height: 200,
+    borderRadius: 10,
+  },
+  details: {
+    marginTop: 10,
+    fontFamily: 'Mont-Regular',
+    color: Colors.gray,
+    fontSize: 12,
+    lineHeight: 15,
   },
 });
 
-export default NewsDetails;
+export default DetailScreen;

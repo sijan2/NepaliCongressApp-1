@@ -1,4 +1,3 @@
-import React, {FC} from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,24 +5,15 @@ import {
   TouchableOpacity,
   SafeAreaView,
 } from 'react-native';
-
+import React from 'react';
 import {Surface} from 'react-native-paper';
 import Colors from '@assets/colors/colors';
-import BackLogo from '@assets/icons/Back.svg';
+import {useNavigation} from '@react-navigation/native';
+import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import Share from '@assets/icons/Share.svg';
-import {useNavigation} from '@react-navigation/native';
 
-interface IProps {
-  fontColor: string;
-}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @Header
- **/
-
-const DetailsHeader: FC<IProps> = () => {
+const DetailsHeader = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView>
@@ -31,7 +21,7 @@ const DetailsHeader: FC<IProps> = () => {
         <View style={styles.view}>
           <View style={styles.Logo}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
-              <BackLogo width={25} height={25} fill="none" />
+              <Back width={20} height={20} fill="none" />
             </TouchableOpacity>
           </View>
           <View style={styles.texts}>
@@ -40,11 +30,11 @@ const DetailsHeader: FC<IProps> = () => {
           <View style={styles.search}>
             <View style={styles.icon1}>
               <TouchableOpacity>
-                <Save width={25} height={25} fill="none" />
+                <Save width={20} height={20} fill="none" />
               </TouchableOpacity>
             </View>
             <TouchableOpacity>
-              <Share width={25} height={25} fill="none" />
+              <Share width={20} height={20} fill="none" />
             </TouchableOpacity>
           </View>
         </View>
@@ -56,8 +46,7 @@ const DetailsHeader: FC<IProps> = () => {
 const styles = StyleSheet.create({
   header: {
     height: 80,
-    marginLeft: 5,
-    marginRight: 5,
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
@@ -84,7 +73,7 @@ const styles = StyleSheet.create({
   },
   text: {
     fontSize: 20,
-    fontWeight: 'bold',
+    fontFamily: 'Mont-Bold',
     color: Colors.black,
   },
   date: {

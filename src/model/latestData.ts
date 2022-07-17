@@ -5,7 +5,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
   {
@@ -14,7 +14,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
   {
@@ -23,7 +23,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
   {
@@ -32,7 +32,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
   {
@@ -41,7 +41,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
   {
@@ -50,7 +50,7 @@ export const latestNews = [
     title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
-    discription:
+    description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate ultrices pellentesque urna tortor viverra sed cras morbi sed. Facilisi ac donec commodo at ut nec vel accumsan. Massa egestas habitant in sed dui ultricies id. Tempor euismod scelerisque tristique massa elementum. Aliquet quam massa orci, tellus enim integer ullamcorper viverra ut. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl. Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi, purus, nunc sapien. Diam tellus bibendum at. Et a, ornare facilisis mauris pretium sodales lacus congue. Enim mus aliquam semper etiam sit sit lectus donec senectus. Odio felis massa morbi sapien curabitur. Euismod sit nullam pellentesque venenatis nunc euismod nisl.Ut iaculis viverra ullamcorper tellus maecenas. Pharetra bibendum aliquam at non turpis vitae eu, aenean. Eu massa, in quis turpis morbi nec sit vitae. Sit mi nisi',
   },
 ];

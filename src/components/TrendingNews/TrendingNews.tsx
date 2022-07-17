@@ -1,24 +1,14 @@
-import React, {FC} from 'react';
 import {StyleSheet, FlatList, View} from 'react-native';
-
+import React from 'react';
 import Colors from '@assets/colors/colors';
 import ListNews from '@components/ListNews/ListNews';
+import {trendingNews} from '@models/trendingData';
 
-import {trendingNews} from '@models/trending';
-
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @TrendingNews
- **/
-
-const TrendingNews: FC<IProps> = () => {
-  const {secondFlatlist, list} = styles;
+const TrendingNews = () => {
   const data = trendingNews;
   return (
-    <View style={secondFlatlist}>
-      <View style={list}>
+    <View style={styles.secondFlatlist}>
+      <View style={styles.list}>
         <FlatList
           data={data}
           keyExtractor={(show, index) => 'key' + index}
@@ -30,6 +20,7 @@ const TrendingNews: FC<IProps> = () => {
                 title={show.item.title}
                 name={show.item.name}
                 date={show.item.date}
+                description={show.item.description}
               />
             );
           }}
@@ -42,7 +33,7 @@ const TrendingNews: FC<IProps> = () => {
 const styles = StyleSheet.create({
   secondFlatlist: {
     marginTop: 20,
-    backgroundColor: Colors.washedGray,
+    backgroundColor: Colors.offWhite,
   },
   list: {
     marginTop: 10,

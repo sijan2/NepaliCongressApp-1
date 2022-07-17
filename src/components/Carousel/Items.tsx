@@ -1,50 +1,67 @@
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+} from 'react-native';
 import React, {FC} from 'react';
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import Colors from '@assets/colors/colors';
 import {useNavigation} from '@react-navigation/native';
 
-import Colors from '@assets/colors/colors';
-import {WIDTH, HEIGHT} from '@utils/Dimensions';
-
-interface IProps {
-  item: any;
+interface Clist {
+  id?: any;
+  image?: any;
+  title?: string;
+  name?: string;
+  date?: string;
+  description?: string;
+  item?: any;
 }
 
-/**
- * @author Nitesh Raj Khanal
- * @function @CarouselItem
- **/
-
-const CarouselItem: FC<IProps> = ({item}) => {
+const {width, height} = Dimensions.get('window');
+const Carouselitem: FC<Clist> = ({item}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
-    return navigation.navigate('DetailScreen');
+    return navigation.navigate('DetailScreen', {
+      id: item.id,
+      image: item.image,
+      title: item.title,
+      name: item.name,
+      date: item.date,
+      description: item.description,
+    });
   };
-  const {cardView, image, textView, title, textShow, nested, text} = styles;
   return (
-    <TouchableOpacity onPress={handleOnPress}>
-      <View style={cardView}>
-        <View>
-          <Image style={image} source={item.image} />
-          <View style={textView}>
-            <Text style={title}>{item.title}</Text>
-            <View style={textShow}>
-              <View style={nested}>
-                <Text style={text}>{item.name}</Text>
-                <Text style={text}>{item.date}</Text>
-                <Text style={text}>{item.state}</Text>
+    <>
+      <TouchableOpacity onPress={handleOnPress}>
+        <View style={styles.cardView}>
+          <View>
+            <Image style={styles.image} source={item.image} />
+            <View style={styles.textView}>
+              <Text style={styles.title}>{item.title}</Text>
+              <View style={styles.textshow}>
+                <View style={styles.nested}>
+                  <Text style={styles.text}>{item.name}</Text>
+                  <Text style={styles.text}>{item.date}</Text>
+                  <Text style={styles.text}>{item.state}</Text>
+                </View>
               </View>
             </View>
           </View>
         </View>
-      </View>
-    </TouchableOpacity>
+      </TouchableOpacity>
+    </>
   );
 };
 
+export default Carouselitem;
+
 const styles = StyleSheet.create({
   cardView: {
-    width: WIDTH - 20,
-    height: HEIGHT / 3.5,
+    width: width - 20,
+    height: height / 3.5,
     backgroundColor: Colors.red,
     margin: 10,
     borderRadius: 20,
@@ -71,10 +88,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     fontSize: 15,
     lineHeight: 15,
-    fontWeight: '700',
+    // fontWeight: '700',
     color: Colors.black,
+    fontFamily: 'Mont-Bold',
   },
-  textShow: {
+  textshow: {
     flex: 1,
     flexDirection: 'column',
     alignSelf: 'center',
@@ -83,9 +101,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
     fontSize: 12,
-    fontWeight: '700',
+    // fontWeight: '700',
+    fontFamily: 'Mont-Regular',
     color: Colors.red,
-    margin: 25,
+    margin: 23,
     lineHeight: 13,
     marginBottom: 10,
   },
@@ -99,5 +118,3 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
-
-export default CarouselItem;

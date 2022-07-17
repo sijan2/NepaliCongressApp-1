@@ -1,28 +1,41 @@
 import React, {FC} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {FlatList, StyleSheet, View} from 'react-native';
+
+import TrendingNews from '@components/TrendingNews/TrendingNews';
+import {trending} from '@models/trendingbutton';
+import Button from '@components/Button/Button';
 
 interface IProps {}
 
 /**
- * @author
+ * @author Nitesh Raj Khanal
  * @function @Trending
  **/
 
 const Trending: FC<IProps> = () => {
-  const {container} = styles;
+  const data = trending;
   return (
-    <View style={container}>
-      <Text>Trending</Text>
+    <View style={styles.mainContainer}>
+      <FlatList
+        style={styles.flat}
+        data={data}
+        keyExtractor={(item, index) => 'key' + index}
+        showsHorizontalScrollIndicator={false}
+        horizontal
+        renderItem={({item}) => {
+          return <Button text={item.name} />;
+        }}
+      />
+      <TrendingNews />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+  mainContainer: {
+    marginTop: 10,
   },
+  flat: {},
 });
 
 export default Trending;

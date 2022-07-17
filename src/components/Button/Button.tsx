@@ -1,24 +1,17 @@
-import React, {FC} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-
+import React, {FC} from 'react';
 import Colors from '@assets/colors/colors';
 
-interface IProps {
-  text: string;
+interface button {
+  onPress?: () => void;
+  text?: string;
 }
-
-/**
- * @author Nitesh Raj Khanal
- * @function @CustomButton
- **/
-
-const CustomButton: FC<IProps> = ({text}) => {
-  const {container, btnActive, textActive} = styles;
+const CustomButton: FC<button> = ({text}) => {
   return (
     <>
-      <View style={container}>
-        <TouchableOpacity style={btnActive}>
-          <Text style={textActive}>{text}</Text>
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.btnActive}>
+          <Text style={styles.textActive}>{text}</Text>
         </TouchableOpacity>
       </View>
     </>
@@ -28,13 +21,13 @@ const CustomButton: FC<IProps> = ({text}) => {
 const styles = StyleSheet.create({
   container: {
     marginVertical: 5,
-    marginHorizontal: 10,
+    marginHorizontal: 3,
     flex: 1,
     flexDirection: 'row',
   },
   btnActive: {
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 11,
+    marginRight: 12,
     marginTop: 20,
     height: 36,
     backgroundColor: Colors.red,
@@ -58,6 +51,7 @@ const styles = StyleSheet.create({
   textActive: {
     fontSize: 13,
     fontWeight: '400',
+    fontFamily: 'Mont-Regular',
     color: Colors.white,
   },
   textInActive: {

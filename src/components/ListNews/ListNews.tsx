@@ -1,10 +1,9 @@
-import React, {FC} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-
+import React, {FC} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Colors from '@assets/colors/colors';
 
-interface IProps {
+interface list {
   id?: any;
   image?: any;
   title?: string;
@@ -12,22 +11,7 @@ interface IProps {
   date?: string;
   description?: string;
 }
-
-/**
- * @author Nitesh Raj Khanal
- * @function @ListNews
- **/
-
-const ListNews: FC<IProps> = ({id, image, title, name, date, description}) => {
-  const {
-    mainContainer,
-    list,
-    imageStyle,
-    textView,
-    titleStyle,
-    nameStyle,
-    text,
-  } = styles;
+const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
@@ -41,15 +25,15 @@ const ListNews: FC<IProps> = ({id, image, title, name, date, description}) => {
   };
   return (
     <TouchableOpacity onPress={handleOnPress}>
-      <View style={mainContainer}>
-        <View style={list}>
-          <Image style={imageStyle} source={image} />
+      <View style={styles.mainContainer}>
+        <View style={styles.list}>
+          <Image style={styles.image} source={image} />
         </View>
-        <View style={textView}>
-          <Text style={titleStyle}>{title}</Text>
-          <View style={nameStyle}>
-            <Text style={text}>{name}</Text>
-            <Text style={text}>{date}</Text>
+        <View style={styles.textView}>
+          <Text style={styles.title}>{title}</Text>
+          <View style={styles.name}>
+            <Text style={styles.text}>{name}</Text>
+            <Text style={styles.text}>{date}</Text>
           </View>
         </View>
       </View>
@@ -72,7 +56,7 @@ const styles = StyleSheet.create({
     marginRight: 10,
     width: '45%',
   },
-  imageStyle: {
+  image: {
     height: '100%',
     borderRadius: 10,
     width: '100%',
@@ -81,20 +65,21 @@ const styles = StyleSheet.create({
     marginTop: 10,
     width: '57%',
   },
-  titleStyle: {
+  title: {
     marginTop: 5,
-    fontSize: 14,
-    fontWeight: 'bold',
+    fontSize: 13,
+    fontFamily: 'Mont-Bold',
     marginBottom: 5,
   },
-  nameStyle: {
+  name: {
     flexDirection: 'row',
   },
   text: {
-    fontSize: 12,
-    fontWeight: 'bold',
+    fontSize: 11,
+    fontFamily: 'Mont-Bold',
     marginTop: 20,
-    margin: 3,
+    margin: 5,
+    color: Colors.red,
   },
 });
 

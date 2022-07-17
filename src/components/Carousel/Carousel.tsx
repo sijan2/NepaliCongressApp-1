@@ -1,21 +1,11 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {FC} from 'react';
 import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
-
-import {WIDTH} from '@utils/Dimensions';
-
+import React from 'react';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
+import {WIDTH} from '@utils/Dimensions';
 
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @Carousel
- **/
-
-const Carousel: FC<IProps> = ({data}: any) => {
-  const {bar, semiContainer, text} = styles;
+const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, WIDTH);
   if (data && data.length > 0) {
@@ -39,7 +29,7 @@ const Carousel: FC<IProps> = ({data}: any) => {
               {nativeEvent: {contentOffset: {x: scrollX}}},
             ])}
           />
-          <View style={bar}>
+          <View style={styles.bar}>
             {data.map((_: any, i: any) => {
               let opacity = position.interpolate({
                 inputRange: [i - 1, i, i + 1],
@@ -62,8 +52,8 @@ const Carousel: FC<IProps> = ({data}: any) => {
             })}
           </View>
         </View>
-        <View style={semiContainer}>
-          <Text style={text}>Latest News</Text>
+        <View style={styles.semiContainer}>
+          <Text style={styles.text}>Latest News</Text>
         </View>
       </>
     );
@@ -83,7 +73,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 10,
     fontSize: 18,
-    fontWeight: 'bold',
+    fontFamily: 'Mont-Bold',
     color: Colors.black,
   },
 });

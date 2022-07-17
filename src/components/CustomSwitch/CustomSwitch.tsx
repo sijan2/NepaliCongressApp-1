@@ -1,36 +1,22 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
-import React, {FC, useState} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-
+import React, {useState} from 'react';
 import Colors from '@assets/colors/colors';
 
-interface IProps {
-  selectionMode: number;
-  option1: string;
-  option2: string;
-  onSelectSwitch: (value: any) => void;
-}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @CustomSwitch
- **/
-
-const CustomSwitch: FC<IProps> = ({
+const CustomSwitch = ({
   selectionMode,
   option1,
   option2,
   onSelectSwitch,
 }: any) => {
-  const {container} = styles;
   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
   const updateSwitchData = (value: any) => {
     setSelectionMode(value);
     onSelectSwitch(value);
   };
   return (
-    <View style={container}>
+    <View style={styles.container}>
       <TouchableOpacity
         style={{
           flex: 1,
@@ -44,6 +30,7 @@ const CustomSwitch: FC<IProps> = ({
             position: 'absolute',
             fontWeight: getSelectionMode === 1 ? '800' : '600',
             fontSize: 16,
+            fontFamily: 'Mont-SemiBold',
             left: 30,
           }}>
           {option1}
@@ -67,8 +54,9 @@ const CustomSwitch: FC<IProps> = ({
         onPress={() => updateSwitchData(2)}>
         <Text
           style={{
-            color: getSelectionMode === 2 ? Colors.black : Colors.gray,
-            fontWeight: getSelectionMode === 2 ? '800' : '600',
+            color: getSelectionMode == 2 ? Colors.black : Colors.gray,
+            fontWeight: getSelectionMode == 2 ? '800' : '600',
+            fontFamily: 'Mont-SemiBold',
             fontSize: 15,
             position: 'absolute',
             left: 30,

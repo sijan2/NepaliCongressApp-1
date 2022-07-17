@@ -1,32 +1,23 @@
-import React, {FC, useState} from 'react';
 import {StyleSheet, View, Image} from 'react-native';
+import React, {useState} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
-
 import Colors from '@assets/colors/colors';
-import Advertisement from '@assets/images/advertisement.png';
+import ad from '@assets/images/advertisement.png';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import ProvinceScreen from '@screens/Province/Province';
 import TrendingNews from '@components/TrendingNews/TrendingNews';
 
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @Home
- **/
-
-const Home: FC<IProps> = () => {
-  const {mainContainer, container, adImage} = styles;
+const HomeScreen = () => {
   const [getTab, setGetTab] = useState(1);
 
   const onSelectSwitch = (value: any) => {
     setGetTab(value);
   };
   return (
-    <View style={mainContainer}>
-      <ScrollView style={container}>
+    <View style={styles.mainContainer}>
+      <ScrollView style={styles.container}>
         <View>
-          <Image style={adImage} source={Advertisement} />
+          <Image style={styles.adImage} source={ad} />
         </View>
         <CustomSwitch
           selectionMode={1}
@@ -63,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Home;
+export default HomeScreen;

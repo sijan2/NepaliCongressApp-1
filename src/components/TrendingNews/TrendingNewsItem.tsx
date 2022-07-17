@@ -1,23 +1,14 @@
-import React, {FC} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
-
+import React from 'react';
 import Colors from '@assets/colors/colors';
 
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @LatestNews
- **/
-
-const LatestNews: FC<IProps> = ({item}: any) => {
-  const {mainContainer, imageShow, image, title} = styles;
+const TrendingNewsItem = ({item}: any) => {
   return (
-    <View style={mainContainer}>
-      <View style={imageShow}>
-        <Image style={image} source={{uri: item.image}} />
+    <View style={styles.mainContainer}>
+      <View style={styles.imageShow}>
+        <Image style={styles.image} source={{uri: item.image}} />
       </View>
-      <Text style={title}>{item.title}</Text>
+      <Text style={styles.title}>{item.title}</Text>
     </View>
   );
 };
@@ -43,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default LatestNews;
+export default TrendingNewsItem;
