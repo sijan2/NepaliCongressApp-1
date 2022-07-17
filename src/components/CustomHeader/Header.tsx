@@ -26,10 +26,9 @@ const Header = () => {
           </View>
           <View style={styles.texts}>
             <Text style={styles.text}>Nepali Congress</Text>
-            <Text
-              style={
-                styles.date
-              }>{`${dateAndDay.day}, ${dateAndDay.month} ${dateAndDay.date},${dateAndDay.year}`}</Text>
+            <Text style={styles.date}>{`${dateAndDay.day}, ${
+              dateAndDay.month
+            } ${dateAndDay.date},${' '}${dateAndDay.year}`}</Text>
           </View>
           <TouchableOpacity>
             <View style={styles.search}>
@@ -65,10 +64,10 @@ const styles = StyleSheet.create({
   },
   image: {
     height: 40,
-    width: 70,
+    width: 60,
   },
   texts: {
-    marginRight: 105,
+    marginRight: 95,
   },
   text: {
     fontSize: 20,

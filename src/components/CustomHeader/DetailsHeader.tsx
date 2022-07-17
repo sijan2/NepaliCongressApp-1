@@ -45,7 +45,7 @@ const DetailsHeader = () => {
 
 const styles = StyleSheet.create({
   header: {
-    height: 80,
+    height: 60,
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',

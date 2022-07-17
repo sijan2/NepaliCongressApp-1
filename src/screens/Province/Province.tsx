@@ -30,15 +30,16 @@ const ProvinceScreen = () => {
           }}
         />
         <Carouselitem data={carouseldata} />
-        {/* <TrendingNews /> */}
         <LatestNews />
       </ScrollView>
     </SafeAreaView>
   );
 };
 
-export default ProvinceScreen;
-
 const styles = StyleSheet.create({
-  mainContainer: {},
+  mainContainer: {
+    marginRight: 10,
+  },
 });
+
+export default ProvinceScreen;

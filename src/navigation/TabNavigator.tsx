@@ -9,7 +9,7 @@ import SavedScreen from '@screens/Saved/Saved';
 
 const Tab = createBottomTabNavigator();
 
-export default function MyTabs() {
+const TabNavigator = () => {
   return (
     <>
       <Header />
@@ -71,7 +71,7 @@ export default function MyTabs() {
       </Tab.Navigator>
     </>
   );
-}
+};
 
 const styles = StyleSheet.create({
   tabBar: {
@@ -106,3 +106,5 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
 });
+
+export default TabNavigator;

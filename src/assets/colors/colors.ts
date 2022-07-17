@@ -7,4 +7,5 @@ export default {
   white: '#FFFFFF',
   fontColor: '#323232',
   backgroundColor: '#E5E5E5',
+  offBlack: '#514F45',
 };

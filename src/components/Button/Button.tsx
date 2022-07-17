@@ -27,14 +27,14 @@ const styles = StyleSheet.create({
   },
   btnActive: {
     marginLeft: 11,
-    marginRight: 12,
+    marginRight: 11,
     marginTop: 20,
-    height: 36,
+    height: 30,
     backgroundColor: Colors.red,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    width: '100%',
+    width: '90%',
     alignSelf: 'center',
   },
   btnInActive: {

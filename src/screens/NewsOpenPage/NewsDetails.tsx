@@ -61,15 +61,17 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 200,
+    height: 160,
     borderRadius: 10,
   },
   details: {
     marginTop: 10,
     fontFamily: 'Mont-Regular',
-    color: Colors.gray,
+    color: Colors.offBlack,
     fontSize: 12,
     lineHeight: 15,
+    textAlign: 'justify',
+    fontWeight: '500',
   },
 });
 

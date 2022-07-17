@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.red,
     margin: 10,
     borderRadius: 20,
+    marginTop: 10,
   },
   textView: {
     marginHorizontal: 10,
@@ -85,12 +86,13 @@ const styles = StyleSheet.create({
   },
   title: {
     marginHorizontal: 10,
-    marginTop: 45,
+    marginTop: 20,
     fontSize: 15,
     lineHeight: 15,
-    fontWeight: '700',
+    fontWeight: '400',
     color: Colors.black,
-    fontFamily: 'Mont-Regular',
+    fontFamily: 'Mont-SemiBold',
+    fontStyle: 'normal',
   },
   textshow: {
     flex: 1,
@@ -101,7 +103,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignSelf: 'flex-end',
     fontSize: 12,
-    fontWeight: '700',
     fontFamily: 'Mont-Regular',
     color: Colors.red,
     margin: 23,
@@ -110,8 +111,6 @@ const styles = StyleSheet.create({
   },
   nested: {
     flexDirection: 'row',
-    marginTop: -10,
-    marginLeft: -35,
   },
   view: {
     color: Colors.black,

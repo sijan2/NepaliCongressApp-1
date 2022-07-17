@@ -20,7 +20,7 @@ const StackNavigator: FC<IProps> = () => {
   useEffect(() => {
     setTimeout(() => {
       setshowSplashScreen(false);
-    }, 6000);
+    }, 2000);
   }, []);
   return (
     <StackNav.Navigator

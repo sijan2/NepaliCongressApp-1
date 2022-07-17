@@ -5,7 +5,7 @@ import Colors from '@assets/colors/colors';
 const SavedScreen = () => {
   return (
     <View style={styles.mainContainer}>
-      <Text style={styles.text}>Comming Soon!</Text>
+      <Text style={styles.text}>Coming Soon!</Text>
     </View>
   );
 };

@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   list: {
-    height: 100,
+    height: 80,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginTop: 10,
     marginBottom: 10,
     marginRight: 10,
-    width: '45%',
+    width: '42%',
   },
   image: {
     height: '100%',
@@ -71,10 +71,13 @@ const styles = StyleSheet.create({
     marginTop: 5,
     fontSize: 13,
     fontFamily: 'Mont-Bold',
-    marginBottom: 5,
+    textAlign: 'justify',
   },
   name: {
     flexDirection: 'row',
+    textAlign: 'left',
+    marginLeft: -5,
+    marginTop: -5,
   },
   text: {
     fontSize: 11,

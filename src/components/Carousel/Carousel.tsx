@@ -3,6 +3,7 @@ import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import React from 'react';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
+
 import {WIDTH} from '@utils/Dimensions';
 
 const Carousel = ({data}: any) => {
@@ -41,11 +42,11 @@ const Carousel = ({data}: any) => {
                   key={i}
                   style={{
                     opacity,
-                    height: 4.43,
-                    width: 20,
+                    height: 5,
+                    width: 30,
                     backgroundColor: Colors.gray,
                     margin: 8,
-                    borderRadius: 19,
+                    borderRadius: 10,
                   }}
                 />
               );
@@ -62,6 +63,8 @@ const Carousel = ({data}: any) => {
   return null;
 };
 
+export default Carousel;
+
 const styles = StyleSheet.create({
   bar: {
     flexDirection: 'row',
@@ -77,5 +80,3 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
 });
-
-export default Carousel;
