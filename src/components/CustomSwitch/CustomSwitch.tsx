@@ -5,7 +5,12 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import Colors from '@assets/colors/colors';
 
-interface IProps {}
+interface IProps {
+  selectionMode: number;
+  option1: string;
+  option2: string;
+  onSelectSwitch: (value: any) => void;
+}
 
 /**
  * @author Nitesh Raj Khanal
