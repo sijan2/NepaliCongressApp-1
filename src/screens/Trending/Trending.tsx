@@ -1,20 +1,18 @@
-import colors from '@assets/colors/colors';
-import Header from '@components/NCHeader/Header';
 import React, {FC} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
 interface IProps {}
 
 /**
- * @author Nitesh Raj Khanal
+ * @author
  * @function @Trending
  **/
 
 const Trending: FC<IProps> = () => {
   const {container} = styles;
   return (
-    <View>
-      <Header fontColor={colors.red} />
+    <View style={container}>
+      <Text>Trending</Text>
     </View>
   );
 };

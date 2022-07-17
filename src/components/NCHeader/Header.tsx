@@ -16,9 +16,7 @@ import colors from '@assets/colors/colors';
 
 // import {WIDTH} from '@utils/Dimensions';
 
-interface IProps {
-  fontColor: string;
-}
+interface IProps {}
 
 /**
  * @author Nitesh Raj Khanal

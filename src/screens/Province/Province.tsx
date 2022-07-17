@@ -4,7 +4,7 @@ import {View, Text, StyleSheet} from 'react-native';
 interface IProps {}
 
 /**
- * @author Nitesh Raj Khanal
+ * @author
  * @function @Province
  **/
 

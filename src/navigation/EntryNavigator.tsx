@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
-import TabNavigator from './TabNavigator';
+import StackNavigator from './StackNavigator';
 
 interface IProps {}
 
@@ -13,7 +13,7 @@ interface IProps {}
 const EntryNavigator: FC<IProps> = () => {
   return (
     <NavigationContainer>
-      <TabNavigator />
+      <StackNavigator />
     </NavigationContainer>
   );
 };

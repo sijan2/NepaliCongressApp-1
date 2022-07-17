@@ -1,7 +1,11 @@
 import React, {FC} from 'react';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import Saved from '@screens/Saved/Saved';
-import Province from '@components/Province/Province';
+
+import ProvinceScreen from '@screens/Province/Province';
+import TrendingScreen from '@screens/Trending/Trending';
+
+import Colors from '@assets/colors/colors';
+
 interface IProps {}
 
 /**
@@ -13,18 +17,23 @@ const MaterialTab = createMaterialTopTabNavigator();
 const TopTabNavigator: FC<IProps> = () => {
   return (
     <MaterialTab.Navigator
+      initialRouteName="Provinces"
       screenOptions={{
-        tabBarLabelStyle: {fontWeight: 'bold'},
         tabBarStyle: {
-          backgroundColor: 'red',
-          elevation: 0, //for android devices
-          shadowOffset: {width: 0, height: 0}, //for ios devices
+          marginRight: 80,
+          elevation: 0,
+          borderBottomColor: Colors.red,
         },
-        tabBarActiveTintColor: 'black',
-        tabBarInactiveTintColor: 'orange',
+        tabBarLabelStyle: {fontWeight: 'bold', fontSize: 15},
+        tabBarIndicatorStyle: {
+          backgroundColor: Colors.red,
+          borderColor: Colors.red,
+          borderWidth: 2,
+        },
       }}>
-      <MaterialTab.Screen name="Province" component={Province} />
-      <MaterialTab.Screen name="Trending" component={Saved} />
+      <MaterialTab.Screen name="Provinces" component={ProvinceScreen} />
+      <MaterialTab.Screen name="Trending" component={TrendingScreen} />
+      {/* <Tab.Screen name=" " component={AddButton} /> */}
     </MaterialTab.Navigator>
   );
 };

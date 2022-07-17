@@ -1,13 +1,12 @@
 import React, {FC} from 'react';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import StackNavigator from './StackNavigator';
-import {getFocusedRouteNameFromRoute} from '@react-navigation/native';
-import Saved from '@screens/Saved/Saved';
 
+import SavedScreen from '@screens/Saved/Saved';
+import HomeScreen from '@screens/Home/Home';
 import Home from '@assets/icons/home.svg';
 import SavedIcon from '@assets/icons/Save.svg';
-import colors from '@assets/colors/colors';
+import Colors from '@assets/colors/colors';
 import Header from '@components/NCHeader/Header';
 
 interface IProps {}
@@ -21,60 +20,42 @@ const TabNav = createBottomTabNavigator();
 const TabNavigator: FC<IProps> = () => {
   return (
     <>
-      <Header fontColor={colors.red} />
+      <Header />
       <TabNav.Navigator
-        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
-          tabBarShowLabel: true,
           tabBarLabelStyle: {
-            fontSize: 8,
-            fontWeight: '600',
-            lineHeight: 13,
-            textAlign: 'center',
-            fontFamily: 'Mont-Regular',
-            color: colors.gray,
-            marginBottom: 4.41,
-            marginTop: 2.57,
+            fontSize: 11,
+            marginBottom: 10,
+            color: Colors.gray,
           },
-          tabBarIconStyle: {
-            marginTop: 10.98,
-          },
+
           tabBarStyle: {
-            backgroundColor: 'rgba(34,36,40,1)',
+            marginHorizontal: 120,
+            backgroundColor: Colors.white,
+            elevation: 0,
+            height: 60,
           },
         }}>
         <TabNav.Screen
           name="Home"
-          component={StackNavigator}
-          options={({route}) => ({
-            tabBarStyle: {
-              display: getTabBarVisibility(route),
-            },
+          component={HomeScreen}
+          options={{
+            tabBarLabel: 'Home',
             tabBarIcon: () => <Home width={25} height={25} fill="none" />,
-          })}
+          }}
         />
         <TabNav.Screen
-          name="Saved"
-          component={Saved}
-          options={({route}) => ({
-            tabBarStyle: {
-              display: getTabBarVisibility(route),
-            },
+          name="Settings"
+          component={SavedScreen}
+          options={{
+            tabBarLabel: 'Saved',
             tabBarIcon: () => <SavedIcon width={25} height={25} fill="none" />,
-          })}
+          }}
         />
       </TabNav.Navigator>
     </>
   );
-};
-
-const getTabBarVisibility = (route: any) => {
-  const routeName = getFocusedRouteNameFromRoute(route) ?? 'Feed';
-  if (routeName === 'HomeStack') {
-    return 'none';
-  }
-  return 'flex';
 };
 
 export default TabNavigator;
