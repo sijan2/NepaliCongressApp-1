@@ -24,7 +24,6 @@ const TabNavigator = () => {
           },
 
           tabBarStyle: {
-            // marginHorizontal: 120,
             backgroundColor: Colors.white,
             elevation: 0,
             height: 60,

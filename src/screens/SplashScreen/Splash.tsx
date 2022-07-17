@@ -26,12 +26,13 @@ const styles = StyleSheet.create({
   splash: {
     justifyContent: 'center',
     alignItems: 'center',
-    height: 80,
+    height: 100,
     width: 110,
   },
   logo: {
-    height: 50,
-    width: 100,
+    height: '100%',
+    width: '100%',
+    resizeMode: 'contain',
   },
   text: {
     color: Colors.black,

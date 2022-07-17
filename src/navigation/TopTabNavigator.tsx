@@ -33,7 +33,6 @@ const TopTabNavigator: FC<IProps> = () => {
       }}>
       <MaterialTab.Screen name="Provinces" component={ProvinceScreen} />
       <MaterialTab.Screen name="Trending" component={TrendingScreen} />
-      {/* <Tab.Screen name=" " component={AddButton} /> */}
     </MaterialTab.Navigator>
   );
 };

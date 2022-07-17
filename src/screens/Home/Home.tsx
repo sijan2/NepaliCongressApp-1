@@ -21,7 +21,7 @@ const HomeScreen = () => {
         </View>
         <CustomSwitch
           selectionMode={1}
-          option1="Province"
+          option1="Provinces"
           option2="Trending"
           onSelectSwitch={onSelectSwitch}
         />
@@ -34,16 +34,12 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
-
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: Colors.white,
     height: '100%',
   },
-  container: {
-    // marginHorizontal: 15,
-  },
+  container: {},
   adImage: {
     height: 60,
     width: '90%',
@@ -57,3 +53,5 @@ const styles = StyleSheet.create({
     zIndex: -1,
   },
 });
+
+export default HomeScreen;

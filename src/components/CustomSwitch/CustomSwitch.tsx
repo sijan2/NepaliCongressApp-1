@@ -22,7 +22,6 @@ const CustomSwitch = ({
           <TouchableOpacity
             style={{
               flex: 1,
-              // backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
               justifyContent: 'center',
               alignItems: 'center',
             }}
@@ -35,14 +34,14 @@ const CustomSwitch = ({
                 fontWeight: getSelectionMode === 1 ? '800' : '600',
                 fontSize: 16,
                 fontFamily: 'Mont-SemiBold',
-                left: 20,
+                left: 10,
               }}>
               {option1}
             </Text>
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 1 ? 5 : 2,
+                height: getSelectionMode === 1 ? 3 : 2,
                 width: '100%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
@@ -65,14 +64,14 @@ const CustomSwitch = ({
                 fontFamily: 'Mont-SemiBold',
                 fontSize: 15,
                 position: 'absolute',
-                left: 20,
+                left: 15,
               }}>
               {option2}
             </Text>
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 2 ? 5 : 2,
+                height: getSelectionMode === 2 ? 3 : 2,
                 width: '100%',
                 backgroundColor:
                   getSelectionMode === 2 ? Colors.red : Colors.washedGray,
@@ -84,7 +83,6 @@ const CustomSwitch = ({
           style={{
             marginHorizontal: 20,
             marginTop: 2,
-
             zIndex: -1,
             height: 3,
             width: '90%',
