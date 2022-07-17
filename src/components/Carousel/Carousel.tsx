@@ -41,11 +41,11 @@ const Carousel = ({data}: any) => {
                   key={i}
                   style={{
                     opacity,
-                    height: 5,
-                    width: 30,
+                    height: 4.43,
+                    width: 20,
                     backgroundColor: Colors.gray,
                     margin: 8,
-                    borderRadius: 10,
+                    borderRadius: 19,
                   }}
                 />
               );

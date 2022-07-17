@@ -9,7 +9,7 @@ import SavedScreen from '@screens/Saved/Saved';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = () => {
+export default function MyTabs() {
   return (
     <>
       <Header />
@@ -24,6 +24,7 @@ const TabNavigator = () => {
           },
 
           tabBarStyle: {
+            // marginHorizontal: 120,
             backgroundColor: Colors.white,
             elevation: 0,
             height: 60,
@@ -70,7 +71,7 @@ const TabNavigator = () => {
       </Tab.Navigator>
     </>
   );
-};
+}
 
 const styles = StyleSheet.create({
   tabBar: {
@@ -88,20 +89,20 @@ const styles = StyleSheet.create({
   },
 
   icon1: {
-    marginLeft: 0,
+    marginLeft: 7,
   },
   text: {
-    marginTop: 5,
+    marginTop: 3,
     right: -90,
     fontFamily: 'Mont-Regular',
     fontSize: 12,
+    color: Colors.black,
   },
   text1: {
-    marginTop: 5,
-    left: -5,
+    marginTop: 3,
+    left: -3,
     fontFamily: 'Mont-Regular',
     fontSize: 12,
+    color: Colors.black,
   },
 });
-
-export default TabNavigator;

@@ -16,74 +16,103 @@ const CustomSwitch = ({
     onSelectSwitch(value);
   };
   return (
-    <View style={styles.container}>
-      <TouchableOpacity
-        style={{
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        onPress={() => updateSwitchData(1)}>
-        <Text
-          style={{
-            color: getSelectionMode === 1 ? Colors.black : Colors.gray,
-            position: 'absolute',
-            fontWeight: getSelectionMode === 1 ? '800' : '600',
-            fontSize: 16,
-            fontFamily: 'Mont-SemiBold',
-            left: 30,
-          }}>
-          {option1}
-        </Text>
+    <>
+      <View>
+        <View style={styles.container}>
+          <TouchableOpacity
+            style={{
+              flex: 1,
+              // backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => updateSwitchData(1)}>
+            <Text
+              style={{
+                color:
+                  getSelectionMode === 1 ? Colors.black : Colors.washedGray,
+                position: 'absolute',
+                fontWeight: getSelectionMode === 1 ? '800' : '600',
+                fontSize: 16,
+                fontFamily: 'Mont-SemiBold',
+                left: 20,
+              }}>
+              {option1}
+            </Text>
+            <View
+              style={{
+                marginTop: 50,
+                height: getSelectionMode === 1 ? 5 : 2,
+                width: '100%',
+                backgroundColor:
+                  getSelectionMode === 1 ? Colors.red : Colors.washedGray,
+                borderRadius: 10,
+              }}></View>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{
+              flex: 1,
+              borderRadius: 10,
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+            onPress={() => updateSwitchData(2)}>
+            <Text
+              style={{
+                color:
+                  getSelectionMode === 2 ? Colors.black : Colors.washedGray,
+                fontWeight: getSelectionMode === 2 ? '800' : '600',
+                fontFamily: 'Mont-SemiBold',
+                fontSize: 15,
+                position: 'absolute',
+                left: 20,
+              }}>
+              {option2}
+            </Text>
+            <View
+              style={{
+                marginTop: 50,
+                height: getSelectionMode === 2 ? 5 : 2,
+                width: '100%',
+                backgroundColor:
+                  getSelectionMode === 2 ? Colors.red : Colors.washedGray,
+                borderRadius: 10,
+              }}></View>
+          </TouchableOpacity>
+        </View>
         <View
           style={{
-            marginTop: 50,
-            height: getSelectionMode === 1 ? 5 : 3,
-            width: '100%',
-            backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.gray,
+            marginHorizontal: 20,
+            marginTop: 2,
+
+            zIndex: -1,
+            height: 3,
+            width: '90%',
+            backgroundColor: Colors.washedGray,
             borderRadius: 10,
           }}></View>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={{
-          flex: 1,
-          borderRadius: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-        onPress={() => updateSwitchData(2)}>
-        <Text
-          style={{
-            color: getSelectionMode == 2 ? Colors.black : Colors.gray,
-            fontWeight: getSelectionMode == 2 ? '800' : '600',
-            fontFamily: 'Mont-SemiBold',
-            fontSize: 15,
-            position: 'absolute',
-            left: 30,
-          }}>
-          {option2}
-        </Text>
-        <View
-          style={{
-            marginTop: 50,
-            height: getSelectionMode === 2 ? 5 : 3,
-            width: '100%',
-            backgroundColor: getSelectionMode === 2 ? Colors.red : Colors.gray,
-            borderRadius: 10,
-          }}></View>
-      </TouchableOpacity>
-    </View>
+      </View>
+    </>
   );
 };
 
+export default CustomSwitch;
+
 const styles = StyleSheet.create({
   container: {
+    marginTop: 10,
     height: 44,
     marginHorizontal: 20,
+    // backgroundColor: Colors.red,
     flexDirection: 'row',
-    width: '90%',
+    width: '50%',
     justifyContent: 'center',
   },
+  // touch: {
+  //     flex: 1,
+  //     backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
+  //     borderRadius: 10,
+  //     justifyContent: 'center',
+  //     alignItems: 'center',
+  // }
 });
-
-export default CustomSwitch;

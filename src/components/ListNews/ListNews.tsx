@@ -2,7 +2,6 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {FC} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Colors from '@assets/colors/colors';
-
 interface list {
   id?: any;
   image?: any;
@@ -41,6 +40,8 @@ const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
   );
 };
 
+export default ListNews;
+
 const styles = StyleSheet.create({
   mainContainer: {
     flex: 1,
@@ -66,6 +67,7 @@ const styles = StyleSheet.create({
     width: '57%',
   },
   title: {
+    color: Colors.black,
     marginTop: 5,
     fontSize: 13,
     fontFamily: 'Mont-Bold',
@@ -82,5 +84,3 @@ const styles = StyleSheet.create({
     color: Colors.red,
   },
 });
-
-export default ListNews;

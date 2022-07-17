@@ -1,28 +1,25 @@
-import React, {FC} from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
+import React from 'react';
+import Colors from '@assets/colors/colors';
 
-interface IProps {}
-
-/**
- * @author Nitesh Raj Khanal
- * @function @Saved
- **/
-
-const Saved: FC<IProps> = () => {
-  const {container} = styles;
+const SavedScreen = () => {
   return (
-    <View style={container}>
-      <Text>Saved</Text>
+    <View style={styles.mainContainer}>
+      <Text style={styles.text}>Comming Soon!</Text>
     </View>
   );
 };
 
+export default SavedScreen;
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
+  mainContainer: {
     alignItems: 'center',
   },
+  text: {
+    marginTop: 300,
+    color: Colors.red,
+    fontSize: 20,
+    fontFamily: 'Mont-Bold',
+  },
 });
-
-export default Saved;

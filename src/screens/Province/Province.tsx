@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
 import React, {useRef, useState} from 'react';
 import {province} from '@models/provience';
@@ -10,7 +11,6 @@ import LatestNews from '@components/LatestNews/LatestNews';
 const ProvinceScreen = () => {
   const data = province;
   const ref = useRef<FlatList>(null);
-  console.log(data);
   const [index] = useState(0);
   return (
     <SafeAreaView style={styles.mainContainer}>
@@ -19,6 +19,9 @@ const ProvinceScreen = () => {
           ref={ref}
           initialScrollIndex={index}
           data={data}
+          contentContainerStyle={{
+            paddingHorizontal: 0,
+          }}
           keyExtractor={(item, indexes) => 'key' + indexes}
           showsHorizontalScrollIndicator={false}
           horizontal
@@ -27,14 +30,15 @@ const ProvinceScreen = () => {
           }}
         />
         <Carouselitem data={carouseldata} />
+        {/* <TrendingNews /> */}
         <LatestNews />
       </ScrollView>
     </SafeAreaView>
   );
 };
 
+export default ProvinceScreen;
+
 const styles = StyleSheet.create({
   mainContainer: {},
 });
-
-export default ProvinceScreen;

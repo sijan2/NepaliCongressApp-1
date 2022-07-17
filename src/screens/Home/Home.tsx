@@ -5,7 +5,7 @@ import Colors from '@assets/colors/colors';
 import ad from '@assets/images/advertisement.png';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import ProvinceScreen from '@screens/Province/Province';
-import TrendingNews from '@components/TrendingNews/TrendingNews';
+import TrendingScreen from '@screens/Trending/Trending';
 
 const HomeScreen = () => {
   const [getTab, setGetTab] = useState(1);
@@ -27,19 +27,23 @@ const HomeScreen = () => {
         />
         <View>
           {getTab === 1 && <ProvinceScreen />}
-          {getTab === 2 && <TrendingNews />}
+          {getTab === 2 && <TrendingScreen />}
         </View>
       </ScrollView>
     </View>
   );
 };
 
+export default HomeScreen;
+
 const styles = StyleSheet.create({
   mainContainer: {
     backgroundColor: Colors.white,
     height: '100%',
   },
-  container: {},
+  container: {
+    // marginHorizontal: 15,
+  },
   adImage: {
     height: 60,
     width: '90%',
@@ -53,5 +57,3 @@ const styles = StyleSheet.create({
     zIndex: -1,
   },
 });
-
-export default HomeScreen;

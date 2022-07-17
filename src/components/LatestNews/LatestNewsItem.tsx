@@ -21,8 +21,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   imageShow: {
-    height: '20%',
-    width: '45%',
     backgroundColor: Colors.red,
     borderRadius: 10,
   },

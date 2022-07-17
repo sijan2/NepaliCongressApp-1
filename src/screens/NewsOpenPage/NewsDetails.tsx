@@ -3,7 +3,6 @@ import React from 'react';
 import DetailHeader from '@components/CustomHeader/DetailsHeader';
 import Colors from '@assets/colors/colors';
 const DetailScreen = ({route}: any) => {
-  console.log('Route=>', route.params);
   return (
     <ScrollView style={styles.scroll}>
       <View>

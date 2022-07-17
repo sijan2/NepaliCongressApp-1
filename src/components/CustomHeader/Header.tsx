@@ -6,50 +6,17 @@ import {
   Image,
   SafeAreaView,
 } from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import Logo from '@assets/images/NCLogo.png';
 import {Surface} from 'react-native-paper';
 import Colors from '@assets/colors/colors';
 import Search from '@assets/icons/Search.svg';
 
+import DateAndDayGenerator from '@utils/DayGen';
+
 const Header = () => {
-  const [currentDate, setCurrentDate] = useState('');
-
-  useEffect(() => {
-    const week = [
-      'Sunday',
-      'Monday',
-      'Tuesday',
-      'Wednesday',
-      'Thursday',
-      'Friday',
-      'Saturday',
-    ];
-    const months = [
-      'January',
-      'February',
-      'March',
-      'April',
-      'May',
-      'June',
-      'July',
-      'August',
-      'September',
-      'October',
-      'November',
-      'December',
-    ];
-    let date = new Date().getDay();
-    let week_name = week[date];
-    let date_number = new Date().getDate();
-    let month = new Date();
-    let month_name = months[month.getMonth()];
-    let year = new Date().getFullYear();
-
-    setCurrentDate(
-      week_name + ', ' + month_name + ' ' + date_number + ', ' + year,
-    );
-  }, []);
+  const date = new Date();
+  const dateAndDay = DateAndDayGenerator(date);
   return (
     <SafeAreaView>
       <Surface style={styles.header}>
@@ -59,7 +26,10 @@ const Header = () => {
           </View>
           <View style={styles.texts}>
             <Text style={styles.text}>Nepali Congress</Text>
-            <Text style={styles.date}>{currentDate}</Text>
+            <Text
+              style={
+                styles.date
+              }>{`${dateAndDay.day}, ${dateAndDay.month} ${dateAndDay.date},${dateAndDay.year}`}</Text>
           </View>
           <TouchableOpacity>
             <View style={styles.search}>
@@ -94,11 +64,11 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   image: {
-    height: 50,
-    width: 80,
+    height: 40,
+    width: 70,
   },
   texts: {
-    marginRight: 70,
+    marginRight: 105,
   },
   text: {
     fontSize: 20,
