@@ -1,11 +1,10 @@
-import Header from '@components/NCHeader/Header';
 import React, {FC} from 'react';
-// import {View, Text, StyleSheet} from 'react-native';
-import {View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
+import {ScrollView} from 'react-native-gesture-handler';
 
-import colors from '@assets/colors/colors';
-import Advertisement from '@components/AdvertisementComponent/Advertisement';
 import TopTabNavigator from '@navigation/TopTabNavigator';
+
+import Advertisement from '@assets/images/advertisement.png';
 interface IProps {}
 
 /**
@@ -14,22 +13,24 @@ interface IProps {}
  **/
 
 const Home: FC<IProps> = () => {
-  // const {container} = styles;
+  const {advertise} = styles;
   return (
     <View>
-      <Header fontColor={colors.fontColor} />
-      <Advertisement />
-      <TopTabNavigator />
+      <ScrollView>
+        <View>
+          <Image source={Advertisement} style={advertise} />
+        </View>
+        <TopTabNavigator />
+      </ScrollView>
     </View>
   );
 };
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   },
-// });
+const styles = StyleSheet.create({
+  advertise: {
+    height: 60,
+    width: '100%',
+  },
+});
 
 export default Home;

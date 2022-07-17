@@ -7,13 +7,14 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
+import {Surface} from 'react-native-paper';
 
 import DateAndDayGenerator from '@utils/DayGen';
 import NCLogo from '@assets/images/NCLogo.png';
 import Search from '@assets/icons/Search.svg';
 import colors from '@assets/colors/colors';
 
-import {WIDTH} from '@utils/Dimensions';
+// import {WIDTH} from '@utils/Dimensions';
 
 interface IProps {
   fontColor: string;
@@ -24,93 +25,74 @@ interface IProps {
  * @function @Header
  **/
 
-const Header: FC<IProps> = (props: any) => {
+const Header: FC<IProps> = () => {
   const date = new Date();
   const dateAndDay = DateAndDayGenerator(date);
 
-  const {
-    container,
-    headerContainer,
-    imageContainer,
-    logo,
-    partyNameContainer,
-    partyName,
-    dateDay,
-    dateDayText,
-    searchContainer,
-  } = styles;
+  const {header, view, Logo, image, texts, text, dateDayText, search} = styles;
   return (
-    <SafeAreaView style={container}>
-      <View style={headerContainer}>
-        <View style={imageContainer}>
-          <Image source={NCLogo} style={logo} />
-        </View>
-        <View style={partyNameContainer}>
-          <Text style={[partyName, {color: props.fontColor}]}>
-            Nepali Congress
-          </Text>
-          <View style={dateDay}>
+    <SafeAreaView>
+      <Surface style={header}>
+        <View style={view}>
+          <View style={Logo}>
+            <Image source={NCLogo} style={image} />
+          </View>
+          <View style={texts}>
+            <Text style={text}>Nepali Congress</Text>
             <Text
               style={
                 dateDayText
               }>{`${dateAndDay.day}, ${dateAndDay.month} ${dateAndDay.date},${dateAndDay.year}`}</Text>
           </View>
+          <TouchableOpacity style={search}>
+            <Search width={25} height={25} fill="none" />
+          </TouchableOpacity>
         </View>
-        <TouchableOpacity style={searchContainer}>
-          <Search width={25} height={25} fill="none" />
-        </TouchableOpacity>
-      </View>
+      </Surface>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.backgroundColor,
+  header: {
+    height: 80,
+    marginLeft: 5,
+    marginRight: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+    backgroundColor: colors.white,
   },
-  headerContainer: {
+  view: {
+    flex: 1,
+    margin: 10,
+    alignItems: 'center',
     flexDirection: 'row',
   },
-  imageContainer: {
-    position: 'absolute',
-    width: WIDTH * 0.15875,
-    height: 42.15,
-    left: 16.09,
-    top: 16,
+  Logo: {
+    flex: 1,
+    margin: 10,
+    alignItems: 'center',
+    flexDirection: 'row',
   },
-  logo: {
-    width: '100%',
-    height: '100%',
-    resizeMode: 'contain',
+  image: {
+    height: 50,
+    width: 80,
   },
-  partyNameContainer: {
-    paddingTop: 4,
-    height: 42.15,
-    flexDirection: 'column',
-    position: 'absolute',
-    top: 14,
-    left: 78,
-    marginLeft: 9,
+  texts: {
+    marginRight: 80,
   },
-  partyName: {
-    fontSize: 18,
-    fontFamily: 'Mont-Bold',
+  text: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: colors.black,
   },
-  dateDay: {},
   dateDayText: {
-    fontFamily: 'Mont-Regular',
-    fontSize: 10,
-    lineHeight: 13,
-    fontWeight: '500',
-    color: colors.fontColor,
+    fontSize: 14,
+    color: colors.gray,
   },
-  searchContainer: {
-    marginLeft: 'auto',
-    marginRight: 18.55,
-    top: 16,
-    height: 42.15,
-    justifyContent: 'center',
+  search: {
+    marginRight: 10,
   },
 });
 

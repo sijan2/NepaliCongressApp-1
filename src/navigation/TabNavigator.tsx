@@ -8,6 +8,7 @@ import Saved from '@screens/Saved/Saved';
 import Home from '@assets/icons/home.svg';
 import SavedIcon from '@assets/icons/Save.svg';
 import colors from '@assets/colors/colors';
+import Header from '@components/NCHeader/Header';
 
 interface IProps {}
 
@@ -19,49 +20,52 @@ interface IProps {}
 const TabNav = createBottomTabNavigator();
 const TabNavigator: FC<IProps> = () => {
   return (
-    <TabNav.Navigator
-      initialRouteName="Home"
-      screenOptions={{
-        headerShown: false,
-        tabBarShowLabel: true,
-        tabBarLabelStyle: {
-          fontSize: 8,
-          fontWeight: '600',
-          lineHeight: 13,
-          textAlign: 'center',
-          fontFamily: 'Mont-Regular',
-          color: colors.gray,
-          marginBottom: 4.41,
-          marginTop: 2.57,
-        },
-        tabBarIconStyle: {
-          marginTop: 10.98,
-        },
-        tabBarStyle: {
-          backgroundColor: 'rgba(34,36,40,1)',
-        },
-      }}>
-      <TabNav.Screen
-        name="Home"
-        component={StackNavigator}
-        options={({route}) => ({
-          tabBarStyle: {
-            display: getTabBarVisibility(route),
+    <>
+      <Header fontColor={colors.red} />
+      <TabNav.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerShown: false,
+          tabBarShowLabel: true,
+          tabBarLabelStyle: {
+            fontSize: 8,
+            fontWeight: '600',
+            lineHeight: 13,
+            textAlign: 'center',
+            fontFamily: 'Mont-Regular',
+            color: colors.gray,
+            marginBottom: 4.41,
+            marginTop: 2.57,
           },
-          tabBarIcon: () => <Home width={25} height={25} fill="none" />,
-        })}
-      />
-      <TabNav.Screen
-        name="Saved"
-        component={Saved}
-        options={({route}) => ({
-          tabBarStyle: {
-            display: getTabBarVisibility(route),
+          tabBarIconStyle: {
+            marginTop: 10.98,
           },
-          tabBarIcon: () => <SavedIcon width={25} height={25} fill="none" />,
-        })}
-      />
-    </TabNav.Navigator>
+          tabBarStyle: {
+            backgroundColor: 'rgba(34,36,40,1)',
+          },
+        }}>
+        <TabNav.Screen
+          name="Home"
+          component={StackNavigator}
+          options={({route}) => ({
+            tabBarStyle: {
+              display: getTabBarVisibility(route),
+            },
+            tabBarIcon: () => <Home width={25} height={25} fill="none" />,
+          })}
+        />
+        <TabNav.Screen
+          name="Saved"
+          component={Saved}
+          options={({route}) => ({
+            tabBarStyle: {
+              display: getTabBarVisibility(route),
+            },
+            tabBarIcon: () => <SavedIcon width={25} height={25} fill="none" />,
+          })}
+        />
+      </TabNav.Navigator>
+    </>
   );
 };
 
