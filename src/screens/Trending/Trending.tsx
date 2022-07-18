@@ -18,6 +18,7 @@ const TrendingScreen = () => {
           renderItem={({item}) => {
             return <Button text={item.name} onPress={() => <TrendingNews />} />;
           }}
+          style={styles.container}
         />
         <TrendingNews />
       </ScrollView>
@@ -29,4 +30,7 @@ export default TrendingScreen;
 
 const styles = StyleSheet.create({
   mainContainer: {},
+  container: {
+    marginRight: 10,
+  },
 });
