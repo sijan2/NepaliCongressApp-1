@@ -2,26 +2,30 @@ import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import DetailHeader from '@components/CustomHeader/DetailsHeader';
 import Colors from '@assets/colors/colors';
+import CustomFooter from '@components/CustomFooter/CustomFooter';
 const DetailScreen = ({route}: any) => {
   return (
-    <ScrollView style={styles.scroll}>
-      <View>
-        <DetailHeader />
-        <View style={styles.mainContainer}>
-          <View style={styles.container}>
-            <Text style={styles.textTitle}>{route.params?.title}</Text>
-            <View style={styles.rowData}>
-              <Text style={styles.text1}>{route.params?.name}</Text>
-              <Text style={styles.text2}>{route.params?.date}</Text>
+    <>
+      <ScrollView style={styles.scroll}>
+        <View>
+          <DetailHeader />
+          <View style={styles.mainContainer}>
+            <View style={styles.container}>
+              <Text style={styles.textTitle}>{route.params?.title}</Text>
+              <View style={styles.rowData}>
+                <Text style={styles.text1}>{route.params?.name}</Text>
+                <Text style={styles.text2}>{route.params?.date}</Text>
+              </View>
+              <View>
+                <Image style={styles.image} source={route.params?.image} />
+              </View>
+              <Text style={styles.details}>{route.params?.description}</Text>
             </View>
-            <View>
-              <Image style={styles.image} source={route.params?.image} />
-            </View>
-            <Text style={styles.details}>{route.params?.description}</Text>
           </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+      <CustomFooter />
+    </>
   );
 };
 

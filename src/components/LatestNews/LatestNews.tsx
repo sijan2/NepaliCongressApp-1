@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   first: {
     backgroundColor: Colors.offWhite,
     marginTop: 10,
+    paddingRight: 10,
   },
   secondFlatlist: {
     marginTop: 10,

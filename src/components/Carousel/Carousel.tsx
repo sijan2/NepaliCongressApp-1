@@ -42,8 +42,8 @@ const Carousel = ({data}: any) => {
                   key={i}
                   style={{
                     opacity,
-                    height: 5,
-                    width: 30,
+                    height: 4,
+                    width: 20,
                     backgroundColor: Colors.gray,
                     margin: 8,
                     borderRadius: 10,
@@ -63,8 +63,6 @@ const Carousel = ({data}: any) => {
   return null;
 };
 
-export default Carousel;
-
 const styles = StyleSheet.create({
   bar: {
     flexDirection: 'row',
@@ -80,3 +78,5 @@ const styles = StyleSheet.create({
     color: Colors.black,
   },
 });
+
+export default Carousel;

@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   list: {
-    height: 80,
+    height: 70,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginTop: 10,

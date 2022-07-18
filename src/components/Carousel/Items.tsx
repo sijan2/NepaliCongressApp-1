@@ -10,7 +10,7 @@ import React, {FC} from 'react';
 import Colors from '@assets/colors/colors';
 import {useNavigation} from '@react-navigation/native';
 
-interface Clist {
+interface Ilist {
   id?: any;
   image?: any;
   title?: string;
@@ -21,7 +21,7 @@ interface Clist {
 }
 
 const {width, height} = Dimensions.get('window');
-const Carouselitem: FC<Clist> = ({item}) => {
+const Carouselitem: FC<Ilist> = ({item}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
