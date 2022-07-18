@@ -28,6 +28,7 @@ const ProvinceScreen = () => {
           renderItem={({item}) => {
             return <Button text={item.name} onPress={() => <LatestNews />} />;
           }}
+          style={styles.container}
         />
         <Carouselitem data={carouseldata} />
         <LatestNews />
@@ -38,6 +39,9 @@ const ProvinceScreen = () => {
 
 const styles = StyleSheet.create({
   mainContainer: {},
+  container: {
+    marginRight: 10,
+  },
 });
 
 export default ProvinceScreen;
