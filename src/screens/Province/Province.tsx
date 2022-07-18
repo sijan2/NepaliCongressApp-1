@@ -37,9 +37,7 @@ const ProvinceScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  mainContainer: {
-    marginRight: 10,
-  },
+  mainContainer: {},
 });
 
 export default ProvinceScreen;
