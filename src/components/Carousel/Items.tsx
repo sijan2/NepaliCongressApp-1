@@ -11,6 +11,7 @@ interface Ilist {
   date?: string;
   description?: string;
   item?: any;
+  index?: any;
 }
 
 import {WIDTH, HEIGHT} from '@utils/Dimensions';
@@ -81,7 +82,7 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: 10,
     marginTop: 20,
-    fontSize: 14,
+    fontSize: 13,
     lineHeight: 17,
     letterSpacing: 0.4,
     color: Colors.black,
