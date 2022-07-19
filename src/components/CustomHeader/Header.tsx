@@ -23,7 +23,7 @@ const Header = () => {
   const dateAndDay = DateAndDayGenerator(date);
   const {color} = useContext(AuthContext);
   const showToast = () => {
-    Alert.alert('Feature Comming Soon!', 'This Feature is unavailable', [
+    Alert.alert('Feature Coming Soon!', 'This Feature is unavailable', [
       {text: 'OK', onPress: () => console.log('OK Pressed')},
     ]);
   };
@@ -34,12 +34,21 @@ const Header = () => {
           <View style={styles.Logo}>
             <Image source={Logo} style={styles.image} />
           </View>
-          <View style={styles.texts}>
-            <Text style={[styles.text, {color}]}>Nepali Congress</Text>
-            <Text style={styles.date}>{`${dateAndDay.day}, ${
-              dateAndDay.month
-            } ${dateAndDay.date},${' '}${dateAndDay.year}`}</Text>
-          </View>
+          {color ? (
+            <View style={styles.texts}>
+              <Text style={[styles.text, {color}]}>Nepali Congress</Text>
+              <Text style={styles.date}>{`${dateAndDay.day}, ${
+                dateAndDay.month
+              } ${dateAndDay.date},${' '}${dateAndDay.year}`}</Text>
+            </View>
+          ) : (
+            <View style={styles.texts}>
+              <Text style={styles.text}>Nepali Congress</Text>
+              <Text style={styles.date}>{`${dateAndDay.day}, ${
+                dateAndDay.month
+              } ${dateAndDay.date},${' '}${dateAndDay.year}`}</Text>
+            </View>
+          )}
           <TouchableOpacity onPress={showToast}>
             <View style={styles.search}>
               <Search width={22} height={22} fill="none" />

@@ -37,7 +37,7 @@ export const latestNews = [
     image: require('../assets/images/2.png'),
     title:
       'Nepali Congress leaders set to challenge Sher Bahadur Deuba in party convention',
-    name: 'The Himalayan Times',
+    name: 'Himalayan Times',
     date: 'June 25, 2022',
     description: `\tPrime Minister Sher Bahadur Deuba of Nepal has reached out to the Indian side with the recent visit of a high-level delegation led by former Foreign Minister Prakash Sharan Mahat. The substantial deliverables of the visit are not known yet, but the emerging political situation is likely to throw up major challenges for Mr. Deuba that he may find easier to negotiate with India’s support.
       \nThe biggest challenge for Mr. Deuba is fast emerging from within his party, especially from vice-president of Nepali Congress (NC) and former Deputy Prime Minister Bimlendra Nidhi. Mr. Nidhi had been a solid supporter of Mr. Deuba in the past but it has been learnt that he has personally conveyed to Prime Minister Deuba that he will contest for the post of the president of the party in the convention scheduled next month. Accordingly, Mr. Nidhi has set up a separate unit for campaigning for the post in Thapa Gaon neighbourhood of Kathmandu.
@@ -186,7 +186,7 @@ export const latestNews = [
     image: require('../assets/images/congmaoist.jpeg'),
     title:
       'Local polls: Nepali Congress looks set to gain, and also to be saviour of Maoists',
-    name: 'The Himalayan Times',
+    name: 'Himalayan Times',
     date: 'June 25, 2022',
     description: `\tThe odds seem to be stacked in the ruling alliance’s favour, if preliminary results, which have trickled in the last two days, of Friday’s local elections are anything to go by. If the leads as of Sunday translated into victories, the Nepali Congress is set to emerge as the biggest gainer, with the CPN (Maoist Centre) managing to cling on to maintain its relevance in Nepal’s political landscape.
       \nAs of Monday morning, the Congress has won 28 local units and maintained leads in 264 while the Maoist Centre has won 21 local units and is leading in 96. The CPN-UML, which emerged as the largest party winning 294 local units in the 2017 local elections, appears set for a setback. It has won in 29 units and is leading in 165.

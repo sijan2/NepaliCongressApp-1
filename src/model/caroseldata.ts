@@ -14,7 +14,7 @@ export const carouseldata = [
     id: 2,
     image: require('../assets/images/cabMeet2.jpeg'),
     title: 'NC Central Working Committee meeting to conclude today',
-    name: 'Kathmandu Post',
+    name: 'Himalayan Times',
     date: 'June 25, 2022',
     state: 'Province 2',
     description:
@@ -25,7 +25,7 @@ export const carouseldata = [
     image: require('../assets/images/CabMeet3.jpeg'),
     title:
       'Deuba nixes call for Cabinet rejig to pre-empt disputes in ruling parties',
-    name: 'Kathmandu Post',
+    name: 'Online Khabar',
     date: 'June 25, 2022',
     state: 'Province 3',
     description: `\tOn Sunday, when the CPN (Unified Socialist), one of the partners in the ruling coalition, suddenly decided to recall four of its ministers with a view to sending a new set of leaders to replace them, it was expected to set in motion a Cabinet reshuffle, with more changes of ministerial portfolios. However, until Sunday night, it looked like Prime Minister Sher Bahadur Deuba might not implement the Unified Socialist’s decision immediately.
@@ -95,7 +95,7 @@ export const carouseldata = [
     id: 5,
     image: require('../assets/images/CabMeet5.jpeg'),
     title: 'Nepali Congress calls PP meeting for Tuesday',
-    name: 'Kathmandu Post',
+    name: 'Nepal News',
     date: 'June 22, 2022',
     state: 'Province 5',
     description:
@@ -105,7 +105,7 @@ export const carouseldata = [
     id: 6,
     image: require('../assets/images/CabMeet6.jpeg'),
     title: 'Nepali Congress CWC meeting postponed to Monday',
-    name: 'Kathmandu Post',
+    name: 'Kantipur News',
     date: 'June 25, 2022',
     state: 'Province 6',
     description: `\tThe Central Working Committee (CWC) meeting of the Nepali Congress (NC) slated for Friday has been postponed until Monday.
@@ -118,7 +118,7 @@ export const carouseldata = [
     image: require('../assets/images/CabMeet7.jpeg'),
     title:
       'Thaw in Congress party allows for February 19-22 as dates for its general convention',
-    name: 'Kathmandu Post',
+    name: 'Himalayan Times',
     date: 'June 25, 2022',
     state: 'Province 7',
     description: `\tDespite factionalism in the party leading to a fistfight between student leaders on Monday, a semblance of calm appears to have returned to the Nepali Congress.

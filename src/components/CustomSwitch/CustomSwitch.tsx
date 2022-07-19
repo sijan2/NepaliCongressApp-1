@@ -38,11 +38,10 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontWeight: getSelectionMode === 1 ? '700' : '600',
                 fontSize: 16,
                 fontFamily: 'Mont-Bold',
                 left: 2,
-                letterSpacing: 0.7,
+                letterSpacing: 0.5,
               }}>
               {option1}
             </Text>
@@ -69,7 +68,6 @@ const CustomSwitch = ({
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontWeight: getSelectionMode === 2 ? '700' : '600',
                 fontFamily: 'Mont-Bold',
                 fontSize: 16,
                 position: 'absolute',

@@ -1,16 +1,21 @@
+import React, {useContext} from 'react';
 import {StyleSheet, FlatList, View} from 'react-native';
-import React from 'react';
 import Colors from '@assets/colors/colors';
 import ListNews from '@components/ListNews/ListNews';
 import {trendingNews} from '@models/trendingData';
 
+import {AuthContext} from '@components/AuthContext/AuthContext';
+
 const TrendingNews = () => {
   const data = trendingNews;
+  const {trending} = useContext(AuthContext);
   return (
     <View style={styles.secondFlatlist}>
       <View style={styles.list}>
         <FlatList
-          data={data}
+          data={data.filter(pro => {
+            return pro.for.toLowerCase() === trending.toLowerCase();
+          })}
           keyExtractor={(show, index) => 'key' + index}
           renderItem={(show: any) => {
             return (

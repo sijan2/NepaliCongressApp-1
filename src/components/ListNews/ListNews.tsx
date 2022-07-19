@@ -72,8 +72,7 @@ const styles = StyleSheet.create({
   title: {
     color: Colors.black,
     fontSize: 13,
-    fontWeight: '700',
-    fontFamily: 'Mont-Regular',
+    fontFamily: 'Mont-Bold',
   },
   name: {
     flexDirection: 'row',
