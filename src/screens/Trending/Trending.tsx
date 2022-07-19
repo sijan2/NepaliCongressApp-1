@@ -1,14 +1,14 @@
 import {FlatList, ScrollView, StyleSheet} from 'react-native';
 import React from 'react';
+import {View} from 'react-native';
 import TrendingNews from '@components/TrendingNews/TrendingNews';
 import {trending} from '@models/trendingbutton';
 import Button from '@components/Button/Button';
-import {SafeAreaView} from 'react-native-safe-area-context';
 
 const TrendingScreen = () => {
   const data = trending;
   return (
-    <SafeAreaView>
+    <View style={styles.parent}>
       <ScrollView style={styles.mainContainer}>
         <FlatList
           data={data}
@@ -22,15 +22,17 @@ const TrendingScreen = () => {
         />
         <TrendingNews />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
 export default TrendingScreen;
 
 const styles = StyleSheet.create({
+  parent: {},
   mainContainer: {},
   container: {
-    marginRight: 10,
+    marginRight: 17,
+    marginLeft: 3,
   },
 });

@@ -13,6 +13,7 @@ import Colors from '@assets/colors/colors';
 import Search from '@assets/icons/Search.svg';
 
 import DateAndDayGenerator from '@utils/DayGen';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 const Header = () => {
   const date = new Date();
@@ -32,7 +33,7 @@ const Header = () => {
           </View>
           <TouchableOpacity>
             <View style={styles.search}>
-              <Search width={20} height={20} fill="none" />
+              <Search width={22} height={22} fill="none" />
             </View>
           </TouchableOpacity>
         </View>
@@ -44,45 +45,44 @@ const Header = () => {
 const styles = StyleSheet.create({
   header: {
     height: 80,
-    justifyContent: 'center',
-    alignItems: 'center',
     flexDirection: 'row',
     backgroundColor: Colors.white,
-    width: '100%',
   },
   view: {
-    flex: 1,
     margin: 10,
     alignItems: 'center',
     flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   Logo: {
-    flex: 1,
     margin: 10,
     alignItems: 'center',
     flexDirection: 'row',
+    width: WIDTH * 0.15,
+    height: HEIGHT * 0.055,
   },
   image: {
-    height: 40,
-    width: 60,
+    width: '100%',
+    height: '100%',
+    resizeMode: 'stretch',
   },
   texts: {
-    marginRight: 95,
+    marginLeft: 4,
+    marginRight: WIDTH * 0.22,
   },
   text: {
-    fontSize: 20,
+    fontSize: 19,
     color: Colors.black,
     fontFamily: 'Mont-Bold',
+    width: WIDTH * 0.434,
   },
   date: {
-    marginTop: 2,
-    fontSize: 14,
+    marginTop: 4,
+    fontSize: 11,
     color: Colors.gray,
     fontFamily: 'Mont-Regular',
   },
-  search: {
-    marginRight: 10,
-  },
+  search: {},
 });
 
 export default Header;

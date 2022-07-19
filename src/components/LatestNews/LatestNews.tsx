@@ -34,12 +34,9 @@ const styles = StyleSheet.create({
   first: {
     backgroundColor: Colors.offWhite,
     marginTop: 10,
-    paddingRight: 10,
+    width: '100%',
   },
-  secondFlatlist: {
-    marginTop: 10,
-    marginHorizontal: 10,
-  },
+  secondFlatlist: {},
 });
 
 export default LatestNews;

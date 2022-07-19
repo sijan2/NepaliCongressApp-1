@@ -34,11 +34,9 @@ export default TrendingNews;
 
 const styles = StyleSheet.create({
   secondFlatlist: {
-    marginTop: 10,
     backgroundColor: Colors.offWhite,
-  },
-  list: {
     marginTop: 10,
-    marginHorizontal: 10,
+    width: '100%',
   },
+  list: {},
 });

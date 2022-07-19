@@ -4,7 +4,7 @@ import React from 'react';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
 
-import {WIDTH} from '@utils/Dimensions';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
@@ -42,8 +42,8 @@ const Carousel = ({data}: any) => {
                   key={i}
                   style={{
                     opacity,
-                    height: 4,
-                    width: 20,
+                    height: HEIGHT * 0.005,
+                    width: WIDTH * 0.05,
                     backgroundColor: Colors.gray,
                     margin: 8,
                     borderRadius: 10,

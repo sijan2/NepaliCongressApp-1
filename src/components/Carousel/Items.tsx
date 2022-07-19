@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  Dimensions,
-  TouchableOpacity,
-} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React, {FC} from 'react';
 import Colors from '@assets/colors/colors';
 import {useNavigation} from '@react-navigation/native';
@@ -20,7 +13,8 @@ interface Ilist {
   item?: any;
 }
 
-const {width, height} = Dimensions.get('window');
+import {WIDTH, HEIGHT} from '@utils/Dimensions';
+
 const Carouselitem: FC<Ilist> = ({item}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
@@ -41,7 +35,7 @@ const Carouselitem: FC<Ilist> = ({item}) => {
             <Image style={styles.image} source={item.image} />
             <View style={styles.textView}>
               <Text style={styles.title}>{item.title}</Text>
-              <View style={styles.textshow}>
+              <View style={styles.detailsContainer}>
                 <View style={styles.nested}>
                   <Text style={styles.text}>{item.name}</Text>
                   <Text style={styles.text}>{item.date}</Text>
@@ -60,10 +54,11 @@ export default Carouselitem;
 
 const styles = StyleSheet.create({
   cardView: {
-    width: width - 20,
-    height: height / 3.5,
+    width: WIDTH * 0.92,
+    height: HEIGHT * 0.29,
     backgroundColor: Colors.red,
-    margin: 10,
+    marginHorizontal: WIDTH * 0.04,
+    marginVertical: WIDTH * 0.04,
     borderRadius: 20,
   },
   textView: {
@@ -72,7 +67,7 @@ const styles = StyleSheet.create({
     zIndex: 2,
     margin: 10,
     borderRadius: 10,
-    marginTop: 110,
+    marginTop: HEIGHT * 0.15,
     opacity: 0.95,
     backgroundColor: Colors.white,
     width: '95%',
@@ -87,28 +82,27 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     marginTop: 20,
     fontSize: 15,
-    lineHeight: 15,
+    lineHeight: 17,
     color: Colors.black,
     fontFamily: 'Mont-SemiBold',
   },
-  textshow: {
-    flex: 1,
-    flexDirection: 'column',
-    alignSelf: 'center',
-  },
+  detailsContainer: {},
   text: {
     flexDirection: 'row',
-    alignSelf: 'flex-end',
     fontSize: 12,
     fontWeight: '700',
     fontFamily: 'Mont-Regular',
     color: Colors.red,
-    margin: 23,
+    marginTop: 15,
     lineHeight: 13,
     marginBottom: 10,
   },
   nested: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 70,
   },
   view: {
     color: Colors.black,

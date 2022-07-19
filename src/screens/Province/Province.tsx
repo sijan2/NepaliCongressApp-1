@@ -40,7 +40,8 @@ const ProvinceScreen = () => {
 const styles = StyleSheet.create({
   mainContainer: {},
   container: {
-    marginRight: 10,
+    marginRight: 17,
+    marginLeft: 3,
   },
 });
 

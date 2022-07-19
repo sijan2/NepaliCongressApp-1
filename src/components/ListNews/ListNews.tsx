@@ -2,6 +2,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {FC} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import Colors from '@assets/colors/colors';
+import {WIDTH} from '@utils/Dimensions';
 interface list {
   id?: any;
   image?: any;
@@ -44,18 +45,19 @@ export default ListNews;
 
 const styles = StyleSheet.create({
   mainContainer: {
-    flex: 1,
     flexDirection: 'row',
-    marginHorizontal: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 10,
   },
   list: {
-    height: 70,
+    height: 82,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginTop: 10,
-    marginBottom: 10,
     marginRight: 10,
-    width: '42%',
+    width: WIDTH * 0.43,
+    marginLeft: 10,
   },
   image: {
     height: '100%',
@@ -63,27 +65,26 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   textView: {
-    marginTop: 10,
-    width: '57%',
+    width: WIDTH * 0.46,
+    marginRight: 10,
+    justifyContent: 'center',
   },
   title: {
     color: Colors.black,
-    marginTop: 5,
-    fontSize: 13,
-    fontFamily: 'Mont-Bold',
+    marginTop: 8,
+    fontSize: 14,
+    fontWeight: '700',
+    fontFamily: 'Mont-Regular',
     textAlign: 'justify',
   },
   name: {
     flexDirection: 'row',
-    textAlign: 'left',
-    marginLeft: -5,
-    marginTop: -5,
   },
   text: {
-    fontSize: 11,
+    fontSize: 10,
     fontFamily: 'Mont-Bold',
     marginTop: 20,
-    margin: 5,
     color: Colors.red,
+    marginRight: 15,
   },
 });

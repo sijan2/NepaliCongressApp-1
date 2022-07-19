@@ -2,7 +2,7 @@ import {StyleSheet, View, Image} from 'react-native';
 import React, {useState} from 'react';
 import {ScrollView} from 'react-native-gesture-handler';
 import Colors from '@assets/colors/colors';
-import ad from '@assets/images/advertisement.png';
+import advertisement from '@assets/images/advertisement.png';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import ProvinceScreen from '@screens/Province/Province';
 import TrendingScreen from '@screens/Trending/Trending';
@@ -17,7 +17,7 @@ const HomeScreen = () => {
     <View style={styles.mainContainer}>
       <ScrollView style={styles.container}>
         <View>
-          <Image style={styles.adImage} source={ad} />
+          <Image style={styles.adImage} source={advertisement} />
         </View>
         <CustomSwitch
           selectionMode={1}
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   container: {},
   adImage: {
-    height: 60,
+    height: 50,
     width: '90%',
     marginHorizontal: 20,
   },

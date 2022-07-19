@@ -17,7 +17,7 @@ const CustomSwitch = ({
   };
   return (
     <>
-      <View>
+      <View style={styles.mainContainer}>
         <View style={styles.container}>
           <TouchableOpacity
             style={{
@@ -31,10 +31,10 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontWeight: getSelectionMode === 1 ? '800' : '600',
+                fontWeight: getSelectionMode === 1 ? 'normal' : '600',
                 fontSize: 16,
-                fontFamily: 'Mont-SemiBold',
-                left: 10,
+                fontFamily: 'Mont-Bold',
+                left: 7,
               }}>
               {option1}
             </Text>
@@ -42,7 +42,7 @@ const CustomSwitch = ({
               style={{
                 marginTop: 50,
                 height: getSelectionMode === 1 ? 3 : 2,
-                width: '100%',
+                width: '120%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
                 borderRadius: 10,
@@ -54,17 +54,18 @@ const CustomSwitch = ({
               borderRadius: 10,
               justifyContent: 'center',
               alignItems: 'center',
+              marginLeft: 10,
             }}
             onPress={() => updateSwitchData(2)}>
             <Text
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontWeight: getSelectionMode === 2 ? '800' : '600',
-                fontFamily: 'Mont-SemiBold',
-                fontSize: 15,
+                fontWeight: getSelectionMode === 2 ? 'normal' : '600',
+                fontFamily: 'Mont-Bold',
+                fontSize: 16,
                 position: 'absolute',
-                left: 15,
+                left: 10,
               }}>
               {option2}
             </Text>
@@ -97,20 +98,13 @@ const CustomSwitch = ({
 export default CustomSwitch;
 
 const styles = StyleSheet.create({
+  mainContainer: {},
   container: {
     marginTop: 10,
     height: 44,
-    marginHorizontal: 20,
-    // backgroundColor: Colors.red,
+    marginHorizontal: 30,
     flexDirection: 'row',
     width: '50%',
     justifyContent: 'center',
   },
-  // touch: {
-  //     flex: 1,
-  //     backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
-  //     borderRadius: 10,
-  //     justifyContent: 'center',
-  //     alignItems: 'center',
-  // }
 });

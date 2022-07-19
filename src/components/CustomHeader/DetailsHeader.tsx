@@ -4,6 +4,7 @@ import {
   View,
   TouchableOpacity,
   SafeAreaView,
+  Alert,
 } from 'react-native';
 import React from 'react';
 import {Surface} from 'react-native-paper';
@@ -13,6 +14,8 @@ import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import Share from '@assets/icons/Share.svg';
 
+import {WIDTH, HEIGHT} from '@utils/Dimensions';
+
 const DetailsHeader = () => {
   const navigation = useNavigation();
   return (
@@ -21,7 +24,7 @@ const DetailsHeader = () => {
         <View style={styles.view}>
           <View style={styles.Logo}>
             <TouchableOpacity onPress={() => navigation.goBack()}>
-              <Back width={20} height={20} fill="none" />
+              <Back width={22} height={22} fill="none" />
             </TouchableOpacity>
           </View>
           <View style={styles.texts}>
@@ -29,12 +32,14 @@ const DetailsHeader = () => {
           </View>
           <View style={styles.search}>
             <View style={styles.icon1}>
-              <TouchableOpacity>
-                <Save width={20} height={20} fill="none" />
+              <TouchableOpacity
+                onPress={() => Alert.alert('Feature coming soon')}>
+                <Save width={22} height={22} fill="none" />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity>
-              <Share width={20} height={20} fill="none" />
+            <TouchableOpacity
+              onPress={() => Alert.alert('Feature coming soon')}>
+              <Share width={22} height={22} fill="none" />
             </TouchableOpacity>
           </View>
         </View>
@@ -45,44 +50,31 @@ const DetailsHeader = () => {
 
 const styles = StyleSheet.create({
   header: {
-    height: 60,
-    width: '100%',
-    justifyContent: 'center',
-    alignItems: 'center',
+    height: HEIGHT * 0.075,
+    width: WIDTH,
     flexDirection: 'row',
     backgroundColor: Colors.offWhite,
   },
   view: {
-    flex: 1,
-    margin: 10,
+    width: WIDTH,
     alignItems: 'center',
+    justifyContent: 'space-between',
     flexDirection: 'row',
   },
   Logo: {
-    flex: 1,
-    margin: 10,
+    marginLeft: WIDTH * 0.04722,
     alignItems: 'center',
     flexDirection: 'row',
   },
-  image: {
-    height: 50,
-    width: 80,
-  },
-  texts: {
-    marginRight: 40,
-  },
+  texts: {},
   text: {
-    fontSize: 20,
+    fontSize: 19,
     fontFamily: 'Mont-Bold',
     color: Colors.black,
   },
-  date: {
-    fontSize: 14,
-    color: Colors.gray,
-  },
   search: {
     flexDirection: 'row',
-    marginRight: 10,
+    marginRight: WIDTH * 0.04722,
   },
   icon1: {
     marginRight: 20,

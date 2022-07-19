@@ -17,7 +17,6 @@ const styles = StyleSheet.create({
   mainContainer: {
     marginTop: 10,
     flexDirection: 'row',
-    flex: 1,
     marginHorizontal: 20,
   },
   imageShow: {

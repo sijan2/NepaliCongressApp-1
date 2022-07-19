@@ -2,7 +2,7 @@ export const trendingNews = [
   {
     id: 1,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
@@ -11,7 +11,7 @@ export const trendingNews = [
   {
     id: 2,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
@@ -20,7 +20,7 @@ export const trendingNews = [
   {
     id: 3,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
@@ -29,7 +29,7 @@ export const trendingNews = [
   {
     id: 4,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
@@ -38,7 +38,7 @@ export const trendingNews = [
   {
     id: 5,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
@@ -47,7 +47,7 @@ export const trendingNews = [
   {
     id: 6,
     image: require('../assets/images/2.png'),
-    title: 'Lorem ipsum dolor sit amet dolor sit amet dolor sit amet',
+    title: 'Lorem ipsum dolor sit amet dolor sit amet',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description:
