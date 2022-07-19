@@ -1,16 +1,19 @@
+import React, {useContext} from 'react';
 import {
   StyleSheet,
   Text,
   View,
   TouchableOpacity,
   Image,
+  Alert,
   SafeAreaView,
 } from 'react-native';
-import React from 'react';
 import Logo from '@assets/images/NCLogo.png';
 import {Surface} from 'react-native-paper';
 import Colors from '@assets/colors/colors';
 import Search from '@assets/icons/Search.svg';
+
+import {AuthContext} from '@components/AuthContext/AuthContext';
 
 import DateAndDayGenerator from '@utils/DayGen';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
@@ -18,6 +21,12 @@ import {HEIGHT, WIDTH} from '@utils/Dimensions';
 const Header = () => {
   const date = new Date();
   const dateAndDay = DateAndDayGenerator(date);
+  const {color} = useContext(AuthContext);
+  const showToast = () => {
+    Alert.alert('Feature Comming Soon!', 'This Feature is unavailable', [
+      {text: 'OK', onPress: () => console.log('OK Pressed')},
+    ]);
+  };
   return (
     <SafeAreaView>
       <Surface style={styles.header}>
@@ -26,12 +35,12 @@ const Header = () => {
             <Image source={Logo} style={styles.image} />
           </View>
           <View style={styles.texts}>
-            <Text style={styles.text}>Nepali Congress</Text>
+            <Text style={[styles.text, {color}]}>Nepali Congress</Text>
             <Text style={styles.date}>{`${dateAndDay.day}, ${
               dateAndDay.month
             } ${dateAndDay.date},${' '}${dateAndDay.year}`}</Text>
           </View>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={showToast}>
             <View style={styles.search}>
               <Search width={22} height={22} fill="none" />
             </View>
@@ -68,18 +77,18 @@ const styles = StyleSheet.create({
   },
   texts: {
     marginLeft: 4,
-    marginRight: WIDTH * 0.22,
+    marginRight: WIDTH * 0.155,
   },
   text: {
-    fontSize: 19,
+    fontSize: 18,
     color: Colors.black,
     fontFamily: 'Mont-Bold',
-    width: WIDTH * 0.434,
+    width: WIDTH * 0.5,
   },
   date: {
     marginTop: 4,
     fontSize: 11,
-    color: Colors.gray,
+    color: Colors.black,
     fontFamily: 'Mont-Regular',
   },
   search: {},

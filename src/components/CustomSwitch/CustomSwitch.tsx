@@ -1,9 +1,10 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
+import React, {useState, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
 import Colors from '@assets/colors/colors';
 
+import {AuthContext} from '@components/AuthContext/AuthContext';
 const CustomSwitch = ({
   selectionMode,
   option1,
@@ -11,9 +12,15 @@ const CustomSwitch = ({
   onSelectSwitch,
 }: any) => {
   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
+  const {setColor} = useContext(AuthContext);
   const updateSwitchData = (value: any) => {
     setSelectionMode(value);
     onSelectSwitch(value);
+    if (value === 2) {
+      setColor(Colors.red);
+    } else {
+      setColor(Colors.black);
+    }
   };
   return (
     <>
@@ -31,10 +38,11 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontWeight: getSelectionMode === 1 ? 'normal' : '600',
+                fontWeight: getSelectionMode === 1 ? '700' : '600',
                 fontSize: 16,
                 fontFamily: 'Mont-Bold',
-                left: 7,
+                left: 2,
+                letterSpacing: 0.7,
               }}>
               {option1}
             </Text>
@@ -61,11 +69,12 @@ const CustomSwitch = ({
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontWeight: getSelectionMode === 2 ? 'normal' : '600',
+                fontWeight: getSelectionMode === 2 ? '700' : '600',
                 fontFamily: 'Mont-Bold',
                 fontSize: 16,
                 position: 'absolute',
                 left: 10,
+                letterSpacing: 0.5,
               }}>
               {option2}
             </Text>

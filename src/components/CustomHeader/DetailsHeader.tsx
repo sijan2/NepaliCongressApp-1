@@ -37,10 +37,12 @@ const DetailsHeader = () => {
                 <Save width={22} height={22} fill="none" />
               </TouchableOpacity>
             </View>
-            <TouchableOpacity
-              onPress={() => Alert.alert('Feature coming soon')}>
-              <Share width={22} height={22} fill="none" />
-            </TouchableOpacity>
+            <View style={styles.icon2}>
+              <TouchableOpacity
+                onPress={() => Alert.alert('Feature coming soon')}>
+                <Share width={22} height={22} fill="none" />
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
       </Surface>
@@ -54,11 +56,12 @@ const styles = StyleSheet.create({
     width: WIDTH,
     flexDirection: 'row',
     backgroundColor: Colors.offWhite,
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   view: {
     width: WIDTH,
     alignItems: 'center',
-    justifyContent: 'space-between',
     flexDirection: 'row',
   },
   Logo: {
@@ -66,7 +69,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flexDirection: 'row',
   },
-  texts: {},
+  texts: {
+    marginLeft: 0.191 * WIDTH,
+  },
   text: {
     fontSize: 19,
     fontFamily: 'Mont-Bold',
@@ -75,10 +80,12 @@ const styles = StyleSheet.create({
   search: {
     flexDirection: 'row',
     marginRight: WIDTH * 0.04722,
+    marginLeft: WIDTH * 0.09,
   },
   icon1: {
-    marginRight: 20,
+    marginRight: 15,
   },
+  icon2: {},
 });
 
 export default DetailsHeader;

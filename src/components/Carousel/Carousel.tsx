@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
 
@@ -9,6 +9,7 @@ import {HEIGHT, WIDTH} from '@utils/Dimensions';
 const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, WIDTH);
+
   if (data && data.length > 0) {
     return (
       <>

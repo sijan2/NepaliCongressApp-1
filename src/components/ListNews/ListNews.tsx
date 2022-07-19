@@ -49,12 +49,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 10,
+    marginBottom: 10,
   },
   list: {
-    height: 82,
+    height: 100,
     borderRadius: 10,
     backgroundColor: Colors.red,
-    marginTop: 10,
     marginRight: 10,
     width: WIDTH * 0.43,
     marginLeft: 10,
@@ -71,11 +71,9 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    marginTop: 8,
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '700',
     fontFamily: 'Mont-Regular',
-    textAlign: 'justify',
   },
   name: {
     flexDirection: 'row',
