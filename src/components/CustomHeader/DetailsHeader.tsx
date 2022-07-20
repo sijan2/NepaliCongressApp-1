@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -6,16 +7,22 @@ import {
   SafeAreaView,
   Alert,
 } from 'react-native';
-import React from 'react';
 import {Surface} from 'react-native-paper';
-import Colors from '@assets/colors/colors';
 import {useNavigation} from '@react-navigation/native';
+
+import Colors from '@assets/colors/colors';
 import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import Share from '@assets/icons/Share.svg';
 
 import {WIDTH, HEIGHT} from '@utils/Dimensions';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @DetailsHeader
+ **/
+
+/* A functional component that returns a view. */
 const DetailsHeader = () => {
   const navigation = useNavigation();
   return (

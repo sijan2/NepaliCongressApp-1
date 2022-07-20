@@ -10,6 +10,10 @@ interface IProps {}
  * @function @EntryNavigator
  **/
 
+/**
+ * It returns a NavigationContainer component that wraps a StackNavigator component
+ * @returns A function component that returns a NavigationContainer with a StackNavigator
+ */
 const EntryNavigator: FC<IProps> = () => {
   return (
     <NavigationContainer>

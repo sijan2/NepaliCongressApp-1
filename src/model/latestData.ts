@@ -35,8 +35,7 @@ export const latestNews = [
     id: 2,
     state: 'Province 1',
     image: require('../assets/images/2.png'),
-    title:
-      'Nepali Congress leaders set to challenge Sher Bahadur Deuba in party convention',
+    title: 'Nepali Congress leaders set to challenge Sher Bahadur Deuba',
     name: 'Himalayan Times',
     date: 'June 25, 2022',
     description: `\tPrime Minister Sher Bahadur Deuba of Nepal has reached out to the Indian side with the recent visit of a high-level delegation led by former Foreign Minister Prakash Sharan Mahat. The substantial deliverables of the visit are not known yet, but the emerging political situation is likely to throw up major challenges for Mr. Deuba that he may find easier to negotiate with India’s support.
@@ -53,10 +52,10 @@ export const latestNews = [
     id: 3,
     state: 'Province 1',
     image: require('../assets/images/cabMeet1.jpeg'),
-    title: 'Nepali Congress president Deuba appointed as prime minister',
+    title: 'Sher Bahadur Deuba appointed as prime minister',
     name: 'Nepal News',
     date: 'June 25, 2022',
-    description: `\tNepali Congress President Sher Bahadur Deuba was appointed prime minister of the country on Tuesday within a deadline set by the Supreme Court.
+    description: `\tSher Bahadur Deuba was appointed prime minister of the country on Tuesday within a deadline set by the Supreme Court.
     \n"The president has appointed Nepali Congress President Sher Bahadur Deuba as the prime minister" under the Constitution of Nepal, Bhesh Raj Adhikari, chief personal secretary to Nepali President Bidya Devi Bhandari, told Xinhua.
     \n"He will be administered the oath of office and secrecy at 6"00 p.m. today (Tuesday)," said Adhikari.
     \nIn its Monday verdict ordering the dissolved House of Representatives to be restored, the Supreme Court also directed Bhandari to appoint Deuba as the new premier by 5:00 p.m. Tuesday local time.
@@ -72,8 +71,7 @@ export const latestNews = [
     id: 4,
     state: 'Province 2',
     image: require('../assets/images/cabMeet2.jpeg'),
-    title:
-      'Congress at a crossroads— party must hold convention by September, but how?',
+    title: 'Congress must hold convention by September, but how?',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description: `\tThe Nepali Congress, a key political force in the country, seems to be all over the place. For more than the last three years, it faced criticism for failing to stand up to KP Sharma Oli’s poor governance and not doing enough to hold the government to account.
@@ -126,8 +124,7 @@ export const latestNews = [
     id: 5,
     state: 'Province 2',
     image: require('../assets/images/CabMeet4.jpeg'),
-    title:
-      'Excessive focus on Bharatpur mayoral race may cost Nepali Congress dearly',
+    title: 'Focus on Bharatpur mayor race may cost Nepali Congress',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description: `\tThe ruling coalition that is contesting local elections under an alliance is holding a campaign rally in Bharatpur on Thursday. Prime Minister Sher Bahadur Deuba along with CPN (Maoist Centre) chair Pushpa Kamal Dahal and other leaders of the coalition are set to address the rally.
@@ -169,8 +166,7 @@ export const latestNews = [
     id: 6,
     state: 'Province 2',
     image: require('../assets/images/election.jpeg'),
-    title:
-      'Nepali Congress election manifesto says no view towers, no nepotism',
+    title: 'Nepali Congress election manifesto says no view towers',
     name: 'My Republic',
     date: 'June 25, 2022',
     description: `\tPrime Minister Sher Bahadur Deuba’s Nepali Congress party has made public its manifesto for the local elections scheduled to be held next month.
@@ -184,8 +180,7 @@ export const latestNews = [
     id: 7,
     state: 'Province 3',
     image: require('../assets/images/congmaoist.jpeg'),
-    title:
-      'Local polls: Nepali Congress looks set to gain, and also to be saviour of Maoists',
+    title: 'Local polls: Nepali Congress looks set to gain',
     name: 'Himalayan Times',
     date: 'June 25, 2022',
     description: `\tThe odds seem to be stacked in the ruling alliance’s favour, if preliminary results, which have trickled in the last two days, of Friday’s local elections are anything to go by. If the leads as of Sunday translated into victories, the Nepali Congress is set to emerge as the biggest gainer, with the CPN (Maoist Centre) managing to cling on to maintain its relevance in Nepal’s political landscape.
@@ -219,8 +214,7 @@ export const latestNews = [
     id: 8,
     state: 'Province 3',
     image: require('../assets/images/congvoting.jpeg'),
-    title:
-      'Nepali Congress convention: Voting for new leadership to begin 8 am Tuesday',
+    title: 'Nepali Congress convention: Voting for new leadership',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description: `\tThe Nepali Congress is holding a vote for the new leadership of the party for the next four years on Tuesday morning as per the schedule of the party’s ongoing 14th general convention.
@@ -385,8 +379,7 @@ export const latestNews = [
     id: 18,
     state: 'Province 6',
     image: require('../assets/images/koirala.jpeg'),
-    title:
-      'Nepali Congress withholds new active membership in disputed constituencies',
+    title: 'Nepali Congress withholds new active membership',
     name: 'Himalayan Times',
     date: 'June 25, 2022',
     description:
@@ -397,8 +390,7 @@ export const latestNews = [
     state: 'Province 7',
     image: require('../assets/images/sherbd.jpeg'),
     name: 'Nepal News',
-    title:
-      'Sher Bahadur Deuba: A journey from Dadeldhura to centre of national politics',
+    title: 'A journey from Dadeldhura to centre of national politics',
     date: 'June 25, 2022',
     description: `\tThis is going to be Nepali Congress leader Sher Bahadur Deuba’s third stint as Prime Minister.
     \nThe 69-year-old has been in Congress politics for about 50 years. Deuba knows president of the largest political party is the prime minister in waiting, since the Maoists and the NC reached a power-sharing deal.
@@ -424,8 +416,7 @@ export const latestNews = [
     id: 20,
     state: 'Province 7',
     image: require('../assets/images/reelect.jpeg'),
-    title:
-      'Re-election for party presidency, now only Deuba and Koirala in the fray',
+    title: 'Re-election for party presidency',
     name: 'My Republic',
     date: 'June 25, 2022',
     description: `\tA re-election is to be held for the post of party president at the 14th General Convention of Nepali Congress (NC) with none of the five candidates getting a majority in the first round.

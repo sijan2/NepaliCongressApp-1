@@ -10,6 +10,12 @@ import {AuthContext} from '@components/AuthContext/AuthContext';
 
 import Colors from '@assets/colors/colors';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @LatestNews
+ **/
+
+/* A functional component that is returning a view with a carousel and a flatlist. */
 const LatestNews = () => {
   const data = latestNews;
   const {myProvince} = useContext(AuthContext);

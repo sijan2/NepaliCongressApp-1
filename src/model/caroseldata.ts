@@ -1,3 +1,5 @@
+/* This code is creating an array of objects. Each object has a unique id, image, title, name,
+date, state, and description. */
 export const carouseldata = [
   {
     id: 1,
@@ -117,7 +119,7 @@ export const carouseldata = [
     id: 7,
     image: require('../assets/images/CabMeet7.jpeg'),
     title:
-      'Thaw in Congress party allows for February 19-22 as dates for its general convention',
+      'Thaw in Congress party allows for February 19-22 as dates for convention',
     name: 'Himalayan Times',
     date: 'June 25, 2022',
     state: 'Province 7',

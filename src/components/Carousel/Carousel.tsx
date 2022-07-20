@@ -6,6 +6,12 @@ import Colors from '@assets/colors/colors';
 
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Carousel
+ **/
+
+/* A functional component that takes data as props and returns a carousel. */
 const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, WIDTH);

@@ -2,11 +2,23 @@ import React, {FC, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Colors from '@assets/colors/colors';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @CustomButton
+ **/
+
 import {AuthContext} from '@components/AuthContext/AuthContext';
 interface button {
   onPress?: () => void;
   text?: string;
 }
+/**
+ * A function that returns a view with a button that when pressed sets the province to the text passed
+ * in.
+ * @param  - FC<button> = ({text}) => {
+ * @returns A custom button component that takes in a text prop and returns a button with the text prop
+ * as the text.
+ */
 const CustomButton: FC<button> = ({text}) => {
   const {setMyProvince} = useContext(AuthContext);
   return (

@@ -1,12 +1,23 @@
 import React, {FC, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Colors from '@assets/colors/colors';
 
+import Colors from '@assets/colors/colors';
 import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @TrendingButton
+ **/
 interface button {
   onPress?: () => void;
   text?: string;
 }
+/**
+ * This function is a React functional component that takes in a button prop and returns a
+ * TouchableOpacity component that when pressed sets the trending state to the text prop
+ * @param  - FC<button> = ({text}) => {
+ * @returns A button that is being returned.
+ */
 const TrendingButton: FC<button> = ({text}) => {
   const {setTrending} = useContext(AuthContext);
   return (

@@ -7,6 +7,15 @@ import {trending} from '@models/trendingbutton';
 import Button from '@components/Button/TrendingButton';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Trending
+ **/
+/**
+ * It renders a horizontal scrollable list of buttons and a list of trending news
+ * @returns A view with a scrollview and a flatlist
+ */
 const TrendingScreen = () => {
   const {setTrending} = useContext(AuthContext);
   const data = trending;

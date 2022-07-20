@@ -15,6 +15,12 @@ interface IProps {}
 
 const StackNav = createNativeStackNavigator();
 
+/**
+ * We are using the useState hook to set the showSplashScreen state to true. We are using the useEffect
+ * hook to set the showSplashScreen state to false after 2 seconds. We are using the StackNavigator
+ * component to render the SplashScreen component if the showSplashScreen state is true
+ * @returns A StackNavigator component
+ */
 const StackNavigator: FC<IProps> = () => {
   const [showSplashScreen, setshowSplashScreen] = useState(true);
 

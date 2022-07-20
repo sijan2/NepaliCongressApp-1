@@ -1,3 +1,4 @@
+/* Scaling the font size based on the screen size. */
 /* The above code is scaling the font size based on the screen size. */
 import {Dimensions, Platform, PixelRatio} from 'react-native';
 export const WIDTH: number = Dimensions.get('window').width;

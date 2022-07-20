@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Image,
   SafeAreaView,
@@ -6,9 +7,19 @@ import {
   Text,
   View,
 } from 'react-native';
-import React from 'react';
 import DetailHeader from '@components/CustomHeader/DetailsHeader';
 import Colors from '@assets/colors/colors';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @DetailsScreen
+ **/
+
+/**
+ * The DetailScreen function is a functional component that returns a SafeAreaView
+ * @param {any}  -
+ * @returns A function component that returns a view with a scrollview
+ */
 const DetailScreen = ({route}: any) => {
   return (
     <>

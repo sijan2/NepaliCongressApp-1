@@ -1,8 +1,15 @@
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React, {FC} from 'react';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
+
 import Colors from '@assets/colors/colors';
 import {WIDTH} from '@utils/Dimensions';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @ListNews
+ **/
+
 interface list {
   id?: any;
   image?: any;
@@ -11,6 +18,12 @@ interface list {
   date?: string;
   description?: string;
 }
+/**
+ * The ListNews function is a functional component that takes in an object of type list as a parameter
+ * and returns a TouchableOpacity component that navigates to the DetailScreen when pressed
+ * @param  - id, image, title, name, date, description
+ * @returns A TouchableOpacity component that navigates to the DetailScreen when pressed.
+ */
 const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {

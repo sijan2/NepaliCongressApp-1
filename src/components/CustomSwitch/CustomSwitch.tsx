@@ -2,9 +2,17 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+
 import Colors from '@assets/colors/colors';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @CustomSwitch
+ **/
+
+/* A custom switch component. */
 const CustomSwitch = ({
   selectionMode,
   option1,
@@ -71,7 +79,7 @@ const CustomSwitch = ({
                 fontFamily: 'Mont-Bold',
                 fontSize: 16,
                 position: 'absolute',
-                left: 10,
+                left: 8,
                 letterSpacing: 0.5,
               }}>
               {option2}
@@ -102,8 +110,6 @@ const CustomSwitch = ({
   );
 };
 
-export default CustomSwitch;
-
 const styles = StyleSheet.create({
   mainContainer: {},
   container: {
@@ -115,3 +121,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
+export default CustomSwitch;

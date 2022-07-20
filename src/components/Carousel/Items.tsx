@@ -3,6 +3,10 @@ import React, {FC} from 'react';
 import Colors from '@assets/colors/colors';
 import {useNavigation} from '@react-navigation/native';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Items
+ **/
 interface Ilist {
   id?: any;
   image?: any;
@@ -16,6 +20,12 @@ interface Ilist {
 
 import {WIDTH, HEIGHT} from '@utils/Dimensions';
 
+/**
+ * The Carouselitem function is a functional component that takes in an item as a prop and returns a
+ * TouchableOpacity component that navigates to the DetailScreen when pressed
+ * @param  - FC<Ilist> = ({item}) => {
+ * @returns A TouchableOpacity component that navigates to the DetailScreen when pressed.
+ */
 const Carouselitem: FC<Ilist> = ({item}) => {
   const navigation: any = useNavigation();
   const handleOnPress = () => {
@@ -50,8 +60,6 @@ const Carouselitem: FC<Ilist> = ({item}) => {
     </>
   );
 };
-
-export default Carouselitem;
 
 const styles = StyleSheet.create({
   cardView: {
@@ -106,3 +114,5 @@ const styles = StyleSheet.create({
     marginRight: 55,
   },
 });
+
+export default Carouselitem;

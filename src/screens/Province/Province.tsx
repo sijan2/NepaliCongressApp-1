@@ -8,6 +8,16 @@ import LatestNews from '@components/LatestNews/LatestNews';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Province
+ **/
+
+/**
+ * ProvinceScreen is a function that returns a FlatList of buttons that when pressed, sets the province
+ * in the AuthContext
+ * @returns A function that returns a component
+ */
 const ProvinceScreen = () => {
   const {setMyProvince} = useContext(AuthContext);
   const data = province;

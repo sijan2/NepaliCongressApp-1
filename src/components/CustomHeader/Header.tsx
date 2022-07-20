@@ -8,8 +8,9 @@ import {
   Alert,
   SafeAreaView,
 } from 'react-native';
-import Logo from '@assets/images/NCLogo.png';
 import {Surface} from 'react-native-paper';
+
+import Logo from '@assets/images/NCLogo.png';
 import Colors from '@assets/colors/colors';
 import Search from '@assets/icons/Search.svg';
 
@@ -18,6 +19,12 @@ import {AuthContext} from '@components/AuthContext/AuthContext';
 import DateAndDayGenerator from '@utils/DayGen';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Header
+ **/
+
+/* A functional component that returns a view. */
 const Header = () => {
   const date = new Date();
   const dateAndDay = DateAndDayGenerator(date);

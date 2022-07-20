@@ -1,9 +1,11 @@
+/* This code is creating an array of objects. Each object has a key and a value. The key is the
+name of the property and the value is the value of the property. */
 export const trendingNews = [
   {
     id: 1,
     image: require('../assets/images/sbdeuba.jpeg'),
     for: 'Sher Bd. Deuba',
-    title: 'Sher Bahadur Deuba sworn in as Nepal’s Prime Minister for 5th time',
+    title: 'Deuba sworn in as Nepal’s Prime Minister for 5th time',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     description: `\tSher Bahadur Deuba took oath as the Prime Minister of Nepal on Tuesday, a day after the country’s Supreme Court overturned the dissolution of the House of Representatives and said that Deuba must be appointed PM.
@@ -27,8 +29,7 @@ export const trendingNews = [
   {
     id: 3,
     image: require('../assets/images/sb1.jpeg'),
-    title:
-      'Setback for KP Oli as Supreme Court directs president to appoint Sher Bahadur Deuba as PM',
+    title: 'Setback for KP Oli as SC directs president to appoint Deuba as PM',
     name: 'Online Khabar',
     for: 'Sher Bd. Deuba',
     date: 'June 25, 2022',
@@ -43,7 +44,7 @@ export const trendingNews = [
   {
     id: 4,
     image: require('../assets/images/ramchandra.jpeg'),
-    title: 'Congress leader Ram Chandra Poudel to receive Japanese honours',
+    title: 'Ram Chandra Poudel to receive Japanese honours',
     name: 'Kathmandu Post',
     for: 'Ramchandra Poudel',
     date: 'June 25, 2022',
@@ -84,7 +85,7 @@ export const trendingNews = [
   {
     id: 7,
     image: require('../assets/images/gagan.jpeg'),
-    title: 'PM must prove his non-involvement in Baskota case: Gagan Thapa',
+    title: 'PM must prove his non-involvement in Baskota case',
     name: 'Kathmandu Post',
     date: 'June 25, 2022',
     for: 'Gagan Thapa',
@@ -99,7 +100,7 @@ export const trendingNews = [
   {
     id: 8,
     image: require('../assets/images/gagan2.jpeg'),
-    title: 'New budget to address the trade deficit: Gagan Thapa',
+    title: 'New budget to address the trade deficit',
     name: 'Online Khabar',
     date: 'June 25, 2022',
     for: 'Gagan Thapa',
@@ -111,8 +112,7 @@ export const trendingNews = [
   {
     id: 9,
     image: require('../assets/images/gagan3.jpeg'),
-    title:
-      'Bill related to Constitutional Council will be withdrawn: Gagan Thapa',
+    title: 'Bill related to Constitutional Council will be withdrawn',
     name: 'My Republic',
     for: 'Gagan Thapa',
     date: 'June 25, 2022',
@@ -136,8 +136,7 @@ export const trendingNews = [
   {
     id: 10,
     image: require('../assets/images/sher3.jpeg'),
-    title:
-      'Nepal SC orders to appoint Sher Bahadur Deuba as PM within next 28 hours',
+    title: 'Nepal SC orders to appoint Deuba as PM within next 28 hours',
     name: 'My Republic',
     for: 'Sher Bd. Deuba',
     date: 'June 25, 2022',
@@ -153,7 +152,7 @@ export const trendingNews = [
   {
     id: 11,
     image: require('../assets/images/sher4.jpeg'),
-    title: 'Nepal PM Sher Bahadur Deuba wins vote of confidence in Parliament',
+    title: 'Nepal PM Deuba wins vote of confidence in Parliament',
     name: 'Online Khabar',
     for: 'Sher Bd. Deuba',
     date: 'June 25, 2022',
@@ -181,8 +180,7 @@ export const trendingNews = [
   {
     id: 13,
     image: require('../assets/images/gagan5.jpeg'),
-    title:
-      'Lawmaker Gagan Thapa lashes out at PM Oli for his ‘double personality’',
+    title: 'Gagan Thapa lashes out at PM Oli for his ‘double personality’',
     name: 'Kathmandu Post',
     for: 'Gagan Thapa',
     date: 'June 25, 2022',
