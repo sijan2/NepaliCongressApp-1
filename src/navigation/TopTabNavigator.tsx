@@ -13,6 +13,7 @@ interface IProps {}
  * @function @TopTabNavigator
  **/
 
+/* Creating a tab navigator. */
 const MaterialTab = createMaterialTopTabNavigator();
 const TopTabNavigator: FC<IProps> = () => {
   return (

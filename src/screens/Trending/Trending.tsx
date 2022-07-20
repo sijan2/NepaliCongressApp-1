@@ -1,36 +1,57 @@
+/* eslint-disable react-native/no-inline-styles */
+import React, {useContext, useRef, useState} from 'react';
 import {FlatList, ScrollView, StyleSheet} from 'react-native';
-import React from 'react';
+import {View} from 'react-native';
 import TrendingNews from '@components/TrendingNews/TrendingNews';
 import {trending} from '@models/trendingbutton';
-import Button from '@components/Button/Button';
-import {SafeAreaView} from 'react-native-safe-area-context';
+import Button from '@components/Button/TrendingButton';
 
+import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Trending
+ **/
+/**
+ * It renders a horizontal scrollable list of buttons and a list of trending news
+ * @returns A view with a scrollview and a flatlist
+ */
 const TrendingScreen = () => {
+  const {setTrending} = useContext(AuthContext);
   const data = trending;
+  const ref = useRef<FlatList>(null);
+  const [index] = useState(0);
   return (
-    <SafeAreaView>
+    <View style={styles.parent}>
       <ScrollView style={styles.mainContainer}>
         <FlatList
+          ref={ref}
           data={data}
-          keyExtractor={(item, index) => 'key' + index}
+          initialScrollIndex={index}
+          contentContainerStyle={{
+            paddingHorizontal: 0,
+          }}
+          keyExtractor={(item, indexes) => 'key' + indexes}
           showsHorizontalScrollIndicator={false}
           horizontal
           renderItem={({item}) => {
-            return <Button text={item.name} onPress={() => <TrendingNews />} />;
+            return <Button text={item.name} onPress={setTrending} />;
           }}
           style={styles.container}
         />
         <TrendingNews />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 };
 
 export default TrendingScreen;
 
 const styles = StyleSheet.create({
+  parent: {},
   mainContainer: {},
   container: {
-    marginRight: 10,
+    marginRight: 17,
+    marginLeft: 3,
   },
 });

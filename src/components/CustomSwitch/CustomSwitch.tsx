@@ -1,9 +1,18 @@
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable react-native/no-inline-styles */
+import React, {useState, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
+
 import Colors from '@assets/colors/colors';
 
+import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @CustomSwitch
+ **/
+
+/* A custom switch component. */
 const CustomSwitch = ({
   selectionMode,
   option1,
@@ -11,13 +20,19 @@ const CustomSwitch = ({
   onSelectSwitch,
 }: any) => {
   const [getSelectionMode, setSelectionMode] = useState(selectionMode);
+  const {setColor} = useContext(AuthContext);
   const updateSwitchData = (value: any) => {
     setSelectionMode(value);
     onSelectSwitch(value);
+    if (value === 2) {
+      setColor(Colors.red);
+    } else {
+      setColor(Colors.black);
+    }
   };
   return (
     <>
-      <View>
+      <View style={styles.mainContainer}>
         <View style={styles.container}>
           <TouchableOpacity
             style={{
@@ -31,10 +46,10 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontWeight: getSelectionMode === 1 ? '800' : '600',
                 fontSize: 16,
-                fontFamily: 'Mont-SemiBold',
-                left: 10,
+                fontFamily: 'Mont-Bold',
+                left: 2,
+                letterSpacing: 0.5,
               }}>
               {option1}
             </Text>
@@ -42,7 +57,7 @@ const CustomSwitch = ({
               style={{
                 marginTop: 50,
                 height: getSelectionMode === 1 ? 3 : 2,
-                width: '100%',
+                width: '120%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
                 borderRadius: 10,
@@ -54,17 +69,18 @@ const CustomSwitch = ({
               borderRadius: 10,
               justifyContent: 'center',
               alignItems: 'center',
+              marginLeft: 10,
             }}
             onPress={() => updateSwitchData(2)}>
             <Text
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontWeight: getSelectionMode === 2 ? '800' : '600',
-                fontFamily: 'Mont-SemiBold',
-                fontSize: 15,
+                fontFamily: 'Mont-Bold',
+                fontSize: 16,
                 position: 'absolute',
-                left: 15,
+                left: 8,
+                letterSpacing: 0.5,
               }}>
               {option2}
             </Text>
@@ -94,23 +110,16 @@ const CustomSwitch = ({
   );
 };
 
-export default CustomSwitch;
-
 const styles = StyleSheet.create({
+  mainContainer: {},
   container: {
     marginTop: 10,
     height: 44,
-    marginHorizontal: 20,
-    // backgroundColor: Colors.red,
+    marginHorizontal: 30,
     flexDirection: 'row',
     width: '50%',
     justifyContent: 'center',
   },
-  // touch: {
-  //     flex: 1,
-  //     backgroundColor: getSelectionMode === 1 ? Colors.red : Colors.grey,
-  //     borderRadius: 10,
-  //     justifyContent: 'center',
-  //     alignItems: 'center',
-  // }
 });
+
+export default CustomSwitch;

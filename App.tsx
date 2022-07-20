@@ -8,6 +8,11 @@ interface IProps {}
  * @function @App
  **/
 
+/**
+ * `const App: FC<IProps> = () => { return <Entry />; };`
+ *
+ * The `App` function is a React component that returns the `Entry` component
+ */
 const App: FC<IProps> = () => {
   return <Entry />;
 };

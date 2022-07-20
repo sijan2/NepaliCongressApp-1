@@ -1,35 +1,57 @@
-import {Image, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {
+  Image,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
 import DetailHeader from '@components/CustomHeader/DetailsHeader';
 import Colors from '@assets/colors/colors';
-import CustomFooter from '@components/CustomFooter/CustomFooter';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @DetailsScreen
+ **/
+
+/**
+ * The DetailScreen function is a functional component that returns a SafeAreaView
+ * @param {any}  -
+ * @returns A function component that returns a view with a scrollview
+ */
 const DetailScreen = ({route}: any) => {
   return (
     <>
-      <ScrollView style={styles.scroll}>
-        <View>
-          <DetailHeader />
-          <View style={styles.mainContainer}>
-            <View style={styles.container}>
-              <Text style={styles.textTitle}>{route.params?.title}</Text>
-              <View style={styles.rowData}>
-                <Text style={styles.text1}>{route.params?.name}</Text>
-                <Text style={styles.text2}>{route.params?.date}</Text>
+      <SafeAreaView style={styles.parent}>
+        <DetailHeader />
+        <ScrollView style={styles.scroll}>
+          <View>
+            <View style={styles.mainContainer}>
+              <View style={styles.container}>
+                <Text style={styles.textTitle}>{route.params?.title}</Text>
+                <View style={styles.rowData}>
+                  <Text style={styles.text1}>{route.params?.name}</Text>
+                  <Text style={styles.text2}>{route.params?.date}</Text>
+                </View>
+                <View>
+                  <Image style={styles.image} source={route.params?.image} />
+                </View>
+                <Text style={styles.details}>{route.params?.description}</Text>
               </View>
-              <View>
-                <Image style={styles.image} source={route.params?.image} />
-              </View>
-              <Text style={styles.details}>{route.params?.description}</Text>
             </View>
           </View>
-        </View>
-      </ScrollView>
-      <CustomFooter />
+        </ScrollView>
+      </SafeAreaView>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  parent: {
+    backgroundColor: Colors.white,
+    flex: 1,
+  },
   scroll: {
     backgroundColor: Colors.white,
     height: '100%',
@@ -42,9 +64,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   textTitle: {
-    marginTop: 20,
-    fontSize: 20,
-    fontFamily: 'Mont-SemiBold',
+    marginTop: 15,
+    fontSize: 19,
+    lineHeight: 28,
+    fontFamily: 'Mont-Regular',
+    fontWeight: '600',
     color: Colors.black,
   },
   rowData: {
@@ -72,8 +96,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontFamily: 'Mont-Regular',
     color: Colors.offBlack,
-    fontSize: 12,
-    lineHeight: 15,
+    fontSize: 14,
+    lineHeight: 17,
     textAlign: 'justify',
     fontWeight: '500',
   },

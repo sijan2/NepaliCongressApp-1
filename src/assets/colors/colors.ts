@@ -1,3 +1,4 @@
+/* Exporting the object as the default export. */
 export default {
   red: '#DA1F27',
   black: '#323232',

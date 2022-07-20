@@ -9,6 +9,12 @@ import SavedScreen from '@screens/Saved/Saved';
 
 const Tab = createBottomTabNavigator();
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @TabNavigator
+ **/
+
+/* A function that returns a view. */
 const TabNavigator = () => {
   return (
     <>

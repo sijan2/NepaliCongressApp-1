@@ -1,3 +1,4 @@
+/* Exporting the array of objects. */
 export const trending = [
   {
     id: 1,
@@ -9,10 +10,6 @@ export const trending = [
   },
   {
     id: 3,
-    name: 'Sher Bd. Deuba',
-  },
-  {
-    id: 4,
-    name: 'Gagan Thapa',
+    name: 'Ramchandra Poudel',
   },
 ];

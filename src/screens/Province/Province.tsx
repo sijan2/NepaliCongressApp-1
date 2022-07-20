@@ -1,14 +1,25 @@
 /* eslint-disable react-native/no-inline-styles */
+import React, {useRef, useState, useContext} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
-import React, {useRef, useState} from 'react';
 import {province} from '@models/provience';
 import Button from '@components/Button/Button';
 import {FlatList} from 'react-native-gesture-handler';
-import Carouselitem from '@components/Carousel/Carousel';
-import {carouseldata} from '@models/caroseldata';
 import LatestNews from '@components/LatestNews/LatestNews';
 
+import {AuthContext} from '@components/AuthContext/AuthContext';
+
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Province
+ **/
+
+/**
+ * ProvinceScreen is a function that returns a FlatList of buttons that when pressed, sets the province
+ * in the AuthContext
+ * @returns A function that returns a component
+ */
 const ProvinceScreen = () => {
+  const {setMyProvince} = useContext(AuthContext);
   const data = province;
   const ref = useRef<FlatList>(null);
   const [index] = useState(0);
@@ -26,11 +37,10 @@ const ProvinceScreen = () => {
           showsHorizontalScrollIndicator={false}
           horizontal
           renderItem={({item}) => {
-            return <Button text={item.name} onPress={() => <LatestNews />} />;
+            return <Button text={item.name} onPress={setMyProvince} />;
           }}
           style={styles.container}
         />
-        <Carouselitem data={carouseldata} />
         <LatestNews />
       </ScrollView>
     </SafeAreaView>
@@ -40,7 +50,8 @@ const ProvinceScreen = () => {
 const styles = StyleSheet.create({
   mainContainer: {},
   container: {
-    marginRight: 10,
+    marginRight: 17,
+    marginLeft: 3,
   },
 });
 

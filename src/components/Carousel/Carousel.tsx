@@ -1,14 +1,21 @@
 /* eslint-disable react-native/no-inline-styles */
-import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import React from 'react';
+import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
 
-import {WIDTH} from '@utils/Dimensions';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
+/**
+ * @author Nitesh Raj Khanal
+ * @function @Carousel
+ **/
+
+/* A functional component that takes data as props and returns a carousel. */
 const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, WIDTH);
+
   if (data && data.length > 0) {
     return (
       <>
@@ -42,8 +49,8 @@ const Carousel = ({data}: any) => {
                   key={i}
                   style={{
                     opacity,
-                    height: 4,
-                    width: 20,
+                    height: HEIGHT * 0.005,
+                    width: WIDTH * 0.05,
                     backgroundColor: Colors.gray,
                     margin: 8,
                     borderRadius: 10,
