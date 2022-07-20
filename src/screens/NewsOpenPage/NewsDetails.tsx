@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import DetailHeader from '@components/CustomHeader/DetailsHeader';
 import Colors from '@assets/colors/colors';
+import scaleFontSize from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -65,7 +66,7 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     marginTop: 15,
-    fontSize: 19,
+    fontSize: scaleFontSize(19),
     lineHeight: 28,
     fontFamily: 'Mont-Regular',
     fontWeight: '600',
@@ -77,13 +78,13 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text1: {
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     marginRight: 20,
     fontFamily: 'Mont-Regular',
     color: Colors.red,
   },
   text2: {
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     fontFamily: 'Mont-Regular',
     color: Colors.red,
   },
@@ -96,8 +97,8 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontFamily: 'Mont-Regular',
     color: Colors.offBlack,
-    fontSize: 14,
-    lineHeight: 17,
+    fontSize: scaleFontSize(14),
+    lineHeight: 19,
     textAlign: 'justify',
     fontWeight: '500',
   },

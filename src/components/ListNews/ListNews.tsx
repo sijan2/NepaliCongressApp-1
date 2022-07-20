@@ -3,7 +3,7 @@ import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import Colors from '@assets/colors/colors';
-import {WIDTH} from '@utils/Dimensions';
+import scaleFontSize, {WIDTH} from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: 13,
+    fontSize: scaleFontSize(13),
     fontFamily: 'Mont-Bold',
     lineHeight: 16,
     letterSpacing: 0.2,
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   text: {
-    fontSize: 10,
+    fontSize: scaleFontSize(10),
     fontFamily: 'Mont-Bold',
     marginTop: 20,
     color: Colors.red,

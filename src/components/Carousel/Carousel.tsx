@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import Carouselitem from './Items';
 import Colors from '@assets/colors/colors';
 
-import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 10,
-    fontSize: 18,
+    fontSize: scaleFontSize(18),
     fontFamily: 'Mont-Bold',
     color: Colors.black,
   },

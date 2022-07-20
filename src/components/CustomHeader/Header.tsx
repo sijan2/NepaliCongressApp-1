@@ -17,7 +17,7 @@ import Search from '@assets/icons/Search.svg';
 import {AuthContext} from '@components/AuthContext/AuthContext';
 
 import DateAndDayGenerator from '@utils/DayGen';
-import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -96,14 +96,14 @@ const styles = StyleSheet.create({
     marginRight: WIDTH * 0.155,
   },
   text: {
-    fontSize: 18,
+    fontSize: scaleFontSize(18),
     color: Colors.black,
     fontFamily: 'Mont-Bold',
     width: WIDTH * 0.5,
   },
   date: {
     marginTop: 4,
-    fontSize: 11,
+    fontSize: scaleFontSize(11),
     color: Colors.black,
     fontFamily: 'Mont-Regular',
   },
