@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    height: 100,
+    height: 95,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginRight: 10,
@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
   text: {
     fontSize: scaleFontSize(10),
     fontFamily: 'Mont-Bold',
+    textAlign: 'justify',
     marginTop: 20,
     color: Colors.red,
     marginRight: 15,

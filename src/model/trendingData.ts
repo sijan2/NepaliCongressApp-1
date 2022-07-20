@@ -1,5 +1,9 @@
 /* This code is creating an array of objects. Each object has a key and a value. The key is the
 name of the property and the value is the value of the property. */
+import DateAndDayGenerator from '@utils/DayGen';
+
+const date = new Date();
+const dateAndDay = DateAndDayGenerator(date);
 export const trendingNews = [
   {
     id: 1,
@@ -7,7 +11,7 @@ export const trendingNews = [
     for: 'Sher Bd. Deuba',
     title: 'Deuba sworn in as Nepal’s Prime Minister for 5th time',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tSher Bahadur Deuba took oath as the Prime Minister of Nepal on Tuesday, a day after the country’s Supreme Court overturned the dissolution of the House of Representatives and said that Deuba must be appointed PM.
     \nPresident Bidya Devi Bhandari administered the oath of office to Deuba at a ceremony held at her office on Tuesday evening. Deuba, 75, president of the Nepali Congress, was sworn in as Prime Minister for the fifth time.
     \nHowever, the swearing in ceremony was delayed by hours due to a dispute between Deuba and the President’s office regarding the content of the letter of appointment.
@@ -20,7 +24,7 @@ export const trendingNews = [
     title: 'Deuba seeks stimulus package for media',
     for: 'Sher Bd. Deuba',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress President Sher Bahadur Deuba today urged the government to announce special relief package for media houses and journalists.
       \nStating that the Nepali media sector was reeling under acute financial crisis in the wake of the COVId-19 pandemic, he underscored the urgent need for the government to come up with an economic stimulus package.
       \n“The COVId-19 pandemic has not only resulted in zero revenue collection for media houses but also rendered some journalists jobless. Therefore, relief is needed from the government to overcome the adverse situation created by the novel coronavirus,” Deuba said in a press release issued on the occasion of World Press Freedom day.
@@ -32,7 +36,7 @@ export const trendingNews = [
     title: 'Setback for KP Oli as SC directs president to appoint Deuba as PM',
     name: 'Online Khabar',
     for: 'Sher Bd. Deuba',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Supreme Court of Nepal on Monday restored the dissolved House of Representatives and ordered President Bidya Devi Bhandari to appoint Nepali Congress chief Sher Bahadur Deuba as the country’s prime minister by Tuesday, The Kathmandu Post reported. Deuba will have to win a vote of confidence within a month of his appointment.
     \nThis the second time in five months that the court has reinstated the House. It had taken a similar action in February as well.
     \nBhandari had dissolved the Parliament on May 21 and ordered fresh elections in six months. The decision was based on the recommendations of caretaker Prime Minister KP Oli’s Cabinet. Neither Oli nor the Opposition have been able to demonstrate a majority to form a new government in Nepal.
@@ -47,7 +51,7 @@ export const trendingNews = [
     title: 'Ram Chandra Poudel to receive Japanese honours',
     name: 'Kathmandu Post',
     for: 'Ramchandra Poudel',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe government of Japan has decided to confer the Grand Cordon of the Order of the Rising Sun on senior Nepali Congress leader Ram Chandra Poudel, recognising his contribution in strengthening Nepal-Japan ties.
     \nThe announcement was made in Tokyo on Wednesday, according to the Embassy of Japan in Kathmandu.
     \n“The Government of Japan announced the foreign recipients of the 2020 Spring Imperial Decorations. Former Speaker of the House of Representatives of Nepal, Ram Chandra Poudel, is among this year’s foreign recipients,” said the embassy in a statement. “In recognition of his contributions towards strengthening the relationship between Japan and Nepal, he will receive the Grand Cordon of the Order of the Rising Sun.”
@@ -64,7 +68,7 @@ export const trendingNews = [
     title: 'Electoral alliance is the need of the country: NC leader Poudel',
     name: 'My Republic',
     for: 'Ramchandra Poudel',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tSenior leader of the ruling Nepali Congress (NC) Ram Chandra Poudel said that it is the need of the nation to forge an electoral alliance. 
       \nAt a program organized by Nepal Trade Union, Nepali Congress, Tanahu district chapter on the occasion of 133rd International Labor Day on Sunday, senior leader Poudel said electoral alliance with other ruling coalition partners is needed in places where NC has relatively weaker presence. 
       \nPoudel claimed that the electoral alliance among the five ruling coalition partners will bring forth good results. "The electoral alliance has been forged among the coalition partners to retain the incumbent government till the parliamentary elections," he explained, adding that the NC opted for electoral alliance to protect democracy, stability and achievements of political movements.
@@ -76,7 +80,7 @@ export const trendingNews = [
     title: 'NC needs capable leadership: Poudel',
     name: 'Online Radio Nepal',
     for: 'Ramchandra Poudel',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress senior leader Ramchandra Poudel has said the party was in dire need of leadership that is capable to tackle new challenges.
     \nSpeaking in a programme organized to distribute health supplies to local levels and health centres here Saturday, senior leader Poudel argued that the current national politics was polarized to the group that favours democracy and another that is against democratic values and principles.
     \nHe further said that the NC had a responsibility to unite democratic forces and it should not miss this chance.
@@ -87,7 +91,7 @@ export const trendingNews = [
     image: require('../assets/images/gagan.jpeg'),
     title: 'PM must prove his non-involvement in Baskota case',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     for: 'Gagan Thapa',
     description: `\tAddressing the controversy surrounding now former Minister of Communication and Information Technology Gokul Prasad Banskota, lawmaker Gagan Kumar Thapa has said that there's more to the issue as the chapter doesn't end with Baskota's resignation.
     \n"It is no longer about Gokul Baskota's resignation, the more important thing now is for the Prime Minister to prove that he was in no way involved in this case," the Nepali Congress lawmaker said.
@@ -102,7 +106,7 @@ export const trendingNews = [
     image: require('../assets/images/gagan2.jpeg'),
     title: 'New budget to address the trade deficit',
     name: 'Online Khabar',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     for: 'Gagan Thapa',
     description: `\tThe House of Representatives (HoR), the lower house of the Federal Parliament, continued deliberations on the annual estimate of income and expenditure (budget) for fiscal year 2022/23 for the third day as well (Thursday). 
     \nSpeaker Agni Prasad Sapkota informed the session of the lower house that general discussions would be held on the principles of the budget which will be followed by detailed discussions on the ministry-wise headings of the budget later on. 
@@ -115,7 +119,7 @@ export const trendingNews = [
     title: 'Bill related to Constitutional Council will be withdrawn',
     name: 'My Republic',
     for: 'Gagan Thapa',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress (NC) General Secretary Gagan Thapa has said that the bill registered in the National Assembly to amend the act related to the Constitutional Council will be withdrawn.
     \nAddressing a program in Lalitpur on Monday, Thapa has stressed that the bill cannot be moved forward.
     \n"The bill related to the Constitutional Council registered in the National Assembly will be withdrawn within a few days. We had said that a similar ordinance brought by the then PM KP Sharma Oli was wrong. We cannot move the issue, that we called wrong yesterday, forward today saying it is right. The bill will be withdrawn," Thapa elaborated.  
@@ -139,7 +143,7 @@ export const trendingNews = [
     title: 'Nepal SC orders to appoint Deuba as PM within next 28 hours',
     name: 'My Republic',
     for: 'Sher Bd. Deuba',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepal's Supreme Court on Monday reinstated the dissolved House of Representatives for a second time in nearly five months, delivering a major blow to Prime Minister K P Sharma Oli who is currently heading a minority government after losing a trust vote in the House.
     A five-member Constitutional Bench of the Supreme Court on Monday also ordered appointment of Nepali Congress President Sher Bahadur Deuba as prime minister within two days.
     The bench led by Chief Justice Cholendra Shumsher Rana had concluded hearings in the case last week. The bench comprised four other senior most justices -- Dipak Kumar Karki, Mira Khadka, Ishwar Prasad Khatiwada and Dr Ananda Mohan Bhattarai -- at the apex court.
@@ -155,7 +159,7 @@ export const trendingNews = [
     title: 'Nepal PM Deuba wins vote of confidence in Parliament',
     name: 'Online Khabar',
     for: 'Sher Bd. Deuba',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepal's new Prime Minister Sher Bahadur Deuba on Sunday comfortably won a vote of confidence in the reinstated lower House of Parliament.
     \nDeuba, the 75-year-old chief of the Nepali Congress, secured 165 votes in the 275-member House of Representatives, Himalayan Times reported. As many as 249 lawmakers participated in the voting process and 83 of them voted against Deuba while one lawmaker remained neutral, it said.
     \nA total of 136 votes were required for Deuba to win Parliament's confidence.
@@ -169,7 +173,7 @@ export const trendingNews = [
     title: 'Gagan Thapa Ready To Discuss On Every Sentence Of IT Bill 2075',
     name: 'Kantipur Post',
     for: 'Gagan Thapa',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tChief Opposition Nepali Congress MP Gagan Thapa has said that he is ready to discuss with the government spokesperson Gokul Prasad Baskota about every word of the Information Technology Bill. Thapa openly asked Baskota, Minister of Communications and Information Technology, where he needs to come for the discussion. He said, “Where do you want to discuss the Bill, Minister? In Singha Durbar, in Parliament or at Maitighar?”
     \nThese phrases from Thapa were in response to Minister Baskota, who accused that the opposition has been raising voice against the bill without reading it. Thapa added, ‘The honorable minister has said that we have not read the Bill. I am ready to discuss every article, sub-article, and word of the bill.”
     \nHe said the Information Technology Bill would curtail civil liberties. He said, “We will take the initiative to stop this bill when the House starts in a few days. Students, opposition parties, journalists, and citizens come to the streets against the bill.”
@@ -183,7 +187,7 @@ export const trendingNews = [
     title: 'Gagan Thapa lashes out at PM Oli for his ‘double personality’',
     name: 'Kathmandu Post',
     for: 'Gagan Thapa',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress lawmaker Gagan Thapa lashed out at Prime Minister KP Sharma Oli saying that he blatantly surrendered to his Indian counterpart Narendra Modi during his recent two-day state visit to Nepal.
     \nSpeaking at the Parliament on Monday, Lawmaker Thapa came down heavily on Prime Minister Oli for his ‘double personality’ saying that he called his predecessors’ state visits to India as the ‘surrenderism’ while the Prime Minister himself embarked on a state visit to India soon after he became the Nepal’s Prime Minister.
     \n“Our Prime Minister roared like a tiger during his speech in defense of nationalism while he was receiving vote of confidence in the Parliament. But he did not speak even a single word on Indian blockade during PM Modi’s recent visit,” Thapa commended.
@@ -214,7 +218,7 @@ export const trendingNews = [
     title: 'There is a conspiracy to make the country fail: Ram Chandra Poudel',
     name: 'Himalayan Times',
     for: 'Ramchandra Poudel',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tSenior Nepali Congress leader and coordinator of a high-level political mechanism Ram Chandra Poudel stated that a conspiracy is being hatched to make the country fail.
     \nSenior leader Poudel has said that he is engaged in the campaign to make the country successful against those who want to make the country fail.
     \nTalking to media persons at his residence in Tanahun today, Poudel said that his only goal is to make the country successful and prosperous.
@@ -226,7 +230,7 @@ export const trendingNews = [
     title: 'Senior Leader Poudel Says He Will Be In Party Presidential Race',
     name: 'Online Khabar',
     for: 'Ramchandra Poudel',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress (NC) senior leader Ramchandra Poudel said he would vie for the post of party president during the upcoming 14th General Convention.     
     \nDuring a press meet organized by the Nepal Press Union, Banke here today, the leader said though there were other aspirants for the presidential posts from his camp, finally one candidate would be chosen from the camp.
     \n“Democracy is also about collective leadership and we will demonstrate it during the nomination,” he said, adding that a delay in organizing the General Convention on time may push the party to a legal crisis and the possibility must be prevented. 

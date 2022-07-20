@@ -1,5 +1,10 @@
 /* This code is creating an array of objects. Each object has a unique id, image, title, name,
 date, state, and description. */
+
+import DateAndDayGenerator from '@utils/DayGen';
+
+const date = new Date();
+const dateAndDay = DateAndDayGenerator(date);
 export const carouseldata = [
   {
     id: 1,
@@ -7,7 +12,7 @@ export const carouseldata = [
     title:
       'NC ministers demand resignation of FinMin Sharma in Cabinet meeting',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 1',
     description:
       '\tMinisters representing the Nepali Congress in the government have demanded resignation of Finance Minister Janardan Sharma.During a Cabinet meeting held at the Office of Prime Minister and Council of Ministers on Tuesday, the ministers urged Finance Minister Sharma to resign from his post.\n\nSharma is accused of inviting two unauthorized persons to change tax rates on the eve of the budget presentation for the next fiscal year 2022-23. \n\nThe ministers said that the Finance Minister should resign on moral grounds as questions have been raised against him in public quarters.',
@@ -17,7 +22,7 @@ export const carouseldata = [
     image: require('../assets/images/cabMeet2.jpeg'),
     title: 'NC Central Working Committee meeting to conclude today',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 2',
     description:
       '\tThe ongoing Central Working Committee meeting of the Nepali Congress, which was supposed to end today, has been extended till tomorrow after the party President Sher Bahadur Deuba called off today’s meeting.\n\nThe decision to postpone today’s meeting was taken after senior NC leader Ramchandra Paudel and leader Bijaya Kumar Gachchhadar presented their opinions. \n\nThe NC president had planned to conclude the meeting today itself after taking decisions related to poor performance of the party in elections, fixing date and place for the Maha Samiti meeting, formation of statute drafting and central election committees, and announcement of campaigns to revive the party, among others.\n\nHowever, Deuba postponed the meeting in a bid to seek consensus on the resolution to be passed by the CWC, according to NC CWC member Pradip Paudel.\n\nThe camp led by senior leader Paudel has demanded that the CWC decisions should also include annulment of parliamentary board and central work execution committee ‘formed in violation of the party statute’.Leaders representing the Paudel camp are preparing to write a note of dissent if the two bodies are not scrapped.\n\nThe Paudel faction has also demanded that the gathering of the NC district presidents be held within this month, followed by Maha Samiti next month. However, the establishment faction is planning to delay the meetings.In today’s meeting, Paudel reiterated that Deuba should take the responsibility of the humiliating loss in the elections at the hands of the left alliance of the CPN-UML and the CPN-Maoist Centre. He also attributed the election loss especially to the working style of Deuba and decisions taken by his government.\n\nPaudel also said that they were not trying to remove Deuba from leadership, but they wanted change.He also defended the letter he had written to Deuba around two months ago. In the letter, Paudel had accused Deuba of being power hungry and only working in the interest of the leaders representing his camp. However, leaders close to Deuba had slammed Paudel for the ‘type of language’ used in the letter.\n\nPaudel stood firm in his stand and asked, “How many times Ganesh Man Sing became the country’s prime minister and how many times Deuba became the PM? Whom do the people admire, Deuba or Singh?” He said he had not written the letter to make it public, but the spokesperson made it public. Similarly, Gachchhadar, who merged his erstwhile Nepal Democratic Forum with the NC just before the elections, said that he and other NDF leaders should be adjusted in the party in line with the understanding reached during the merger, according to a leader present at the meeting.',
@@ -28,7 +33,7 @@ export const carouseldata = [
     title:
       'Deuba nixes call for Cabinet rejig to pre-empt disputes in ruling parties',
     name: 'Online Khabar',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 3',
     description: `\tOn Sunday, when the CPN (Unified Socialist), one of the partners in the ruling coalition, suddenly decided to recall four of its ministers with a view to sending a new set of leaders to replace them, it was expected to set in motion a Cabinet reshuffle, with more changes of ministerial portfolios. However, until Sunday night, it looked like Prime Minister Sher Bahadur Deuba might not implement the Unified Socialist’s decision immediately.
       \nOn Monday, Deuba refused to change the ministers as recommended by the Unified Socialist, in what seems to be a setback for its chair Madhav Kumar Nepal.
@@ -73,7 +78,7 @@ export const carouseldata = [
     title:
       'Congress’ shadow cabinet has largely failed to check on government activities',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 4',
     description: `\tIn order to keep a closer watch on the KP Sharma Oli administration, the primary opposition Nepali Congress had formed a “shadow government” headed by party president Sher Bahadur Deuba. But in the five months since its formation, not a single meeting of the shadow government has taken place. The role of shadow ministers has not been effective either, with little discussion over the content of proposed bills, say party insiders.
       \nMembers of the shadow cabinet themselves admit that their roles have not been as effective as envisioned and they are not working as a collective unit.
@@ -98,7 +103,7 @@ export const carouseldata = [
     image: require('../assets/images/CabMeet5.jpeg'),
     title: 'Nepali Congress calls PP meeting for Tuesday',
     name: 'Nepal News',
-    date: 'June 22, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 5',
     description:
       "\tNepali Congress Parliamentary Party Leader Sher Bahadur Deuba has called a meeting of the PP for 8 am on Tuesday.\n\nBefore that, the PP Working Committee would hold its meeting at 4:30 pm today at the PP Office, Singhadurbar, according to a statement issued by NC PP Secretary Dhruva Wagle. \n\nThe meetings are expected to discuss various contemporary issues including conclusions of a discussion organised with the party's district presidents on local body restructuring. The two-day event is going to conclude today.\n\nLikewise, the both meetings are likely to discuss finalising a list of party leaders to be sent to the incumbent coalition government.\n\nEven through three weeks have passed since formation of the CPN Maoist Centre Chairman Pushpa Kamal Dahal-led government, the largest coalition partner has not yet been able to send its leaders to the Cabinet mainly due to intra-party rifts.\n\nThe NC is said to get 12 to 13 ministries, but so far has sent only two members in the Cabinet.",
@@ -108,7 +113,7 @@ export const carouseldata = [
     image: require('../assets/images/CabMeet6.jpeg'),
     title: 'Nepali Congress CWC meeting postponed to Monday',
     name: 'Kantipur News',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 6',
     description: `\tThe Central Working Committee (CWC) meeting of the Nepali Congress (NC) slated for Friday has been postponed until Monday.
       \nThe party meeting was postponed after a meeting of party officials, and former office bearers on Thursday failed to agree on the agenda.
@@ -121,7 +126,7 @@ export const carouseldata = [
     title:
       'Thaw in Congress party allows for February 19-22 as dates for convention',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     state: 'Province 7',
     description: `\tDespite factionalism in the party leading to a fistfight between student leaders on Monday, a semblance of calm appears to have returned to the Nepali Congress.
       \nThe primary opposition Nepali Congress has long been battling internal feuds, with top leaders quarrelling over the date for the party’s general convention. These simmering resentments had trickled down to the party rank-and-file, leading to Monday afternoon’s fight over the formation of various party departments.

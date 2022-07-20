@@ -1,3 +1,7 @@
+import DateAndDayGenerator from '@utils/DayGen';
+
+const date = new Date();
+const dateAndDay = DateAndDayGenerator(date);
 export const latestNews = [
   {
     id: 1,
@@ -5,7 +9,7 @@ export const latestNews = [
     image: require('../assets/images/1.png'),
     title: 'Nepali Congress set to decide today in favour of poll alliance',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tWhile the ruling Nepali Congress is gearing up to decide in favour of an electoral alliance with the ruling coalition partners for the upcoming elections, top Congress leaders on Monday engaged in a heated debate on whether the party should partner with communists, especially the Communist Party of Nepal (Maoist Centre).
     \nAfter the opponents of the electoral alliance questioned the leadership that the party could face moral questions if they forged an electoral alliance with the Maoists, party president Sher Bahadur Deuba had a tough time answering them.
     \nAddressing the ongoing Central Working Committee meeting on Monday leader Shekhar Koirala, who had lost the party presidency to Deuba in the latest 14th general convention, had said Congress should not back the Maoists by ignoring its policy and principles.
@@ -37,7 +41,7 @@ export const latestNews = [
     image: require('../assets/images/2.png'),
     title: 'Nepali Congress leaders set to challenge Sher Bahadur Deuba',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tPrime Minister Sher Bahadur Deuba of Nepal has reached out to the Indian side with the recent visit of a high-level delegation led by former Foreign Minister Prakash Sharan Mahat. The substantial deliverables of the visit are not known yet, but the emerging political situation is likely to throw up major challenges for Mr. Deuba that he may find easier to negotiate with India’s support.
       \nThe biggest challenge for Mr. Deuba is fast emerging from within his party, especially from vice-president of Nepali Congress (NC) and former Deputy Prime Minister Bimlendra Nidhi. Mr. Nidhi had been a solid supporter of Mr. Deuba in the past but it has been learnt that he has personally conveyed to Prime Minister Deuba that he will contest for the post of the president of the party in the convention scheduled next month. Accordingly, Mr. Nidhi has set up a separate unit for campaigning for the post in Thapa Gaon neighbourhood of Kathmandu.
       \nThe grand convention is significant as the outcome of the contest will determine the leadership under which the NC will fight next year’s election.
@@ -54,7 +58,7 @@ export const latestNews = [
     image: require('../assets/images/cabMeet1.jpeg'),
     title: 'Sher Bahadur Deuba appointed as prime minister',
     name: 'Nepal News',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tSher Bahadur Deuba was appointed prime minister of the country on Tuesday within a deadline set by the Supreme Court.
     \n"The president has appointed Nepali Congress President Sher Bahadur Deuba as the prime minister" under the Constitution of Nepal, Bhesh Raj Adhikari, chief personal secretary to Nepali President Bidya Devi Bhandari, told Xinhua.
     \n"He will be administered the oath of office and secrecy at 6"00 p.m. today (Tuesday)," said Adhikari.
@@ -73,7 +77,7 @@ export const latestNews = [
     image: require('../assets/images/cabMeet2.jpeg'),
     title: 'Congress must hold convention by September, but how?',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Nepali Congress, a key political force in the country, seems to be all over the place. For more than the last three years, it faced criticism for failing to stand up to KP Sharma Oli’s poor governance and not doing enough to hold the government to account.
       \nIts credibility also came into question when it could not cobble up a coalition after Oli lost a vote of confidence in the House on May 10. President Bidya Devi Bhandari’s refusal to party President Sher Bahadur’s claim to form a new government on May 21 left a bad taste in its mouth. The party has gone to the Supreme Court to challenge Oli’s May 21 House dissolution and the President’s move of calling Deuba’s claims for the post of prime minister insufficient.
       \nThe House dissolution case is currently being examined by the Constitutional Bench of the Supreme Court, with the hearing set to resume on June 23.
@@ -126,7 +130,7 @@ export const latestNews = [
     image: require('../assets/images/CabMeet4.jpeg'),
     title: 'Focus on Bharatpur mayor race may cost Nepali Congress',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe ruling coalition that is contesting local elections under an alliance is holding a campaign rally in Bharatpur on Thursday. Prime Minister Sher Bahadur Deuba along with CPN (Maoist Centre) chair Pushpa Kamal Dahal and other leaders of the coalition are set to address the rally.
       \nThere are 753 local units across the country but no other municipality has received so much attention as Bharatpur given the intense debate over the selection of candidates.
       \nRenu Dahal of the Maoist Centre is seeking a second mayoral term in the metropolitan city as per an understanding among the coalition partners. But Nepali Congress’ Jagannath Poudel has decided to run as an independent against her, defying the party high command’s order. The party has even expelled him for refusing to abide by its diktat.
@@ -168,7 +172,7 @@ export const latestNews = [
     image: require('../assets/images/election.jpeg'),
     title: 'Nepali Congress election manifesto says no view towers',
     name: 'My Republic',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tPrime Minister Sher Bahadur Deuba’s Nepali Congress party has made public its manifesto for the local elections scheduled to be held next month.
       \nParty President Deuba along with senior leaders of the party made the manifesto public at a press meet in Kathmandu on Sunday.
       \nIn the manifesto, the party, in addition to what it promises to do at the local level, has also mentioned what it does not want to do. The list interestingly mentions not building view towers as its priority as the CPN-UML-led government had earned notoriety for spending money on view towers that do not make any substantial difference in people’s lives.
@@ -182,7 +186,7 @@ export const latestNews = [
     image: require('../assets/images/congmaoist.jpeg'),
     title: 'Local polls: Nepali Congress looks set to gain',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe odds seem to be stacked in the ruling alliance’s favour, if preliminary results, which have trickled in the last two days, of Friday’s local elections are anything to go by. If the leads as of Sunday translated into victories, the Nepali Congress is set to emerge as the biggest gainer, with the CPN (Maoist Centre) managing to cling on to maintain its relevance in Nepal’s political landscape.
       \nAs of Monday morning, the Congress has won 28 local units and maintained leads in 264 while the Maoist Centre has won 21 local units and is leading in 96. The CPN-UML, which emerged as the largest party winning 294 local units in the 2017 local elections, appears set for a setback. It has won in 29 units and is leading in 165.
       \nLocal election results hold a huge significance for parties for the upcoming national elections, and it appears the ruling coalition will keep the alliance intact.
@@ -216,7 +220,7 @@ export const latestNews = [
     image: require('../assets/images/congvoting.jpeg'),
     title: 'Nepali Congress convention: Voting for new leadership',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Nepali Congress is holding a vote for the new leadership of the party for the next four years on Tuesday morning as per the schedule of the party’s ongoing 14th general convention.
       \nThe election will be held at Rastriya Sabha Griha at 8 pm tomorrow.
       \nFive leaders–Sher Bahadur Deuba, Bimalendra Nidhi, Prakash Man Singh, Shekhar Koirala and Kalyan Gurung–have filed their nominations for the party president. Whereas six nominations were filed on Saturday, one–Yuba Raj Neupane–withdrew his candidacy on Sunday extending his support for Koirala.
@@ -229,7 +233,7 @@ export const latestNews = [
     image: require('../assets/images/congress.png'),
     title: 'Congress intensifies door-to-door campaign',
     name: 'Kantipur Daily',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Nepali Congress has intensified its door-to-door campaign for the local elections to be held in April. The party has said that the door-to-door campaign has been intensified to inform the people about the public welfare work done by the party and its future strategy. According to District Chairman Pemwachhiring Tamang, leaders and cadres of all the 27 wards under the five village municipalities of the district have started meeting at their doorsteps with a clear outline of the work to be done by their parties.
       \nIt is stated that they are also taking suggestions for the shortcomings of the past work and for further improvement. With the slogan 'Let's go from house to house, let's win the Congress', well-wishers, well-wishers and leaders of the party have started clarifying the party's views to the voters during the election campaign. Chairman Tamang said that he would leave after fulfilling his promise.
       \nCentral member Mohan Acharya, who is representing Rasuwa in favour of the Nepali Congress, said that the people are more inclined towards the Nepali Congress in the current election than in the past as the people of the district have started evaluating their work in the public interest. He said that he is moving ahead with a priority to provide blacktop access to every village in the district, quality education, provision of safe drinking water, treatment services at the local level, irrigation, concrete bridges on rural roads, employment, and agriculture and animal husbandry.
@@ -241,7 +245,7 @@ export const latestNews = [
     image: require('../assets/images/deuba.jpeg'),
     title: 'Deuba-led Nepali Congress to stake claim in Nepal',
     name: 'Online Khabar',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe main Opposition party, Nepali Congress (NC), has decided to stake a claim for the prime minister’s post. It is engaged in hectic parleys with other parties to conclude a deal ahead of Thursday’s deadline issued by the President to political parties to form a new government as the one headed by KP Sharma Oli lost a crucial trust vote.
       \nThe decision to form a new government was taken after the office-bearers of the Nepali Congress (NC) met on Tuesday under the leadership of party president Sher Bahadur Deuba.
       \nOn Tuesday, Deuba held a meeting with the Opposition leaders and discussed ways to form a new government under his leadership. The meeting was attended by CPN-Maoist Centre chairman Pushpa Kamal Dahal ‘Prachanda’ and Janata Samajwadi Party (JSP-N) second president Upendra Yadav. Prachanda indicated that his party would support Deuba. — PTI`,
@@ -252,7 +256,7 @@ export const latestNews = [
     image: require('../assets/images/oli.jpeg'),
     title: 'Nepali Congress to back Oli government on vote for new map',
     name: 'Nepal News',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tA leading figure of the Nepali Congress confirmed that the party has decided to back the move of Prime Minister K.P. Sharma Oli and help in passing the amendment motion next week.
       \nThe government of Nepal on Saturday secured crucial support of the main opposition party, the Nepali Congress (NC) to grant constitutional status to the updated map of the country that claims the disputed territory of Kalapani. A leading figure of the Nepali Congress confirmed that the party has decided to back the move of Prime Minister K.P. Sharma Oli and help in passing the amendment motion next week.`,
   },
@@ -262,7 +266,7 @@ export const latestNews = [
     image: require('../assets/images/jamboree.jpeg'),
     title: '13th Nepali Congress jamboree kicks off',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description:
       '\tNepali Congress’s 13th National General Convention began today with fanfare amid a grand function at the Khula Manch in the presence of thousands of Congress supporters, leaders of political parties, including those from neighbouring countries. The candidates wishing to fight for the party’s Central Working Committee’s elected posts will have to file their candidacy by noon tomorrow.\n\nThe party’s close session to begin at 2:00pm at Bhrikutimandap will discuss party’s policy and programmes for the next term. Election for the CWC posts are slated for March 6.Three leaders, including two from the establishment side and one from rival faction, have announced their panels. Ramchandra Paudel and Shashanka Koirala have announced candidacy for the party president and general secretary, respectively. Krishna Prasad Sitaula andGagan Thapa have also announced candidacy for the two vital posts, with Umakanta Chaudhari vying for treasurer’s post from Sitaula panel. Both the panels from establishment side did not file their nomination today and will do so tomorrow morning.Senior leader Sher Bahadur Deuba and Chitra Lekha Yadav filed their nomination for party presidency and treasurer, respectively, at the party headquarters in Sanepa today. Arjun Narsingh KC will file nomination for general secretary’s post from Deuba’s side tomorrow morning.A candidate for party president should garner more than 50 per cent of the over 3,200 votes to get elected. But for the posts of general secretary and treasurer, first-past-the-post system will be followed, according to NC Election Committee member Gopal Krishna Ghimire.Seventy-five members, including Kul Bahadur Gurung, Khum Bahadur Khadka and Mahesh Acharya, filed nomination papers today for CWC membership under open competition and province-wise representation, according to party sources.\n\nEarlier, NC leaders Ramchandra Paudel, Sher Bahadur Deuba, general secretaries Prakash Man Singh and Krishna Prasad Sitaula and treasurer Chitra Lekha Yadav addressed the function.Prime Minister and CPN-UML Chairman KP Sharma Oli and Unified CPN Maoist Chairman Pushpa Kamal Dahal were among those present at the inaugural session of the NC’s 13th National General Convention.Chief Minister of Bihar Nitish Kumar, Bharatiya Janata Party leader Bhagat Singh Koshyari, General Secretary of Indian National Congress BK Hariprasad, Information Minister of Bangladesh Hasanul Haqinu and General Secretary of Socialist International Luis Ayala, were some of the foreign leaders present in Khula Manch for NC’s jamboree. Deuba announces his panelKATHMANDU: Senior NC leader Sher Bahadur Deuba, who is vying for the post of party president, announced his panel in the presence of hundreds of his supporters at the party headquarters in Sanepa, on Thursday.CWC member KB Gurung proposed the names of Deuba, Arjun Narsingh KC and Chitra Lekha Yadav for the posts of NC president, general secretary and treasurer, respectively.CWC member Khum Bahadur Khadka seconded the three names. \n\nArjun Narsingh KC, who was part of the party establishment till recently, said he switched over to the Deuba camp to protest the politics of syndicate and family legacy.Gurung, Khadka, Taranath Ranabhat, Govinda Raj Joshi, Laxman Ghimire and Binay Dhoj Chand, who were not in the Deuba camp not so long ago, have also thrown their weight behind Deuba. \n\nSujata backs PaudelKATHMANDU: Sujata Koirala, who is from the establishment side and had announced to contest for party presidency on Wednesday, decided on Thursday to support Paudel and his panel instead.Organising a press meet at her residence in Mandikatar in the presence of Paudel and other leaders, including Shashanka Koirala, Ram Sharan Mahat and Shekhar Koirala, she said, “On the request of well wishers of the party from across the country, I have decided to support Paudel and his team to save the party.” \n\nUDMF boycotts functionKATHMANDU: Leaders of the United Democratic Madhesi Front boycotted the inaugural session of the 13th National General Convention of the Nepali Congress, claiming that NC drafted anti-Madhes constitution.Chairman of Sadbhawana Party Rajendra Mahato said the UDMF could not attend the function because they had been agitating against the constitution promulgated under the leadership of NC.UDMF, however, had supported NC during PM election. Chairman of MJF-Democratic Bijaya Kumar Gachhadar, however, was present at the inaugural function.',
   },
@@ -272,7 +276,7 @@ export const latestNews = [
     image: require('../assets/images/NCMeet.png'),
     title: 'NC holding its CWC meeting even today',
     name: 'Khabar Hub',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Central Working Committee (CWC) meeting of the ruling Nepali Congress (NC) will continue today as well.
       \nThe meeting that began on Monday at the party central office in Sanepa will be held at 1 p.m. today.
       \nCentral members of the party are discussing the outcome of the local elections, management of sister organizations, current political situation, and ruling coalition, among other issues.
@@ -285,7 +289,7 @@ export const latestNews = [
     image: require('../assets/images/GaganSharma.jpeg'),
     title: 'Gagan Thapa and Sharma to contest from same team',
     name: 'Setopati',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tNepali Congress (NC) Spokesperson Bishwa Prakash Sharma and central member Gagan Thapa are preparing to contest for general secretary from the same team in the ongoing 14th general convention.
       \nSharma, who is from the faction of NC President Sher Bahadur Deuba, is looking to contest from a new team after Deuba refused to field him from the establishment panel.
       \nFinal preparations are now on to field Thapa and Sharma from the team of Shekhar Koirala. The team is now holding discussion to decide about vice-presidents and joint general secretaries before the deadline for filing candidacy expires at five in the evening.
@@ -297,7 +301,7 @@ export const latestNews = [
     image: require('../assets/images/np.jpeg'),
     title: 'Nepali Congress set to decide today in favour of poll alliance',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tWhile the ruling Nepali Congress is gearing up to decide in favour of an electoral alliance with the ruling coalition partners for the upcoming elections, top Congress leaders on Monday engaged in a heated debate on whether the party should partner with communists, especially the Communist Party of Nepal (Maoist Centre).
       \nAfter the opponents of the electoral alliance questioned the leadership that the party could face moral questions if they forged an electoral alliance with the Maoists, party president Sher Bahadur Deuba had a tough time answering them.
       \nAddressing the ongoing Central Working Committee meeting on Monday leader Shekhar Koirala, who had lost the party presidency to Deuba in the latest 14th general convention, had said Congress should not back the Maoists by ignoring its policy and principles.
@@ -329,7 +333,7 @@ export const latestNews = [
     image: require('../assets/images/elections.jpeg'),
     title: 'Nepali Congress wins most votes in elections',
     name: 'BBC',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe centrist Nepali Congress party won the most votes in last week's general elections, latest results announced on Thursday show.
       \nThe Maoists - who formed the single largest party in the previous Constituent Assembly - have been relegated to third place.
       \nThey have complained that the results have been systematically rigged.
@@ -350,7 +354,7 @@ export const latestNews = [
     image: require('../assets/images/ncoffice.jpeg'),
     title: 'Publication of final list of candidates for Congress GC',
     name: 'Nepal News',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe Nepali Congress has published the final list of candidates for office bearers and central member posts in the 14th General Convention. The Election Committee has posted the final list of candidates in the Rastriya Sabha Griha.
       \nAccordingly, there are five candidates for president, seven candidates for (two) vice-presidential posts, six for (two) general secretaries, and 19 for (eight) joint general ministers.
       \nLikewise, As many as 548 candidates had registered for 134 posts including office bearers and central members of the new Central Committee. Out of them, two candidates for office bearers and 55 candidates for central members have withdrawn their nominations.
@@ -381,7 +385,7 @@ export const latestNews = [
     image: require('../assets/images/koirala.jpeg'),
     title: 'Nepali Congress withholds new active membership',
     name: 'Himalayan Times',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description:
       "Nepali Congress said the party leadership has decided to acknowledge the new active members from Solukhumbu and Kailali districts and four disputed constituencies of Rautahat district (Constituency No. 1, 2 3, and 4) after the party's upcoming 13th General Convention only.As per the decision made by the party's office-bearers, which the Nepali Congress central office said was on a par with the party statute, the active members who took part the 12th general convention can renew their membership and take part in the upcoming gala also. \n\nThe party leadership, however, decided to acknowledge 100 new active members from Dolpa district in such a way that the party organisation would extend in all the VDCs of the remote district. The new membership would be granted on the recommendation of the party's district president.The party had formed a probe panel to look into the dispute over new active membership in Solukhumbu, Kailali, Rautahat and Dolpa districts.\n\nThe main opposition party is scheduled to hold its gala from March 3 to 6 in Kathmandu.",
   },
@@ -391,7 +395,7 @@ export const latestNews = [
     image: require('../assets/images/sherbd.jpeg'),
     name: 'Nepal News',
     title: 'A journey from Dadeldhura to centre of national politics',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThis is going to be Nepali Congress leader Sher Bahadur Deuba’s third stint as Prime Minister.
     \nThe 69-year-old has been in Congress politics for about 50 years. Deuba knows president of the largest political party is the prime minister in waiting, since the Maoists and the NC reached a power-sharing deal.
     \nWho is Deuba?
@@ -418,7 +422,7 @@ export const latestNews = [
     image: require('../assets/images/reelect.jpeg'),
     title: 'Re-election for party presidency',
     name: 'My Republic',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tA re-election is to be held for the post of party president at the 14th General Convention of Nepali Congress (NC) with none of the five candidates getting a majority in the first round.
       \nIncumbent party president and Prime Minister Sher Bahadur Deuba failed to get a majority in the first round and will now compete with Shekhar Koirala in the second.  
       \nDeuba was able to secure 2,258 votes. A total of 4,679 representatives cast their votes during the voting on Monday. The magical number to get elected was 2,340 and Deuba fell short by 82 votes.
@@ -434,7 +438,7 @@ export const latestNews = [
     image: require('../assets/images/congleader.jpeg'),
     title: 'Congress rival factions reach truce, focus now on new leadership',
     name: 'Kathmandu Post',
-    date: 'June 25, 2022',
+    date: `${dateAndDay.month} ${dateAndDay.date}, ${dateAndDay.year}`,
     description: `\tThe two rival factions of the Nepali Congress — one led by Prime Minister and party president Sher Bahadur Deuba and the other by senior leader Ram Chandra Poudel — reached a truce on Saturday paving the way for holding the party’s local level conventions in all 6,743 wards of the country.
       \nAlthough the Deuba and Poudel factions had agreed to hold the ward-level conventions on September 3, they have been postponed to September 7 owing to lack of preparations, floods and landslides in different parts of the country, and the Covid-19 restrictions in some districts, according to a party leader.
       \nThe two factions also said they have resolved the row over the distribution of active membership, which had remained a bone of contention for months, and are set to hold the party’s 14th general convention on November 25-29 in Kathmandu amid Covid-19 pandemic.

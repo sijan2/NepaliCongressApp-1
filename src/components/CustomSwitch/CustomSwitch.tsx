@@ -80,7 +80,7 @@ const CustomSwitch = ({
                 fontFamily: 'Mont-Bold',
                 fontSize: scaleFontSize(16),
                 position: 'absolute',
-                left: 8,
+                left: 6,
                 letterSpacing: 0.5,
               }}>
               {option2}
