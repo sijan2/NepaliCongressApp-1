@@ -1,6 +1,7 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import Colors from '@assets/colors/colors';
+import scaleFontSize from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -28,7 +29,7 @@ const styles = StyleSheet.create({
   text: {
     marginTop: 300,
     color: Colors.red,
-    fontSize: 20,
+    fontSize: scaleFontSize(20),
     fontFamily: 'Mont-Bold',
   },
 });

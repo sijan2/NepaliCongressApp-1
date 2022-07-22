@@ -3,6 +3,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import Colors from '@assets/colors/colors';
 import {AuthContext} from '@components/AuthContext/AuthContext';
+import scaleFontSize from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -64,13 +65,13 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   textActive: {
-    fontSize: 13,
+    fontSize: scaleFontSize(12),
     fontWeight: '400',
     fontFamily: 'Mont-Regular',
     color: Colors.white,
   },
   textInActive: {
-    fontSize: 13,
+    fontSize: scaleFontSize(12),
     fontWeight: '400',
     color: Colors.gray,
   },

@@ -6,6 +6,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Colors from '@assets/colors/colors';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
+import scaleFontSize from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -46,7 +47,7 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontSize: 16,
+                fontSize: scaleFontSize(16),
                 fontFamily: 'Mont-Bold',
                 left: 2,
                 letterSpacing: 0.5,
@@ -77,9 +78,9 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
                 fontFamily: 'Mont-Bold',
-                fontSize: 16,
+                fontSize: scaleFontSize(16),
                 position: 'absolute',
-                left: 8,
+                left: 6,
                 letterSpacing: 0.5,
               }}>
               {option2}

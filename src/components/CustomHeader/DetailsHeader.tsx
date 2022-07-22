@@ -15,7 +15,7 @@ import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import Share from '@assets/icons/Share.svg';
 
-import {WIDTH, HEIGHT} from '@utils/Dimensions';
+import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     marginLeft: 0.191 * WIDTH,
   },
   text: {
-    fontSize: 19,
+    fontSize: scaleFontSize(19),
     fontFamily: 'Mont-Bold',
     color: Colors.black,
   },

@@ -18,7 +18,7 @@ interface Ilist {
   index?: any;
 }
 
-import {WIDTH, HEIGHT} from '@utils/Dimensions';
+import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
 
 /**
  * The Carouselitem function is a functional component that takes in an item as a prop and returns a
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
   title: {
     marginHorizontal: 10,
     marginTop: 20,
-    fontSize: 13,
+    fontSize: scaleFontSize(13),
     lineHeight: 17,
     letterSpacing: 0.4,
     color: Colors.black,
@@ -99,7 +99,7 @@ const styles = StyleSheet.create({
   detailsContainer: {},
   text: {
     flexDirection: 'row',
-    fontSize: 11,
+    fontSize: scaleFontSize(11),
     fontFamily: 'Mont-Bold',
     color: Colors.red,
     marginTop: 15,

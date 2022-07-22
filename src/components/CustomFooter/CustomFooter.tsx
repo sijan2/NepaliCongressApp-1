@@ -5,6 +5,7 @@ import {useNavigation} from '@react-navigation/native';
 
 import HomeLogo from '@assets/icons/home.svg';
 import SavedLogo from '@assets/icons/Save.svg';
+import scaleFontSize from '@utils/Dimensions';
 interface IProps {}
 
 /**
@@ -48,7 +49,7 @@ const styles = StyleSheet.create({
     marginLeft: 25,
   },
   text: {
-    fontSize: 12,
+    fontSize: scaleFontSize(12),
     fontFamily: 'Mont-Regular',
     marginTop: 3,
     color: colors.black,
