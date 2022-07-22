@@ -57,7 +57,7 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 1 ? 3 : 2,
+                height: getSelectionMode === 1 ? 2 : 2,
                 width: '120%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
@@ -88,7 +88,7 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 2 ? 3 : 2,
+                height: getSelectionMode === 2 ? 2 : 2,
                 width: '100%',
                 backgroundColor:
                   getSelectionMode === 2 ? Colors.red : Colors.washedGray,

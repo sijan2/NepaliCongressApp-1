@@ -21,14 +21,26 @@ interface button {
  * as the text.
  */
 const CustomButton: FC<button> = ({text}) => {
-  const {setMyProvince} = useContext(AuthContext);
+  const {myProvince, setMyProvince} = useContext(AuthContext);
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity
-          style={styles.btnActive}
+          key={0}
+          style={
+            myProvince.toLowerCase() === text?.toLowerCase()
+              ? styles.btnActive
+              : styles.btnInActive
+          }
           onPress={() => setMyProvince(text)}>
-          <Text style={styles.textActive}>{text}</Text>
+          <Text
+            style={
+              myProvince.toLowerCase() === text?.toLowerCase()
+                ? styles.textActive
+                : styles.textInActive
+            }>
+            {text}
+          </Text>
         </TouchableOpacity>
       </View>
     </>
@@ -53,16 +65,18 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: '90%',
     alignSelf: 'center',
+    color: Colors.white,
   },
   btnInActive: {
-    marginHorizontal: 5,
+    marginLeft: 11,
+    marginRight: 11,
     marginTop: 20,
-    height: 36,
+    height: 30,
     backgroundColor: Colors.washedGray,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    width: '20%',
+    width: '90%',
     alignSelf: 'center',
   },
   textActive: {
@@ -74,6 +88,7 @@ const styles = StyleSheet.create({
   textInActive: {
     fontSize: scaleFontSize(12),
     fontWeight: '400',
+    fontFamily: 'Mont-Regular',
     color: Colors.gray,
   },
 });

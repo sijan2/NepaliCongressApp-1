@@ -69,7 +69,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    height: 80,
+    height: HEIGHT * 0.087,
     flexDirection: 'row',
     backgroundColor: Colors.white,
   },

@@ -10,10 +10,12 @@ import {
 import {Surface} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 
+import Share from 'react-native-share';
+
 import Colors from '@assets/colors/colors';
 import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
-import Share from '@assets/icons/Share.svg';
+import ShareLogo from '@assets/icons/Share.svg';
 
 import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
 
@@ -23,8 +25,23 @@ import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
  **/
 
 /* A functional component that returns a view. */
-const DetailsHeader = () => {
+const DetailsHeader = ({data}: any) => {
+  console.log('Data=>', data);
   const navigation = useNavigation();
+
+  const myCustomShare = async () => {
+    const shareOptions = {
+      message: 'Share via',
+      url: 'https://www.google.com',
+    };
+    try {
+      const ShareResponse = await Share.open(shareOptions);
+      console.log(JSON.stringify(ShareResponse));
+    } catch (error) {
+      console.log('Error =>', error);
+    }
+  };
+
   return (
     <SafeAreaView>
       <Surface style={styles.header}>
@@ -45,9 +62,8 @@ const DetailsHeader = () => {
               </TouchableOpacity>
             </View>
             <View style={styles.icon2}>
-              <TouchableOpacity
-                onPress={() => Alert.alert('Feature coming soon')}>
-                <Share width={22} height={22} fill="none" />
+              <TouchableOpacity onPress={myCustomShare}>
+                <ShareLogo width={22} height={22} fill="none" />
               </TouchableOpacity>
             </View>
           </View>

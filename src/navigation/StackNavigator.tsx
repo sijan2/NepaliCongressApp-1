@@ -5,7 +5,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import NewsDetails from '@screens/NewsOpenPage/NewsDetails';
 import TabNavigator from './TabNavigator';
 import SplashScreen from '@screens/SplashScreen/Splash';
-import SavedScreen from '@screens/Saved/Saved';
 interface IProps {}
 
 /**
@@ -22,11 +21,11 @@ const StackNav = createNativeStackNavigator();
  * @returns A StackNavigator component
  */
 const StackNavigator: FC<IProps> = () => {
-  const [showSplashScreen, setshowSplashScreen] = useState(true);
+  const [showSplashScreen, setShowSplashScreen] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      setshowSplashScreen(false);
+      setShowSplashScreen(false);
     }, 2000);
   }, []);
   return (
@@ -39,7 +38,6 @@ const StackNavigator: FC<IProps> = () => {
       ) : null}
       <StackNav.Screen name="TabNavigator" component={TabNavigator} />
       <StackNav.Screen name="DetailScreen" component={NewsDetails} />
-      <StackNav.Screen name="SavedScreen" component={SavedScreen} />
     </StackNav.Navigator>
   );
 };

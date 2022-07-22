@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Image} from 'react-native';
+import {StyleSheet, View, Image, SafeAreaView} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import Colors from '@assets/colors/colors';
 import advertisement from '@assets/images/advertisement.png';
@@ -19,7 +19,7 @@ const HomeScreen = () => {
     setGetTab(value);
   };
   return (
-    <View style={styles.mainContainer}>
+    <SafeAreaView style={styles.mainContainer}>
       <ScrollView style={styles.container}>
         <View>
           <Image style={styles.adImage} source={advertisement} />
@@ -35,7 +35,7 @@ const HomeScreen = () => {
           {getTab === 2 && <TrendingScreen />}
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
