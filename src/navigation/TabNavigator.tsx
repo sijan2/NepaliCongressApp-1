@@ -91,11 +91,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   icon: {
-    marginLeft: 100,
+    marginLeft: WIDTH * 0.24,
   },
 
   icon1: {
-    marginLeft: WIDTH * 0.02,
+    marginLeft: WIDTH * 0.023,
   },
   text: {
     marginTop: 3,

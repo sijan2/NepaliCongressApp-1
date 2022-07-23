@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
     marginTop: HEIGHT * 0.14,
     opacity: 0.95,
     backgroundColor: Colors.white,
-    width: '95%',
+    width: '94.5%',
   },
   image: {
     zIndex: 1,
