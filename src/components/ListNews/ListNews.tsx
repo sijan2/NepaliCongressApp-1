@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    height: 95,
+    height: 90,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginRight: 10,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: scaleFontSize(13),
+    fontSize: scaleFontSize(12),
     fontFamily: 'Mont-Bold',
     lineHeight: 16,
     letterSpacing: 0.2,

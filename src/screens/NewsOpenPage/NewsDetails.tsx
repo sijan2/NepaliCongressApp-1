@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {
   Image,
   SafeAreaView,
@@ -12,7 +12,6 @@ import {
 
 import {Surface} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Share from 'react-native-share';
 
 import Colors from '@assets/colors/colors';
@@ -21,6 +20,8 @@ import Save from '@assets/icons/Save.svg';
 import ShareLogo from '@assets/icons/Share.svg';
 
 import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useSaved} from '@components/SavedProvider/SavedProvider';
 
 /**
  * @author Nitesh Raj Khanal
@@ -35,9 +36,6 @@ import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
 const DetailScreen = ({route}: any) => {
   const navigation = useNavigation();
 
-  const initialSaved: any[] | (() => any[]) = [];
-  const [saved, setSaved] = useState(initialSaved);
-
   const myCustomShare = async () => {
     const shareOptions = {
       message: 'Test Url',
@@ -51,17 +49,17 @@ const DetailScreen = ({route}: any) => {
     }
   };
 
-  const storeData = async (save: any) => {
-    const newSaved = [...saved, save];
-    AsyncStorage.setItem('savedNews', JSON.stringify(newSaved))
-      .then(() => {
-        setSaved(newSaved);
-        console.log('Saved News =>', newSaved);
-        Alert.alert('Saved Successfully');
-      })
-      .catch(error => {
-        console.log('Error =>', error);
-      });
+  const {saved, setSaved} = useSaved();
+  const {id, title, description, date, image, name} = route.params;
+  const storeData = () => {
+    const save = {id, title, description, date, image, name};
+    const updatedNews = [...saved, save];
+    setSaved(updatedNews);
+    AsyncStorage.setItem('saved', JSON.stringify(updatedNews));
+    Alert.alert(
+      'Saved Successfully',
+      'You can view your saved news in the Saved tab',
+    );
   };
 
   return (
@@ -204,6 +202,13 @@ const styles = StyleSheet.create({
     marginRight: 15,
   },
   icon2: {},
+  footer: {
+    height: HEIGHT * 0.075,
+    width: WIDTH,
+  },
+  footerText: {
+    color: Colors.black,
+  },
 });
 
 export default DetailScreen;

@@ -1,9 +1,21 @@
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable radix */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useState} from 'react';
-import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {
+  Alert,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import Colors from '@assets/colors/colors';
 import scaleFontSize from '@utils/Dimensions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import {useSaved} from '@components/SavedProvider/SavedProvider';
+import {useNavigation} from '@react-navigation/native';
+import SavedNews from '@components/SavedNews/SavedNews';
 
 /**
  * @author Nitesh Raj Khanal
@@ -14,28 +26,35 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
  * It returns a View component with a Text component inside of it
  * @returns A View component with a Text component nested inside.
  */
+
+const reversedData = (data: any) => {
+  return data.sort((a: any, b: any) => {
+    const aInt = parseInt(a.time);
+    const bInt = parseInt(b.time);
+    if (aInt < bInt) {
+      return 1;
+    }
+    if (aInt === bInt) {
+      return 0;
+    }
+    if (aInt > bInt) {
+      return -1;
+    }
+  });
+};
+
 const SavedScreen = () => {
-  const initialSaved: any[] | (() => any[]) = [];
-  const [saved, setSaved] = useState(initialSaved);
-
+  const {saved, findSaved} = useSaved();
+  const navigation = useNavigation();
   const LoadSaved = async () => {
-    AsyncStorage.getItem('savedNews')
-      .then(data => {
-        if (data !== null) {
-          setSaved(JSON.parse(data));
-        }
-        console.log('Saved News =>', data);
-      })
-      .catch(error => {
-        console.log('Error =>', error);
-      });
+    console.log('Saved', saved);
+    return await findSaved();
   };
-
-  return (
-    <TouchableOpacity style={styles.button} onPress={LoadSaved}>
-      <Text style={styles.text}>Press Me to retrieve data</Text>
-    </TouchableOpacity>
-  );
+  const openSaved = (saved: any) => {
+    navigation.navigate('NewsOpenPage', {saved});
+  };
+  const reversedNews = reversedData(saved);
+  return <SavedNews data={reversedNews} />;
 };
 
 export default SavedScreen;

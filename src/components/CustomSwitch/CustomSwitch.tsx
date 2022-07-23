@@ -6,7 +6,7 @@ import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Colors from '@assets/colors/colors';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
-import scaleFontSize from '@utils/Dimensions';
+import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 /**
  * @author Nitesh Raj Khanal
@@ -57,7 +57,8 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 1 ? 2 : 2,
+                height:
+                  getSelectionMode === 1 ? 0.0025 * HEIGHT : 0.0025 * HEIGHT,
                 width: '120%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
@@ -88,7 +89,8 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 2 ? 2 : 2,
+                height:
+                  getSelectionMode === 2 ? 0.0025 * HEIGHT : 0.0025 * HEIGHT,
                 width: '100%',
                 backgroundColor:
                   getSelectionMode === 2 ? Colors.red : Colors.washedGray,
@@ -101,8 +103,8 @@ const CustomSwitch = ({
             marginHorizontal: 20,
             marginTop: 2,
             zIndex: -1,
-            height: 3,
-            width: '90%',
+            height: 0.0025 * HEIGHT,
+            width: WIDTH * 0.9,
             backgroundColor: Colors.washedGray,
             borderRadius: 10,
           }}></View>
