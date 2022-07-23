@@ -7,6 +7,7 @@ import Header from '@components/CustomHeader/Header';
 import HomeScreen from '@screens/Home/Home';
 import SavedScreen from '@screens/Saved/Saved';
 
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
 const Tab = createBottomTabNavigator();
 
 /**
@@ -80,13 +81,13 @@ const TabNavigator = () => {
 
 const styles = StyleSheet.create({
   tabBar: {
-    marginTop: 20,
-    marginleft: 130,
+    marginTop: HEIGHT * 0.024,
+    marginLeft: WIDTH * 0.03,
     flexDirection: 'column',
   },
   tabBar1: {
-    marginTop: 20,
-    marginRight: 120,
+    marginTop: HEIGHT * 0.024,
+    marginRight: WIDTH * 0.27,
     flexDirection: 'column',
   },
   icon: {
@@ -94,7 +95,7 @@ const styles = StyleSheet.create({
   },
 
   icon1: {
-    marginLeft: 7,
+    marginLeft: WIDTH * 0.02,
   },
   text: {
     marginTop: 3,
