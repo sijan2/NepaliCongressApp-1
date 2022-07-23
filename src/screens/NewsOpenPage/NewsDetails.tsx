@@ -22,6 +22,7 @@ import ShareLogo from '@assets/icons/Share.svg';
 import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSaved} from '@components/SavedProvider/SavedProvider';
+import colors from '@assets/colors/colors';
 
 /**
  * @author Nitesh Raj Khanal
@@ -51,7 +52,7 @@ const DetailScreen = ({route}: any) => {
 
   const {saved, setSaved} = useSaved();
   const {id, title, description, date, image, name} = route.params;
-  const storeData = () => {
+  const saveNews = () => {
     const save = {id, title, description, date, image, name};
     const updatedNews = [...saved, save];
     setSaved(updatedNews);
@@ -61,6 +62,15 @@ const DetailScreen = ({route}: any) => {
       'You can view your saved news in the Saved tab',
     );
   };
+
+  const removeNews = () => {
+    const updatedNews = saved.filter((item: any) => item.id !== id);
+    setSaved(updatedNews);
+    AsyncStorage.setItem('saved', JSON.stringify(updatedNews));
+    Alert.alert('Removed Successfully');
+  };
+
+  const savedNews = saved.find((item: any) => item.id === id);
 
   return (
     <>
@@ -77,11 +87,20 @@ const DetailScreen = ({route}: any) => {
                 <Text style={styles.text}>Nepali Congress</Text>
               </View>
               <View style={styles.search}>
-                <View style={styles.icon1}>
-                  <TouchableOpacity onPress={storeData}>
-                    <Save width={22} height={22} fill="none" />
-                  </TouchableOpacity>
-                </View>
+                {savedNews ? (
+                  <View style={styles.icon1}>
+                    <TouchableOpacity onPress={removeNews}>
+                      <Save width={22} height={22} fill={colors.red} />
+                    </TouchableOpacity>
+                  </View>
+                ) : (
+                  <View style={styles.icon1}>
+                    <TouchableOpacity onPress={saveNews}>
+                      <Save width={22} height={22} fill="none" />
+                    </TouchableOpacity>
+                  </View>
+                )}
+
                 <View style={styles.icon2}>
                   <TouchableOpacity onPress={myCustomShare}>
                     <ShareLogo width={22} height={22} fill="none" />

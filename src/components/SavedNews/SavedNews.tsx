@@ -14,7 +14,6 @@ import scaleFontSize from '@utils/Dimensions';
 /* A functional component that is returning a view with a carousel and a flatlist. */
 const SavedNews = (data: any) => {
   const test = data;
-  console.log('Test =>', test);
   return (
     <>
       <View style={styles.semiContainer}>
