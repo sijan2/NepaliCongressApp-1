@@ -50,8 +50,5 @@ export default TrendingScreen;
 const styles = StyleSheet.create({
   parent: {},
   mainContainer: {},
-  container: {
-    marginRight: 17,
-    marginLeft: 3,
-  },
+  container: {},
 });

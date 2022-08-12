@@ -3,10 +3,12 @@
 import React, {useState, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
-import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -47,8 +49,8 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontSize: scaleFontSize(16),
-                fontFamily: 'Mont-Bold',
+                fontSize: Metrics.body3,
+                fontFamily: Fonts.type.montBold,
                 left: 2,
                 letterSpacing: 0.5,
               }}>
@@ -78,8 +80,8 @@ const CustomSwitch = ({
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontFamily: 'Mont-Bold',
-                fontSize: scaleFontSize(16),
+                fontFamily: Fonts.type.montBold,
+                fontSize: Metrics.body3,
                 position: 'absolute',
                 left: 6,
                 letterSpacing: 0.5,

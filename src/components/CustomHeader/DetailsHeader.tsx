@@ -12,12 +12,14 @@ import {useNavigation} from '@react-navigation/native';
 
 import Share from 'react-native-share';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import ShareLogo from '@assets/icons/Share.svg';
 
-import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
+import {WIDTH, HEIGHT} from '@utils/Dimensions';
+import Fonts from '@constants/fonts/fonts';
+import Metrics from '@constants/metrics/Metrics';
 
 /**
  * @author Nitesh Raj Khanal
@@ -96,8 +98,8 @@ const styles = StyleSheet.create({
     marginLeft: 0.191 * WIDTH,
   },
   text: {
-    fontSize: scaleFontSize(19),
-    fontFamily: 'Mont-Bold',
+    fontSize: Metrics.h3,
+    fontFamily: Fonts.type.montBold,
     color: Colors.black,
   },
   search: {

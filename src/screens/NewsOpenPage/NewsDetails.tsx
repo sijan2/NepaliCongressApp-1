@@ -14,15 +14,17 @@ import {Surface} from 'react-native-paper';
 import {useNavigation} from '@react-navigation/native';
 import Share from 'react-native-share';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import Back from '@assets/icons/Back.svg';
 import Save from '@assets/icons/Save.svg';
 import ShareLogo from '@assets/icons/Share.svg';
 
-import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
+import {WIDTH, HEIGHT} from '@utils/Dimensions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useSaved} from '@components/SavedProvider/SavedProvider';
-import colors from '@assets/colors/colors';
+import colors from '@constants/colors/colors';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -150,9 +152,9 @@ const styles = StyleSheet.create({
   },
   textTitle: {
     marginTop: 15,
-    fontSize: scaleFontSize(19),
+    fontSize: Metrics.h3,
     lineHeight: 28,
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     fontWeight: '600',
     color: Colors.black,
   },
@@ -162,14 +164,14 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   text1: {
-    fontSize: scaleFontSize(12),
+    fontSize: Metrics.body6,
     marginRight: 20,
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.red,
   },
   text2: {
-    fontSize: scaleFontSize(12),
-    fontFamily: 'Mont-Regular',
+    fontSize: Metrics.body6,
+    fontFamily: Fonts.type.montRegular,
     color: Colors.red,
   },
   image: {
@@ -179,9 +181,9 @@ const styles = StyleSheet.create({
   },
   details: {
     marginTop: 10,
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.offBlack,
-    fontSize: scaleFontSize(14),
+    fontSize: Metrics.body4,
     lineHeight: 19,
     textAlign: 'justify',
     fontWeight: '500',
@@ -208,7 +210,7 @@ const styles = StyleSheet.create({
     marginLeft: 0.191 * WIDTH,
   },
   text: {
-    fontSize: scaleFontSize(19),
+    fontSize: Metrics.h2_5,
     fontFamily: 'Mont-Bold',
     color: Colors.black,
   },

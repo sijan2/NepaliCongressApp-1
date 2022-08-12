@@ -4,7 +4,7 @@ import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs
 import ProvinceScreen from '@screens/Province/Province';
 import TrendingScreen from '@screens/Trending/Trending';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
 interface IProps {}
 

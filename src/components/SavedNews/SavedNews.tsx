@@ -3,8 +3,9 @@ import {StyleSheet, FlatList, View, Text} from 'react-native';
 
 import ListNews from '@components/ListNews/ListNews';
 
-import Colors from '@assets/colors/colors';
-import scaleFontSize from '@utils/Dimensions';
+import Colors from '@constants/colors/colors';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -55,8 +56,8 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 10,
-    fontSize: scaleFontSize(18),
-    fontFamily: 'Mont-Bold',
+    fontSize: Metrics.h3,
+    fontFamily: Fonts.type.montBold,
     color: Colors.black,
   },
 });

@@ -1,8 +1,9 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 import NCLogo from '@assets/images/NCLogo.png';
-import Colors from '@assets/colors/colors';
-import scaleFontSize from '@utils/Dimensions';
+import Colors from '@constants/colors/colors';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: Colors.black,
-    fontSize: scaleFontSize(20),
-    fontFamily: 'Mont-Bold',
+    fontSize: Metrics.h3,
+    fontFamily: Fonts.type.montBold,
   },
 });

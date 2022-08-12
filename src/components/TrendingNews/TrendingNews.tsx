@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import {StyleSheet, FlatList, View} from 'react-native';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import ListNews from '@components/ListNews/ListNews';
 import {trendingNews} from '@models/trendingData';
 

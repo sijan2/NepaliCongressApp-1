@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import Svg, {Path} from 'react-native-svg';
 import Header from '@components/CustomHeader/Header';
 import HomeScreen from '@screens/Home/Home';
@@ -23,17 +23,13 @@ const TabNavigator = () => {
       <Tab.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarLabelStyle: {
-            marginLeft: 90,
-            fontSize: 11,
-            marginBottom: 10,
-            color: Colors.gray,
-          },
+          tabBarShowLabel: false,
 
           tabBarStyle: {
             backgroundColor: Colors.white,
             elevation: 0,
             height: 60,
+            position: 'absolute',
           },
         }}>
         <Tab.Screen
@@ -84,18 +80,20 @@ const styles = StyleSheet.create({
     marginTop: HEIGHT * 0.024,
     marginLeft: WIDTH * 0.03,
     flexDirection: 'column',
+    marginBottom: HEIGHT * 0.024,
   },
   tabBar1: {
     marginTop: HEIGHT * 0.024,
     marginRight: WIDTH * 0.27,
     flexDirection: 'column',
+    marginBottom: HEIGHT * 0.024,
   },
   icon: {
-    marginLeft: WIDTH * 0.24,
+    marginLeft: WIDTH * 0.245,
   },
 
   icon1: {
-    marginLeft: WIDTH * 0.023,
+    marginLeft: WIDTH * 0.019,
   },
   text: {
     marginTop: 3,

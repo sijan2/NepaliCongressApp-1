@@ -1,6 +1,6 @@
 import React, {FC, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
 /**
  * @author Nitesh Raj Khanal
@@ -8,7 +8,8 @@ import Colors from '@assets/colors/colors';
  **/
 
 import {AuthContext} from '@components/AuthContext/AuthContext';
-import scaleFontSize from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 interface button {
   onPress?: () => void;
   text?: string;
@@ -80,15 +81,15 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
   },
   textActive: {
-    fontSize: scaleFontSize(12),
+    fontSize: Metrics.body6,
     fontWeight: '400',
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.white,
   },
   textInActive: {
-    fontSize: scaleFontSize(12),
+    fontSize: Metrics.body6,
     fontWeight: '400',
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.gray,
   },
 });
