@@ -1,7 +1,7 @@
-import {StyleSheet, Text, View} from 'react-native';
+/* eslint-disable radix */
 import React from 'react';
-import Colors from '@assets/colors/colors';
-import scaleFontSize from '@utils/Dimensions';
+import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
+import SavedNews from '@components/SavedNews/SavedNews';
 
 /**
  * @author Nitesh Raj Khanal
@@ -12,24 +12,27 @@ import scaleFontSize from '@utils/Dimensions';
  * It returns a View component with a Text component inside of it
  * @returns A View component with a Text component nested inside.
  */
+
+const reversedData = (data: any) => {
+  return data.sort((a: any, b: any) => {
+    const aInt = parseInt(a.time);
+    const bInt = parseInt(b.time);
+    if (aInt < bInt) {
+      return 1;
+    }
+    if (aInt === bInt) {
+      return 0;
+    }
+    if (aInt > bInt) {
+      return -1;
+    }
+  });
+};
+
 const SavedScreen = () => {
-  return (
-    <View style={styles.mainContainer}>
-      <Text style={styles.text}>Coming Soon!</Text>
-    </View>
-  );
+  const {saved} = useSaved();
+  const reversedNews = reversedData(saved);
+  return <SavedNews data={reversedNews} />;
 };
 
 export default SavedScreen;
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    alignItems: 'center',
-  },
-  text: {
-    marginTop: 300,
-    color: Colors.red,
-    fontSize: scaleFontSize(20),
-    fontFamily: 'Mont-Bold',
-  },
-});

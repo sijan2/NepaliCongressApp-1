@@ -6,9 +6,9 @@ import {latestNews} from '@models/latestData';
 
 import Carouselitem from '@components/Carousel/Carousel';
 import {carouseldata} from '@models/caroseldata';
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
 /**
  * @author Nitesh Raj Khanal

@@ -1,0 +1,48 @@
+const customFonts = {
+  'Mont-Black': require('../../assets/fonts/Mont-Black.ttf'),
+  'Mont-BlackItalic': require('../../assets/fonts/Mont-BlackItalic.ttf'),
+  'Mont-Bold': require('../../assets/fonts/Mont-Bold.ttf'),
+  'Mont-BoldItalic': require('../../assets/fonts/Mont-BoldItalic.ttf'),
+  'Mont-DEMOExtraLight': require('../../assets/fonts/Mont-DEMOExtraLight.ttf'),
+  'Mont-DEMOHeavy': require('../../assets/fonts/Mont-DEMOHeavy.ttf'),
+  'Mont-ExtraLight': require('../../assets/fonts/Mont-ExtraLight.ttf'),
+  'Mont-ExtraLightItalic': require('../../assets/fonts/Mont-ExtraLightItalic.ttf'),
+  'Mont-HairLine': require('../../assets/fonts/Mont-Hairline.ttf'),
+  'Mont-HairLineItalic': require('../../assets/fonts/Mont-HairlineItalic.ttf'),
+  'Mont-Heavy': require('../../assets/fonts/Mont-Heavy.ttf'),
+  'Mont-HeavyItalic': require('../../assets/fonts/Mont-HeavyItalic.ttf'),
+  'Mont-Light': require('../../assets/fonts/Mont-Light.ttf'),
+  'Mont-LightItalic': require('../../assets/fonts/Mont-LightItalic.ttf'),
+  'Mont-Regular': require('../../assets/fonts/Mont-Regular.ttf'),
+  'Mont-RegularItalic': require('../../assets/fonts/Mont-RegularItalic.ttf'),
+  'Mont-SemiBold': require('../../assets/fonts/Mont-SemiBold.ttf'),
+  'Mont-SemiBoldItalic': require('../../assets/fonts/Mont-SemiBoldItalic.ttf'),
+  'Mont-Thin': require('../../assets/fonts/Mont-Thin.ttf'),
+  'Mont-ThinItalic': require('../../assets/fonts/Mont-ThinItalic.ttf'),
+};
+
+const type = {
+  montBlack: 'Mont-Black',
+  montBlackItalic: 'Mont-BlackItalic',
+  montBold: 'Mont-Bold',
+  montBoldItalic: 'Mont-BoldItalic',
+  montDEMOExtraLight: 'Mont-DEMOExtraLight',
+  montDEMOHeavy: 'Mont-DEMOHeavy',
+  montExtraLight: 'Mont-ExtraLight',
+  montExtraLightItalic: 'Mont-ExtraLightItalic',
+  montHairLine: 'Mont-HairLine',
+  montHairLineItalic: 'Mont-HairLineItalic',
+  montHeavy: 'Mont-Heavy',
+  montHeavyItalic: 'Mont-HeavyItalic',
+  montLight: 'Mont-Light',
+  montLightItalic: 'Mont-LightItalic',
+  montRegular: 'Mont-Regular',
+  montRegularItalic: 'Mont-RegularItalic',
+  montSemiBold: 'Mont-SemiBold',
+  montSemiBoldItalic: 'Mont-SemiBoldItalic',
+  montThin: 'Mont-Thin',
+  montThinItalic: 'Mont-ThinItalic',
+};
+
+const Fonts = {customFonts, type};
+export default Fonts;

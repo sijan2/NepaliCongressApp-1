@@ -1,6 +1,12 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import React, {FC} from 'react';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import {useNavigation} from '@react-navigation/native';
 
 /**
@@ -18,7 +24,10 @@ interface Ilist {
   index?: any;
 }
 
-import scaleFontSize, {WIDTH, HEIGHT} from '@utils/Dimensions';
+import {WIDTH, HEIGHT} from '@utils/Dimensions';
+import Fonts from '@constants/fonts/fonts';
+import Metrics from '@constants/metrics/Metrics';
+import {titleCharactersCounter} from '@utils/titleCharCounter';
 
 /**
  * The Carouselitem function is a functional component that takes in an item as a prop and returns a
@@ -41,21 +50,31 @@ const Carouselitem: FC<Ilist> = ({item}) => {
   return (
     <>
       <TouchableOpacity onPress={handleOnPress}>
-        <View style={styles.cardView}>
-          <View>
-            <Image style={styles.image} source={item.image} />
-            <View style={styles.textView}>
-              <Text style={styles.title}>{item.title}</Text>
-              <View style={styles.detailsContainer}>
-                <View style={styles.nested}>
-                  <Text style={styles.text}>{item.name}</Text>
-                  <Text style={styles.text}>{item.date}</Text>
-                  <Text style={styles.text}>{item.state}</Text>
-                </View>
+        <ImageBackground
+          style={[styles.image, styles.cardView]}
+          source={item.image}>
+          <View style={styles.textView}>
+            <Text
+              style={[
+                styles.title,
+                {
+                  fontSize:
+                    titleCharactersCounter(item.title) > 70
+                      ? Metrics.h6
+                      : Metrics.h5,
+                },
+              ]}>
+              {item.title}
+            </Text>
+            <View style={styles.detailsContainer}>
+              <View style={styles.nested}>
+                <Text style={styles.text}>{item.name}</Text>
+                <Text style={styles.text}>{item.date}</Text>
+                <Text style={styles.text}>{item.state}</Text>
               </View>
             </View>
           </View>
-        </View>
+        </ImageBackground>
       </TouchableOpacity>
     </>
   );
@@ -64,43 +83,41 @@ const Carouselitem: FC<Ilist> = ({item}) => {
 const styles = StyleSheet.create({
   cardView: {
     width: WIDTH * 0.92,
-    height: HEIGHT * 0.29,
+    height: HEIGHT * 0.28,
     backgroundColor: Colors.red,
     marginHorizontal: WIDTH * 0.04,
     marginVertical: WIDTH * 0.04,
-    borderRadius: 20,
+    alignItems: 'center',
   },
   textView: {
-    marginHorizontal: 10,
     position: 'absolute',
-    zIndex: 2,
-    margin: 10,
     borderRadius: 10,
     marginTop: HEIGHT * 0.14,
     opacity: 0.95,
     backgroundColor: Colors.white,
-    width: '95%',
+    width: '94.5%',
   },
   image: {
     zIndex: 1,
     width: '100%',
     height: '100%',
     borderRadius: 10,
+    flex: 1,
+    overflow: 'hidden',
   },
   title: {
     marginHorizontal: 10,
     marginTop: 20,
-    fontSize: scaleFontSize(13),
     lineHeight: 17,
     letterSpacing: 0.4,
     color: Colors.black,
-    fontFamily: 'Mont-Bold',
+    fontFamily: Fonts.type.montBold,
   },
   detailsContainer: {},
   text: {
     flexDirection: 'row',
-    fontSize: scaleFontSize(11),
-    fontFamily: 'Mont-Bold',
+    fontSize: Metrics.body7,
+    fontFamily: Fonts.type.montBold,
     color: Colors.red,
     marginTop: 15,
     lineHeight: 13,

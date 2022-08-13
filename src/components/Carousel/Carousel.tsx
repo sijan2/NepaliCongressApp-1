@@ -3,9 +3,11 @@
 import React from 'react';
 import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
 import Carouselitem from './Items';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
-import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 /**
  * @author Nitesh Raj Khanal
  * @function @Carousel
@@ -59,9 +61,10 @@ const Carousel = ({data}: any) => {
             renderItem={({item}) => {
               return <Carouselitem item={item} />;
             }}
-            onScroll={Animated.event([
-              {nativeEvent: {contentOffset: {x: scrollX}}},
-            ])}
+            onScroll={Animated.event(
+              [{nativeEvent: {contentOffset: {x: scrollX}}}],
+              {useNativeDriver: false},
+            )}
           />
           <View style={styles.bar}>
             {data.map((_: any, i: any) => {
@@ -106,8 +109,8 @@ const styles = StyleSheet.create({
   },
   text: {
     marginTop: 10,
-    fontSize: scaleFontSize(18),
-    fontFamily: 'Mont-Bold',
+    fontSize: Metrics.h3,
+    fontFamily: Fonts.type.montBold,
     color: Colors.black,
   },
 });

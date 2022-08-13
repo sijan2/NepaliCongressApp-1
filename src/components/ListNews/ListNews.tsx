@@ -2,8 +2,10 @@ import React, {FC} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import Colors from '@assets/colors/colors';
-import scaleFontSize, {WIDTH} from '@utils/Dimensions';
+import Colors from '@constants/colors/colors';
+import {WIDTH} from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    height: 95,
+    height: 90,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginRight: 10,
@@ -84,16 +86,16 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: scaleFontSize(13),
-    fontFamily: 'Mont-Bold',
-    lineHeight: 16,
-    letterSpacing: 0.2,
+    fontSize: Metrics.body6,
+    fontFamily: Fonts.type.montBold,
+    lineHeight: 13,
+    letterSpacing: 0.3,
   },
   name: {
     flexDirection: 'row',
   },
   text: {
-    fontSize: scaleFontSize(10),
+    fontSize: Metrics.body8,
     fontFamily: 'Mont-Bold',
     textAlign: 'justify',
     marginTop: 20,

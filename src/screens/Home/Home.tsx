@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import {StyleSheet, View, Image} from 'react-native';
-import {ScrollView} from 'react-native-gesture-handler';
-import Colors from '@assets/colors/colors';
+import {StyleSheet, View, Image, SafeAreaView, FlatList} from 'react-native';
+import Colors from '@constants/colors/colors';
 import advertisement from '@assets/images/advertisement.png';
 import CustomSwitch from '@components/CustomSwitch/CustomSwitch';
 import ProvinceScreen from '@screens/Province/Province';
@@ -18,24 +17,35 @@ const HomeScreen = () => {
   const onSelectSwitch = (value: any) => {
     setGetTab(value);
   };
+
+  const emptyData: any = [];
+  const renderNullItems: any = () => null;
+
+  const ListComponent = (
+    <>
+      <View>
+        <Image style={styles.adImage} source={advertisement} />
+      </View>
+      <CustomSwitch
+        selectionMode={1}
+        option1="Provinces"
+        option2="Trending"
+        onSelectSwitch={onSelectSwitch}
+      />
+      <View>
+        {getTab === 1 && <ProvinceScreen />}
+        {getTab === 2 && <TrendingScreen />}
+      </View>
+    </>
+  );
   return (
-    <View style={styles.mainContainer}>
-      <ScrollView style={styles.container}>
-        <View>
-          <Image style={styles.adImage} source={advertisement} />
-        </View>
-        <CustomSwitch
-          selectionMode={1}
-          option1="Provinces"
-          option2="Trending"
-          onSelectSwitch={onSelectSwitch}
-        />
-        <View>
-          {getTab === 1 && <ProvinceScreen />}
-          {getTab === 2 && <TrendingScreen />}
-        </View>
-      </ScrollView>
-    </View>
+    <SafeAreaView style={styles.mainContainer}>
+      <FlatList
+        data={emptyData}
+        renderItem={renderNullItems}
+        ListFooterComponent={ListComponent}
+      />
+    </SafeAreaView>
   );
 };
 

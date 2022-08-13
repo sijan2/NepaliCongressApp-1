@@ -3,10 +3,12 @@
 import React, {useState, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
-import scaleFontSize from '@utils/Dimensions';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -47,8 +49,8 @@ const CustomSwitch = ({
                 color:
                   getSelectionMode === 1 ? Colors.black : Colors.washedGray,
                 position: 'absolute',
-                fontSize: scaleFontSize(16),
-                fontFamily: 'Mont-Bold',
+                fontSize: Metrics.body3,
+                fontFamily: Fonts.type.montBold,
                 left: 2,
                 letterSpacing: 0.5,
               }}>
@@ -57,7 +59,8 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 1 ? 3 : 2,
+                height:
+                  getSelectionMode === 1 ? 0.0025 * HEIGHT : 0.0025 * HEIGHT,
                 width: '120%',
                 backgroundColor:
                   getSelectionMode === 1 ? Colors.red : Colors.washedGray,
@@ -77,8 +80,8 @@ const CustomSwitch = ({
               style={{
                 color:
                   getSelectionMode === 2 ? Colors.black : Colors.washedGray,
-                fontFamily: 'Mont-Bold',
-                fontSize: scaleFontSize(16),
+                fontFamily: Fonts.type.montBold,
+                fontSize: Metrics.body3,
                 position: 'absolute',
                 left: 6,
                 letterSpacing: 0.5,
@@ -88,7 +91,8 @@ const CustomSwitch = ({
             <View
               style={{
                 marginTop: 50,
-                height: getSelectionMode === 2 ? 3 : 2,
+                height:
+                  getSelectionMode === 2 ? 0.0025 * HEIGHT : 0.0025 * HEIGHT,
                 width: '100%',
                 backgroundColor:
                   getSelectionMode === 2 ? Colors.red : Colors.washedGray,
@@ -101,8 +105,8 @@ const CustomSwitch = ({
             marginHorizontal: 20,
             marginTop: 2,
             zIndex: -1,
-            height: 3,
-            width: '90%',
+            height: 0.0025 * HEIGHT,
+            width: WIDTH * 0.9,
             backgroundColor: Colors.washedGray,
             borderRadius: 10,
           }}></View>

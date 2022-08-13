@@ -4,7 +4,7 @@ const date = new Date();
 const dateAndDay = DateAndDayGenerator(date);
 export const latestNews = [
   {
-    id: 1,
+    id: 8,
     state: 'Province 1',
     image: require('../assets/images/1.png'),
     title: 'Nepali Congress set to decide today in favour of poll alliance',
@@ -36,7 +36,7 @@ export const latestNews = [
     \n“On Tuesday, the party will come up with a formal decision in favour of an electoral alliance,” said Jeevan Pariyar, joint general secretary of the party. `,
   },
   {
-    id: 2,
+    id: 9,
     state: 'Province 1',
     image: require('../assets/images/2.png'),
     title: 'Nepali Congress leaders set to challenge Sher Bahadur Deuba',
@@ -53,7 +53,7 @@ export const latestNews = [
       `,
   },
   {
-    id: 3,
+    id: 10,
     state: 'Province 1',
     image: require('../assets/images/cabMeet1.jpeg'),
     title: 'Sher Bahadur Deuba appointed as prime minister',
@@ -72,7 +72,7 @@ export const latestNews = [
     \nAs recommended by Oli, President Bhandari dissolved the lower house on May 22 after she rejected claims by Deuba and Oli to the premiership, a move that was challenged by an alliance of the Nepali Congress and other opposition parties and factions at the Supreme Court.`,
   },
   {
-    id: 4,
+    id: 11,
     state: 'Province 2',
     image: require('../assets/images/cabMeet2.jpeg'),
     title: 'Congress must hold convention by September, but how?',
@@ -125,7 +125,7 @@ export const latestNews = [
       \n“We as a party must set an example to others by following democratic processes,” said Adhikari. “We should be unwavering in our commitment to the system, constitution, democratic values and principles. General Convention is not just a technical process, it is a democratic process.”`,
   },
   {
-    id: 5,
+    id: 12,
     state: 'Province 2',
     image: require('../assets/images/CabMeet4.jpeg'),
     title: 'Focus on Bharatpur mayor race may cost Nepali Congress',
@@ -167,7 +167,7 @@ export const latestNews = [
       \n“It’s the Congress’ responsibility to convince the parties in the alliance because there is a rebel candidate against the common candidate, but the party must not get confined to a single local unit,” said Poudel, the Congress central working committee leader.`,
   },
   {
-    id: 6,
+    id: 13,
     state: 'Province 2',
     image: require('../assets/images/election.jpeg'),
     title: 'Nepali Congress election manifesto says no view towers',
@@ -181,7 +181,7 @@ export const latestNews = [
       \nLike the UML’s, the Nepali Congress manifesto has also discussed the achievements of the government led by the party. In particular, the party says the endorsement of the controversial MCC deal was also its achievement.`,
   },
   {
-    id: 7,
+    id: 14,
     state: 'Province 3',
     image: require('../assets/images/congmaoist.jpeg'),
     title: 'Local polls: Nepali Congress looks set to gain',
@@ -215,7 +215,7 @@ export const latestNews = [
       \nBut how the Maoist Centre behaves could chart the country’s future political course, as its tendency to switch sides has been the source of a major ill the country has been trying to get rid of—political instability.`,
   },
   {
-    id: 8,
+    id: 15,
     state: 'Province 3',
     image: require('../assets/images/congvoting.jpeg'),
     title: 'Nepali Congress convention: Voting for new leadership',
@@ -228,7 +228,7 @@ export const latestNews = [
       \nMeanwhile, there are seven candidates for two positions of the vice-president, six for two positions of the general secretary and 19 for eight positions of joint general secretaries.`,
   },
   {
-    id: 9,
+    id: 16,
     state: 'Province 3',
     image: require('../assets/images/congress.png'),
     title: 'Congress intensifies door-to-door campaign',
@@ -240,7 +240,7 @@ export const latestNews = [
       \nAccording to Acharya, the overall development in Naukunda and Uttargaya and Amachhodingmo has already shown the blueprint for the construction of prosperous Rasuwa. Similarly, the party has started discussions from today to field candidates for the local elections. Chairman Tamang said that homework has been started for the selection of eligible candidates. According to the District Election Officer, a total of 38,545 voters, including 18,856 women, will cast their ballots from 51 centres of 34 polling stations in the upcoming April election.`,
   },
   {
-    id: 10,
+    id: 17,
     state: 'Province 4',
     image: require('../assets/images/deuba.jpeg'),
     title: 'Deuba-led Nepali Congress to stake claim in Nepal',
@@ -251,7 +251,7 @@ export const latestNews = [
       \nOn Tuesday, Deuba held a meeting with the Opposition leaders and discussed ways to form a new government under his leadership. The meeting was attended by CPN-Maoist Centre chairman Pushpa Kamal Dahal ‘Prachanda’ and Janata Samajwadi Party (JSP-N) second president Upendra Yadav. Prachanda indicated that his party would support Deuba. — PTI`,
   },
   {
-    id: 11,
+    id: 18,
     state: 'Province 4',
     image: require('../assets/images/oli.jpeg'),
     title: 'Nepali Congress to back Oli government on vote for new map',
@@ -261,7 +261,7 @@ export const latestNews = [
       \nThe government of Nepal on Saturday secured crucial support of the main opposition party, the Nepali Congress (NC) to grant constitutional status to the updated map of the country that claims the disputed territory of Kalapani. A leading figure of the Nepali Congress confirmed that the party has decided to back the move of Prime Minister K.P. Sharma Oli and help in passing the amendment motion next week.`,
   },
   {
-    id: 12,
+    id: 19,
     state: 'Province 4',
     image: require('../assets/images/jamboree.jpeg'),
     title: '13th Nepali Congress jamboree kicks off',
@@ -271,7 +271,7 @@ export const latestNews = [
       '\tNepali Congress’s 13th National General Convention began today with fanfare amid a grand function at the Khula Manch in the presence of thousands of Congress supporters, leaders of political parties, including those from neighbouring countries. The candidates wishing to fight for the party’s Central Working Committee’s elected posts will have to file their candidacy by noon tomorrow.\n\nThe party’s close session to begin at 2:00pm at Bhrikutimandap will discuss party’s policy and programmes for the next term. Election for the CWC posts are slated for March 6.Three leaders, including two from the establishment side and one from rival faction, have announced their panels. Ramchandra Paudel and Shashanka Koirala have announced candidacy for the party president and general secretary, respectively. Krishna Prasad Sitaula andGagan Thapa have also announced candidacy for the two vital posts, with Umakanta Chaudhari vying for treasurer’s post from Sitaula panel. Both the panels from establishment side did not file their nomination today and will do so tomorrow morning.Senior leader Sher Bahadur Deuba and Chitra Lekha Yadav filed their nomination for party presidency and treasurer, respectively, at the party headquarters in Sanepa today. Arjun Narsingh KC will file nomination for general secretary’s post from Deuba’s side tomorrow morning.A candidate for party president should garner more than 50 per cent of the over 3,200 votes to get elected. But for the posts of general secretary and treasurer, first-past-the-post system will be followed, according to NC Election Committee member Gopal Krishna Ghimire.Seventy-five members, including Kul Bahadur Gurung, Khum Bahadur Khadka and Mahesh Acharya, filed nomination papers today for CWC membership under open competition and province-wise representation, according to party sources.\n\nEarlier, NC leaders Ramchandra Paudel, Sher Bahadur Deuba, general secretaries Prakash Man Singh and Krishna Prasad Sitaula and treasurer Chitra Lekha Yadav addressed the function.Prime Minister and CPN-UML Chairman KP Sharma Oli and Unified CPN Maoist Chairman Pushpa Kamal Dahal were among those present at the inaugural session of the NC’s 13th National General Convention.Chief Minister of Bihar Nitish Kumar, Bharatiya Janata Party leader Bhagat Singh Koshyari, General Secretary of Indian National Congress BK Hariprasad, Information Minister of Bangladesh Hasanul Haqinu and General Secretary of Socialist International Luis Ayala, were some of the foreign leaders present in Khula Manch for NC’s jamboree. Deuba announces his panelKATHMANDU: Senior NC leader Sher Bahadur Deuba, who is vying for the post of party president, announced his panel in the presence of hundreds of his supporters at the party headquarters in Sanepa, on Thursday.CWC member KB Gurung proposed the names of Deuba, Arjun Narsingh KC and Chitra Lekha Yadav for the posts of NC president, general secretary and treasurer, respectively.CWC member Khum Bahadur Khadka seconded the three names. \n\nArjun Narsingh KC, who was part of the party establishment till recently, said he switched over to the Deuba camp to protest the politics of syndicate and family legacy.Gurung, Khadka, Taranath Ranabhat, Govinda Raj Joshi, Laxman Ghimire and Binay Dhoj Chand, who were not in the Deuba camp not so long ago, have also thrown their weight behind Deuba. \n\nSujata backs PaudelKATHMANDU: Sujata Koirala, who is from the establishment side and had announced to contest for party presidency on Wednesday, decided on Thursday to support Paudel and his panel instead.Organising a press meet at her residence in Mandikatar in the presence of Paudel and other leaders, including Shashanka Koirala, Ram Sharan Mahat and Shekhar Koirala, she said, “On the request of well wishers of the party from across the country, I have decided to support Paudel and his team to save the party.” \n\nUDMF boycotts functionKATHMANDU: Leaders of the United Democratic Madhesi Front boycotted the inaugural session of the 13th National General Convention of the Nepali Congress, claiming that NC drafted anti-Madhes constitution.Chairman of Sadbhawana Party Rajendra Mahato said the UDMF could not attend the function because they had been agitating against the constitution promulgated under the leadership of NC.UDMF, however, had supported NC during PM election. Chairman of MJF-Democratic Bijaya Kumar Gachhadar, however, was present at the inaugural function.',
   },
   {
-    id: 13,
+    id: 20,
     state: 'Province 5',
     image: require('../assets/images/NCMeet.png'),
     title: 'NC holding its CWC meeting even today',
@@ -284,7 +284,7 @@ export const latestNews = [
       \nNepali Congress parliamentary party whip Pushpa Bhusal was elected Deputy Speaker of the House of Representatives on Friday.`,
   },
   {
-    id: 14,
+    id: 21,
     state: 'Province 5',
     image: require('../assets/images/GaganSharma.jpeg'),
     title: 'Gagan Thapa and Sharma to contest from same team',
@@ -296,7 +296,7 @@ export const latestNews = [
     \nSharma was also offered a ticket for general secretary by Prakash Man Singh and Bimalendra Nidhi who is looking to challenge Deuba for the top post having been with Deuba for decades. But a source close to Sharma confided with Setopati that he is now preparing to contest together with Thapa from Shekhar's team.`,
   },
   {
-    id: 15,
+    id: 22,
     state: 'Province 5',
     image: require('../assets/images/np.jpeg'),
     title: 'Nepali Congress set to decide today in favour of poll alliance',
@@ -328,7 +328,7 @@ export const latestNews = [
       \n“On Tuesday, the party will come up with a formal decision in favour of an electoral alliance,” said Jeevan Pariyar, joint general secretary of the party.`,
   },
   {
-    id: 16,
+    id: 23,
     state: 'Province 6',
     image: require('../assets/images/elections.jpeg'),
     title: 'Nepali Congress wins most votes in elections',
@@ -349,7 +349,7 @@ export const latestNews = [
       \nThe BBC's Bhagirath Yogi in Kathmandu says that Nepal's future stability - as well as any new constitution - may well depend on the Maoists joining a national government, which is why intense negotiations are likely to take place in the next few days over the allocation of ministerial portfolios.`,
   },
   {
-    id: 17,
+    id: 24,
     state: 'Province 6',
     image: require('../assets/images/ncoffice.jpeg'),
     title: 'Publication of final list of candidates for Congress GC',
@@ -380,7 +380,7 @@ export const latestNews = [
       \nThe total number of delegates in this General Convention is four thousand 743.  They were elected from 165 federal electoral constituencies and the party's sister organizations, well-wisher organizations, and the public relations committee abroad. The voting will take place from 8 am to 5 pm on Monday. `,
   },
   {
-    id: 18,
+    id: 25,
     state: 'Province 6',
     image: require('../assets/images/koirala.jpeg'),
     title: 'Nepali Congress withholds new active membership',
@@ -390,7 +390,7 @@ export const latestNews = [
       "Nepali Congress said the party leadership has decided to acknowledge the new active members from Solukhumbu and Kailali districts and four disputed constituencies of Rautahat district (Constituency No. 1, 2 3, and 4) after the party's upcoming 13th General Convention only.As per the decision made by the party's office-bearers, which the Nepali Congress central office said was on a par with the party statute, the active members who took part the 12th general convention can renew their membership and take part in the upcoming gala also. \n\nThe party leadership, however, decided to acknowledge 100 new active members from Dolpa district in such a way that the party organisation would extend in all the VDCs of the remote district. The new membership would be granted on the recommendation of the party's district president.The party had formed a probe panel to look into the dispute over new active membership in Solukhumbu, Kailali, Rautahat and Dolpa districts.\n\nThe main opposition party is scheduled to hold its gala from March 3 to 6 in Kathmandu.",
   },
   {
-    id: 19,
+    id: 26,
     state: 'Province 7',
     image: require('../assets/images/sherbd.jpeg'),
     name: 'Nepal News',
@@ -417,7 +417,7 @@ export const latestNews = [
     \nCritics often accuse Deuba of giving a bad name to the parliamentary system.  Horse trading in the Parliament was a controversial legacy of his prime ministership. His government’s decision to give away Pajero to all lawmakers by waiving customs came under fire. He would form jumbo cabinet to make sure that his government does not topple. This move also came under criticism.`,
   },
   {
-    id: 20,
+    id: 27,
     state: 'Province 7',
     image: require('../assets/images/reelect.jpeg'),
     title: 'Re-election for party presidency',
@@ -433,7 +433,7 @@ export const latestNews = [
       \n The election was held for 132 party posts including the central working committee office-bearers and the members.`,
   },
   {
-    id: 21,
+    id: 28,
     state: 'Province 7',
     image: require('../assets/images/congleader.jpeg'),
     title: 'Congress rival factions reach truce, focus now on new leadership',

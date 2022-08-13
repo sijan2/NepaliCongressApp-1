@@ -11,13 +11,15 @@ import {
 import {Surface} from 'react-native-paper';
 
 import Logo from '@assets/images/NCLogo.png';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 import Search from '@assets/icons/Search.svg';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 import DateAndDayGenerator from '@utils/DayGen';
-import scaleFontSize, {HEIGHT, WIDTH} from '@utils/Dimensions';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -69,7 +71,7 @@ const Header = () => {
 
 const styles = StyleSheet.create({
   header: {
-    height: 80,
+    height: HEIGHT * 0.087,
     flexDirection: 'row',
     backgroundColor: Colors.white,
   },
@@ -96,14 +98,14 @@ const styles = StyleSheet.create({
     marginRight: WIDTH * 0.155,
   },
   text: {
-    fontSize: scaleFontSize(18),
+    fontSize: Metrics.h3,
     color: Colors.black,
-    fontFamily: 'Mont-Bold',
+    fontFamily: Fonts.type.montBold,
     width: WIDTH * 0.5,
   },
   date: {
     marginTop: 4,
-    fontSize: scaleFontSize(11),
+    fontSize: Metrics.body7,
     color: Colors.black,
     fontFamily: 'Mont-Regular',
   },

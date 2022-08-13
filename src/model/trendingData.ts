@@ -6,7 +6,7 @@ const date = new Date();
 const dateAndDay = DateAndDayGenerator(date);
 export const trendingNews = [
   {
-    id: 1,
+    id: 39,
     image: require('../assets/images/sbdeuba.jpeg'),
     for: 'Sher Bd. Deuba',
     title: 'Deuba sworn in as Nepal’s Prime Minister for 5th time',
@@ -18,7 +18,7 @@ export const trendingNews = [
     \n“The President has appointed Sher Bahadur Deuba as the Prime Minister as per the verdict of the Supreme court yesterday (Monday),” a statement issued by President Bhandari’s office had initially said. But Bhandari was later forced issue another letter in which the relevant article of the Constitution under which the appointment was being made was mentioned. The second letter came after Deuba insisted he would not take the oath of office without the change being made in the initial letter.`,
   },
   {
-    id: 2,
+    id: 40,
     image: require('../assets/images/sb.jpeg'),
 
     title: 'Deuba seeks stimulus package for media',
@@ -31,7 +31,7 @@ export const trendingNews = [
       \nDeuba lauded the role played by the Nepali media during trying times. “Press freedom is at risk of being further undermined on the pretext of the fight against COVId-19. Recent actions of the government hint at this possibility. Any attempt to curtail press freedom will not be acceptable to the NC,” he warned.`,
   },
   {
-    id: 3,
+    id: 41,
     image: require('../assets/images/sb1.jpeg'),
     title: 'Setback for KP Oli as SC directs president to appoint Deuba as PM',
     name: 'Online Khabar',
@@ -46,7 +46,7 @@ export const trendingNews = [
     `,
   },
   {
-    id: 4,
+    id: 42,
     image: require('../assets/images/ramchandra.jpeg'),
     title: 'Ram Chandra Poudel to receive Japanese honours',
     name: 'Kathmandu Post',
@@ -63,7 +63,7 @@ export const trendingNews = [
     \nPoudel, 76, has contributed to the activation of contacts between parliamentarians of the two countries, established the Japan Nepal Friendship Parliamentarian League in 1999 when he was the Speaker of the House of Representatives of Nepal.`,
   },
   {
-    id: 5,
+    id: 43,
     image: require('../assets/images/rpoudel.jpeg'),
     title: 'Electoral alliance is the need of the country: NC leader Poudel',
     name: 'My Republic',
@@ -75,7 +75,7 @@ export const trendingNews = [
       \nPaudel also lauded the role of laborers to achieve democratic republic system in the country.`,
   },
   {
-    id: 6,
+    id: 44,
     image: require('../assets/images/rp1.jpeg'),
     title: 'NC needs capable leadership: Poudel',
     name: 'Online Radio Nepal',
@@ -87,7 +87,7 @@ export const trendingNews = [
     \nOn the occasion, Poudel handed over different health materials worth about Rs 3. 5 million to 10 local levels of Tanahu, and one of Lamjung district. The health and safety stuffs include oxygen concentrators, face shields, mask, PPE and sanitizer among others.`,
   },
   {
-    id: 7,
+    id: 45,
     image: require('../assets/images/gagan.jpeg'),
     title: 'PM must prove his non-involvement in Baskota case',
     name: 'Kathmandu Post',
@@ -102,7 +102,7 @@ export const trendingNews = [
     `,
   },
   {
-    id: 8,
+    id: 46,
     image: require('../assets/images/gagan2.jpeg'),
     title: 'New budget to address the trade deficit',
     name: 'Online Khabar',
@@ -114,7 +114,7 @@ export const trendingNews = [
     \nHowever, the Ministry of Finance should call other ministries concerned and discuss the implementation modalities. The budget has brought the right policy on decreasing the trade deficit," he said, adding that the provisions on social security as provisioned in the budget are worth welcoming. There should be transparency in the sources of the budget, he stressed.`,
   },
   {
-    id: 9,
+    id: 47,
     image: require('../assets/images/gagan3.jpeg'),
     title: 'Bill related to Constitutional Council will be withdrawn',
     name: 'My Republic',
@@ -138,7 +138,7 @@ export const trendingNews = [
     \nThe six-strong Constitutional Council only had five members even then with the post of deputy speaker remaining vacant since resignation of the then deputy speaker Shiva Maya Tumbahangphe before election of Sapkota as speaker.`,
   },
   {
-    id: 10,
+    id: 48,
     image: require('../assets/images/sher3.jpeg'),
     title: 'Nepal SC orders to appoint Deuba as PM within next 28 hours',
     name: 'My Republic',
@@ -154,7 +154,7 @@ export const trendingNews = [
     On February 23, the apex court reinstated the dissolved House of Representatives, in a setback to embattled Prime Minister Oli who was preparing for snap polls.`,
   },
   {
-    id: 11,
+    id: 49,
     image: require('../assets/images/sher4.jpeg'),
     title: 'Nepal PM Deuba wins vote of confidence in Parliament',
     name: 'Online Khabar',
@@ -168,7 +168,7 @@ export const trendingNews = [
     \nDeuba won the vote of confidence on the first day of the restored House session.`,
   },
   {
-    id: 12,
+    id: 50,
     image: require('../assets/images/gagan4.jpeg'),
     title: 'Gagan Thapa Ready To Discuss On Every Sentence Of IT Bill 2075',
     name: 'Kantipur Post',
@@ -182,7 +182,7 @@ export const trendingNews = [
     \nHe added that the contents of information technology bill are also included in the criminal law. He claimed that the right to write/speak was given only to the government-backed people.`,
   },
   {
-    id: 13,
+    id: 51,
     image: require('../assets/images/gagan5.jpeg'),
     title: 'Gagan Thapa lashes out at PM Oli for his ‘double personality’',
     name: 'Kathmandu Post',
@@ -213,7 +213,7 @@ export const trendingNews = [
     \nhapa suggested that responsible leaders like Oli should stop using so called nationalistic discourse as a device to simply garner votes.`,
   },
   {
-    id: 14,
+    id: 52,
     image: require('../assets/images/rcp3.jpeg'),
     title: 'There is a conspiracy to make the country fail: Ram Chandra Poudel',
     name: 'Himalayan Times',
@@ -225,7 +225,7 @@ export const trendingNews = [
     \nStating that there is a conspiracy to make the country fail, Poudel said, “We should all work towards defeating the attempt to make the country fail and lead it towards instability. I am continuing the same campaign.”`,
   },
   {
-    id: 15,
+    id: 53,
     image: require('../assets/images/rcp4.jpeg'),
     title: 'Senior Leader Poudel Says He Will Be In Party Presidential Race',
     name: 'Online Khabar',

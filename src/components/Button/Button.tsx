@@ -1,14 +1,15 @@
 import React, {FC, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import Colors from '@assets/colors/colors';
+import Colors from '@constants/colors/colors';
 
 /**
  * @author Nitesh Raj Khanal
  * @function @CustomButton
  **/
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
-import scaleFontSize from '@utils/Dimensions';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
+import Metrics from '@constants/metrics/Metrics';
+import Fonts from '@constants/fonts/fonts';
 interface button {
   onPress?: () => void;
   text?: string;
@@ -21,14 +22,26 @@ interface button {
  * as the text.
  */
 const CustomButton: FC<button> = ({text}) => {
-  const {setMyProvince} = useContext(AuthContext);
+  const {myProvince, setMyProvince} = useContext(AuthContext);
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity
-          style={styles.btnActive}
+          key={0}
+          style={
+            myProvince.toLowerCase() === text?.toLowerCase()
+              ? styles.btnActive
+              : styles.btnInActive
+          }
           onPress={() => setMyProvince(text)}>
-          <Text style={styles.textActive}>{text}</Text>
+          <Text
+            style={
+              myProvince.toLowerCase() === text?.toLowerCase()
+                ? styles.textActive
+                : styles.textInActive
+            }>
+            {text}
+          </Text>
         </TouchableOpacity>
       </View>
     </>
@@ -53,27 +66,30 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: '90%',
     alignSelf: 'center',
+    color: Colors.white,
   },
   btnInActive: {
-    marginHorizontal: 5,
+    marginLeft: 11,
+    marginRight: 11,
     marginTop: 20,
-    height: 36,
+    height: 30,
     backgroundColor: Colors.washedGray,
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    width: '20%',
+    width: '90%',
     alignSelf: 'center',
   },
   textActive: {
-    fontSize: scaleFontSize(12),
+    fontSize: Metrics.body6,
     fontWeight: '400',
-    fontFamily: 'Mont-Regular',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.white,
   },
   textInActive: {
-    fontSize: scaleFontSize(12),
+    fontSize: Metrics.body6,
     fontWeight: '400',
+    fontFamily: Fonts.type.montRegular,
     color: Colors.gray,
   },
 });

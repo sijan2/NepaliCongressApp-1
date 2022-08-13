@@ -1,7 +1,8 @@
 import React, {FC} from 'react';
 
-import AuthProvider from '@components/AuthContext/AuthContext';
+import AuthProvider from '@components/ContextStore/AuthContext/AuthContext';
 import EntryNavigator from '@navigation/EntryNavigator';
+import SaveProvider from '@components/ContextStore/SavedProvider/SavedProvider';
 
 interface IProps {}
 
@@ -18,7 +19,9 @@ interface IProps {}
 const Entry: FC<IProps> = () => {
   return (
     <AuthProvider>
-      <EntryNavigator />
+      <SaveProvider>
+        <EntryNavigator />
+      </SaveProvider>
     </AuthProvider>
   );
 };

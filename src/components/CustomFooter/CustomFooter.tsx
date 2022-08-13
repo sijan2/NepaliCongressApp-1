@@ -1,4 +1,4 @@
-import colors from '@assets/colors/colors';
+import colors from '@constants/colors/colors';
 import React, {FC} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Alert} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
