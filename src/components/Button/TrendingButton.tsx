@@ -2,7 +2,7 @@ import React, {FC, useContext} from 'react';
 import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 import Colors from '@constants/colors/colors';
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 

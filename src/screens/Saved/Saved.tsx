@@ -1,6 +1,6 @@
 /* eslint-disable radix */
 import React from 'react';
-import {useSaved} from '@components/SavedProvider/SavedProvider';
+import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
 import SavedNews from '@components/SavedNews/SavedNews';
 
 /**

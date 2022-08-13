@@ -3,7 +3,7 @@ import React, {FC, useState, useEffect} from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import NewsDetails from '@screens/NewsOpenPage/NewsDetails';
-import TabNavigator from './TabNavigator';
+import TabNavigator from '../TabNavigator/TabNavigator';
 import SplashScreen from '@screens/SplashScreen/Splash';
 interface IProps {}
 

@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
-import StackNavigator from './StackNavigator';
+import StackNavigator from './StackNavigator/StackNavigator';
 
 interface IProps {}
 

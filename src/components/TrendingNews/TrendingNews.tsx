@@ -5,7 +5,7 @@ import Colors from '@constants/colors/colors';
 import ListNews from '@components/ListNews/ListNews';
 import {trendingNews} from '@models/trendingData';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 /**
  * @author Nitesh Raj Khanal

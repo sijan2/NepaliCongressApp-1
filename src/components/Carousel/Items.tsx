@@ -87,12 +87,10 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.red,
     marginHorizontal: WIDTH * 0.04,
     marginVertical: WIDTH * 0.04,
+    alignItems: 'center',
   },
   textView: {
-    marginHorizontal: 10,
     position: 'absolute',
-    zIndex: 2,
-    margin: 10,
     borderRadius: 10,
     marginTop: HEIGHT * 0.14,
     opacity: 0.95,

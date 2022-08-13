@@ -7,7 +7,7 @@ import Colors from '@constants/colors/colors';
  * @function @CustomButton
  **/
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 interface button {

@@ -14,7 +14,7 @@ import Logo from '@assets/images/NCLogo.png';
 import Colors from '@constants/colors/colors';
 import Search from '@assets/icons/Search.svg';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 import DateAndDayGenerator from '@utils/DayGen';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';

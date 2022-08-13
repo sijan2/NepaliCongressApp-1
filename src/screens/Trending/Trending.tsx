@@ -6,7 +6,7 @@ import TrendingNews from '@components/TrendingNews/TrendingNews';
 import {trending} from '@models/trendingbutton';
 import Button from '@components/Button/TrendingButton';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 /**
  * @author Nitesh Raj Khanal

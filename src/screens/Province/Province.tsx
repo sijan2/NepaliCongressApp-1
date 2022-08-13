@@ -6,7 +6,7 @@ import Button from '@components/Button/Button';
 import {FlatList} from 'react-native-gesture-handler';
 import LatestNews from '@components/LatestNews/LatestNews';
 
-import {AuthContext} from '@components/AuthContext/AuthContext';
+import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 /**
  * @author Nitesh Raj Khanal

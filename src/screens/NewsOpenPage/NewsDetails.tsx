@@ -21,7 +21,7 @@ import ShareLogo from '@assets/icons/Share.svg';
 
 import {WIDTH, HEIGHT} from '@utils/Dimensions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import {useSaved} from '@components/SavedProvider/SavedProvider';
+import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
 import colors from '@constants/colors/colors';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
