@@ -38,6 +38,8 @@ import {dateFormatter} from '@utils/DayGen';
  * @returns A function component that returns a view with a scrollview
  */
 const DetailScreen = ({route}: any) => {
+  const parsedTitle = route.params.title;
+  const cms_title = {html: parsedTitle};
   const navigation = useNavigation();
   const myCustomShare = async () => {
     const shareOptions = {
@@ -77,6 +79,11 @@ const DetailScreen = ({route}: any) => {
   const mixedStyle = {
     ...styles.details,
   };
+  const titleStyle = {
+    ...styles.textTitle,
+  };
+
+  const HtmlContentWidth = WIDTH * 0.9;
 
   const formattedDate = dateFormatter(route.params.date);
   const newDate = formattedDate.date;
@@ -127,13 +134,17 @@ const DetailScreen = ({route}: any) => {
           <View>
             <View style={styles.mainContainer}>
               <View style={styles.container}>
-                <Text style={styles.textTitle}>{route.params?.title}</Text>
+                <RenderHtml
+                  contentWidth={WIDTH}
+                  source={cms_title}
+                  baseStyle={titleStyle}
+                />
                 <View style={styles.rowData}>
                   <Text style={styles.text1}>{route.params?.name}</Text>
                   <Text style={styles.text2}>{formatted}</Text>
                 </View>
                 <RenderHtml
-                  contentWidth={WIDTH}
+                  contentWidth={HtmlContentWidth}
                   source={source}
                   baseStyle={mixedStyle}
                 />

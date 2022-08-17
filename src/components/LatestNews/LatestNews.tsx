@@ -45,7 +45,7 @@ const LatestNews = () => {
   const getCarouselNews = async () => {
     try {
       const response = await fetch(
-        'https://congress-api.server247.info/api/news/all-news/1/5',
+        'https://congress-api.server247.info/api/news/all-news/1/7',
         {
           headers: {
             Authorization: `Basic ${auth}`,
