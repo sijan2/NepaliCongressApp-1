@@ -6,6 +6,7 @@ import Colors from '@constants/colors/colors';
 import {WIDTH} from '@utils/Dimensions';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
+import RenderHTML from 'react-native-render-html';
 
 /**
  * @author Nitesh Raj Khanal
@@ -15,7 +16,7 @@ import Fonts from '@constants/fonts/fonts';
 interface list {
   id?: any;
   image?: any;
-  title?: string;
+  title?: any;
   name?: string;
   date?: string;
   description?: string;
@@ -28,6 +29,7 @@ interface list {
  */
 const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
   const navigation: any = useNavigation();
+  const cms_title = {html: title};
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
       id,
@@ -38,14 +40,26 @@ const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
       description,
     });
   };
+  const mixedStyle = {
+    ...styles.title,
+  };
   return (
     <TouchableOpacity onPress={handleOnPress}>
       <View style={styles.mainContainer}>
         <View style={styles.list}>
-          <Image style={styles.image} source={image} />
+          <Image
+            style={styles.image}
+            source={{
+              uri: image,
+            }}
+          />
         </View>
         <View style={styles.textView}>
-          <Text style={styles.title}>{title}</Text>
+          <RenderHTML
+            contentWidth={WIDTH}
+            source={cms_title}
+            baseStyle={mixedStyle}
+          />
           <View style={styles.name}>
             <Text style={styles.text}>{name}</Text>
             <Text style={styles.text}>{date}</Text>
@@ -86,9 +100,10 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: Metrics.body6,
+    fontSize: Metrics.body5,
     fontFamily: Fonts.type.montBold,
-    lineHeight: 13,
+    lineHeight: 14,
+    fontWeight: '700',
     letterSpacing: 0.3,
   },
   name: {

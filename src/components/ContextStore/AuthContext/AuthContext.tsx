@@ -24,7 +24,7 @@ export const AuthContext = createContext<createContextInitialization>({
  * @returns AuthContext.Provider
  */
 const AuthProvider = ({children}: any) => {
-  const [myProvince, setMyProvince] = useState('province 1');
+  const [myProvince, setMyProvince] = useState('1');
   const [trending, setTrending] = useState('sher bd. deuba');
   const [color, setColor] = useState();
   return (

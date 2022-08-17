@@ -12,7 +12,8 @@ import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 interface button {
   onPress?: () => void;
-  text?: string;
+  text: string;
+  provinceCode: string;
 }
 /**
  * A function that returns a view with a button that when pressed sets the province to the text passed
@@ -21,22 +22,25 @@ interface button {
  * @returns A custom button component that takes in a text prop and returns a button with the text prop
  * as the text.
  */
-const CustomButton: FC<button> = ({text}) => {
+const CustomButton: FC<button> = ({text, provinceCode}) => {
   const {myProvince, setMyProvince} = useContext(AuthContext);
+
   return (
     <>
       <View style={styles.container}>
         <TouchableOpacity
           key={0}
           style={
-            myProvince.toLowerCase() === text?.toLowerCase()
+            myProvince.toLowerCase() === provinceCode?.toLowerCase()
               ? styles.btnActive
               : styles.btnInActive
           }
-          onPress={() => setMyProvince(text)}>
+          onPress={() => {
+            setMyProvince(provinceCode);
+          }}>
           <Text
             style={
-              myProvince.toLowerCase() === text?.toLowerCase()
+              myProvince.toLowerCase() === provinceCode?.toLowerCase()
                 ? styles.textActive
                 : styles.textInActive
             }>

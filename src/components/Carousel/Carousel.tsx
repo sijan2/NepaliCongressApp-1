@@ -1,4 +1,3 @@
-// /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import {StyleSheet, Text, View, FlatList, Animated} from 'react-native';
@@ -12,34 +11,11 @@ import Fonts from '@constants/fonts/fonts';
  * @author Nitesh Raj Khanal
  * @function @Carousel
  **/
-// function infiniteScroll(this: any, dataList: any) {
-//   let numberOfData = dataList.length;
-//   let scrollValue = 1,
-//     scrolled = 0;
-
-//   setInterval(function (this: any) {
-//     scrolled++;
-//     if (scrolled < numberOfData) {
-//       scrollValue = scrollValue + WIDTH;
-//     } else {
-//       scrollValue = 1;
-//       scrolled = 0;
-//     }
-//     this.flatlist?.scrollToOffset({offset: scrollValue, animated: true});
-//   }, 3000);
-// }
 
 /* A functional component that takes data as props and returns a carousel. */
 const Carousel = ({data}: any) => {
   const scrollX = new Animated.Value(0);
   let position = Animated.divide(scrollX, WIDTH);
-
-  // const [dataList, setDataList] = React.useState(data);
-
-  // React.useEffect(() => {
-  //   setDataList(data);
-  //   infiniteScroll(dataList);
-  // });
 
   if (data && data.length > 0) {
     return (
@@ -47,9 +23,6 @@ const Carousel = ({data}: any) => {
         <View>
           <FlatList
             data={data}
-            // ref={flatlist => {
-            //   this.flatlist = flatlist;
-            // }}
             keyExtractor={(item, index) => 'key' + index}
             horizontal
             pagingEnabled

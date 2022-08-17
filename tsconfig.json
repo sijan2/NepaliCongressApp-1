@@ -35,7 +35,9 @@
       "@models/*": ["src/model/*"],
       "@constants/*": ["src/constants/*"],
       "@navigation/*": ["src/navigation/*"],
+      "@redux/*": ["src/redux/*"],
       "@screens/*": ["src/screens/*"],
+      "@services/*":["src/services/*"],
       "@utils/*": ["src/utils/*"],
     },                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
