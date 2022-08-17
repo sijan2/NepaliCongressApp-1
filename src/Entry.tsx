@@ -1,8 +1,9 @@
 import React, {FC} from 'react';
-
+import globalStore from '@redux/store/globalStore';
 import AuthProvider from '@components/ContextStore/AuthContext/AuthContext';
 import EntryNavigator from '@navigation/EntryNavigator';
 import SaveProvider from '@components/ContextStore/SavedProvider/SavedProvider';
+import {Provider} from 'react-redux';
 
 interface IProps {}
 
@@ -19,9 +20,11 @@ interface IProps {}
 const Entry: FC<IProps> = () => {
   return (
     <AuthProvider>
-      <SaveProvider>
-        <EntryNavigator />
-      </SaveProvider>
+      <Provider store={globalStore}>
+        <SaveProvider>
+          <EntryNavigator />
+        </SaveProvider>
+      </Provider>
     </AuthProvider>
   );
 };

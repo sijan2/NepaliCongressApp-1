@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Image,
   SafeAreaView,
   ScrollView,
   StyleSheet,
@@ -25,6 +24,8 @@ import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
 import colors from '@constants/colors/colors';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
+import RenderHtml from 'react-native-render-html';
+import {dateFormatter} from '@utils/DayGen';
 
 /**
  * @author Nitesh Raj Khanal
@@ -37,12 +38,13 @@ import Fonts from '@constants/fonts/fonts';
  * @returns A function component that returns a view with a scrollview
  */
 const DetailScreen = ({route}: any) => {
+  const parsedTitle = route.params.title;
+  const cms_title = {html: parsedTitle};
   const navigation = useNavigation();
-
   const myCustomShare = async () => {
     const shareOptions = {
-      message: 'Test Url',
-      url: 'https://www.google.com',
+      message: `${route.params.title}\n`,
+      url: `${route.params.sourceLink}`,
     };
     try {
       const ShareResponse = await Share.open(shareOptions);
@@ -73,6 +75,22 @@ const DetailScreen = ({route}: any) => {
   };
 
   const savedNews = saved.find((item: any) => item.id === id);
+  const source = {html: route.params?.description};
+  const mixedStyle = {
+    ...styles.details,
+  };
+  const titleStyle = {
+    ...styles.textTitle,
+  };
+
+  const HtmlContentWidth = WIDTH * 0.9;
+
+  const formattedDate = dateFormatter(route.params.date);
+  const newDate = formattedDate.date;
+  const newMonth = formattedDate.month;
+  const newYear = formattedDate.year;
+
+  const formatted = `${newMonth} ${newDate}, ${newYear}`;
 
   return (
     <>
@@ -116,15 +134,20 @@ const DetailScreen = ({route}: any) => {
           <View>
             <View style={styles.mainContainer}>
               <View style={styles.container}>
-                <Text style={styles.textTitle}>{route.params?.title}</Text>
+                <RenderHtml
+                  contentWidth={WIDTH}
+                  source={cms_title}
+                  baseStyle={titleStyle}
+                />
                 <View style={styles.rowData}>
                   <Text style={styles.text1}>{route.params?.name}</Text>
-                  <Text style={styles.text2}>{route.params?.date}</Text>
+                  <Text style={styles.text2}>{formatted}</Text>
                 </View>
-                <View>
-                  <Image style={styles.image} source={route.params?.image} />
-                </View>
-                <Text style={styles.details}>{route.params?.description}</Text>
+                <RenderHtml
+                  contentWidth={HtmlContentWidth}
+                  source={source}
+                  baseStyle={mixedStyle}
+                />
               </View>
             </View>
           </View>

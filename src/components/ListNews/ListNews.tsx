@@ -6,6 +6,8 @@ import Colors from '@constants/colors/colors';
 import {WIDTH} from '@utils/Dimensions';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
+import RenderHTML from 'react-native-render-html';
+import {dateFormatter} from '@utils/DayGen';
 
 /**
  * @author Nitesh Raj Khanal
@@ -15,10 +17,11 @@ import Fonts from '@constants/fonts/fonts';
 interface list {
   id?: any;
   image?: any;
-  title?: string;
+  title?: any;
   name?: string;
   date?: string;
   description?: string;
+  sourceLink?: string;
 }
 /**
  * The ListNews function is a functional component that takes in an object of type list as a parameter
@@ -26,8 +29,17 @@ interface list {
  * @param  - id, image, title, name, date, description
  * @returns A TouchableOpacity component that navigates to the DetailScreen when pressed.
  */
-const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
+const ListNews: FC<list> = ({
+  id,
+  image,
+  title,
+  name,
+  date,
+  description,
+  sourceLink,
+}) => {
   const navigation: any = useNavigation();
+  const cms_title = {html: title};
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
       id,
@@ -36,19 +48,40 @@ const ListNews: FC<list> = ({id, image, title, name, date, description}) => {
       name,
       date,
       description,
+      sourceLink,
     });
   };
+  const mixedStyle = {
+    ...styles.title,
+  };
+
+  const formattedDate = dateFormatter(date);
+  const newDate = formattedDate.date;
+  const newMonth = formattedDate.month;
+  const newYear = formattedDate.year;
+
+  const formatted = `${newMonth} ${newDate}, ${newYear}`;
+
   return (
     <TouchableOpacity onPress={handleOnPress}>
       <View style={styles.mainContainer}>
         <View style={styles.list}>
-          <Image style={styles.image} source={image} />
+          <Image
+            style={styles.image}
+            source={{
+              uri: image,
+            }}
+          />
         </View>
         <View style={styles.textView}>
-          <Text style={styles.title}>{title}</Text>
+          <RenderHTML
+            contentWidth={WIDTH}
+            source={cms_title}
+            baseStyle={mixedStyle}
+          />
           <View style={styles.name}>
             <Text style={styles.text}>{name}</Text>
-            <Text style={styles.text}>{date}</Text>
+            <Text style={styles.text}>{formatted}</Text>
           </View>
         </View>
       </View>
@@ -86,9 +119,10 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: Metrics.body6,
+    fontSize: Metrics.body5,
     fontFamily: Fonts.type.montBold,
-    lineHeight: 13,
+    lineHeight: 14,
+    fontWeight: '700',
     letterSpacing: 0.3,
   },
   name: {

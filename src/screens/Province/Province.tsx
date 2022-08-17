@@ -1,12 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
-import React, {useRef, useState, useContext} from 'react';
+import React, {useRef, useState} from 'react';
 import {SafeAreaView, ScrollView, StyleSheet} from 'react-native';
 import {province} from '@models/provience';
 import Button from '@components/Button/Button';
 import {FlatList} from 'react-native-gesture-handler';
 import LatestNews from '@components/LatestNews/LatestNews';
-
-import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 /**
  * @author Nitesh Raj Khanal
@@ -19,7 +17,6 @@ import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
  * @returns A function that returns a component
  */
 const ProvinceScreen = () => {
-  const {setMyProvince} = useContext(AuthContext);
   const data = province;
   const ref = useRef<FlatList>(null);
   const [index] = useState(0);
@@ -37,7 +34,7 @@ const ProvinceScreen = () => {
           showsHorizontalScrollIndicator={false}
           horizontal
           renderItem={({item}) => {
-            return <Button text={item.name} onPress={setMyProvince} />;
+            return <Button provinceCode={item.code} text={item.name} />;
           }}
           style={styles.container}
         />
