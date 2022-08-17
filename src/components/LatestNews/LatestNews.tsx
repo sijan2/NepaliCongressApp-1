@@ -5,7 +5,6 @@ import {btoa} from 'react-native-quick-base64';
 import ListNews from '@components/ListNews/ListNews';
 
 import Carouselitem from '@components/Carousel/Carousel';
-import {carouseldata} from '@models/caroseldata';
 import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
 
 import Colors from '@constants/colors/colors';
@@ -19,6 +18,7 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 /* A functional component that is returning a view with a carousel and a flatlist. */
 const LatestNews = () => {
   const [news, setNews] = React.useState([]);
+  const [carouselNews, setCarouselNews] = React.useState([]);
   const user = 'congress-mobile-apiuser';
   const pass = 'N3p@l!C0ngr355@2022';
   // base-64 encryption
@@ -42,13 +42,31 @@ const LatestNews = () => {
     }
   };
 
+  const getCarouselNews = async () => {
+    try {
+      const response = await fetch(
+        'https://congress-api.server247.info/api/news/all-news/1/5',
+        {
+          headers: {
+            Authorization: `Basic ${auth}`,
+          },
+        },
+      );
+      const responseJson = await response.json();
+      setCarouselNews(responseJson.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   React.useLayoutEffect(() => {
+    getCarouselNews();
     getNews();
   }, [myProvince]);
 
   return (
     <>
-      <Carouselitem data={carouseldata} />
+      <Carouselitem data={carouselNews} />
       <View style={styles.first}>
         <View style={styles.secondFlatlist}>
           <FlatList
@@ -60,9 +78,10 @@ const LatestNews = () => {
                   id={show.item.id}
                   image={BASE_URL + show.item.image}
                   title={show.item.title}
-                  name={show.item.name}
-                  date={show.item.date}
+                  name={show.item.source_title}
+                  date={show.item.published_date}
                   description={show.item.description}
+                  sourceLink={show.item.source_link}
                 />
               );
             }}

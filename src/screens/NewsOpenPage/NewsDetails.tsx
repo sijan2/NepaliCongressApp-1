@@ -25,6 +25,7 @@ import colors from '@constants/colors/colors';
 import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 import RenderHtml from 'react-native-render-html';
+import {dateFormatter} from '@utils/DayGen';
 
 /**
  * @author Nitesh Raj Khanal
@@ -38,11 +39,10 @@ import RenderHtml from 'react-native-render-html';
  */
 const DetailScreen = ({route}: any) => {
   const navigation = useNavigation();
-
   const myCustomShare = async () => {
     const shareOptions = {
-      message: 'Test Url',
-      url: 'https://www.google.com',
+      message: `${route.params.title}\n`,
+      url: `${route.params.sourceLink}`,
     };
     try {
       const ShareResponse = await Share.open(shareOptions);
@@ -77,6 +77,13 @@ const DetailScreen = ({route}: any) => {
   const mixedStyle = {
     ...styles.details,
   };
+
+  const formattedDate = dateFormatter(route.params.date);
+  const newDate = formattedDate.date;
+  const newMonth = formattedDate.month;
+  const newYear = formattedDate.year;
+
+  const formatted = `${newMonth} ${newDate}, ${newYear}`;
 
   return (
     <>
@@ -123,7 +130,7 @@ const DetailScreen = ({route}: any) => {
                 <Text style={styles.textTitle}>{route.params?.title}</Text>
                 <View style={styles.rowData}>
                   <Text style={styles.text1}>{route.params?.name}</Text>
-                  <Text style={styles.text2}>{route.params?.date}</Text>
+                  <Text style={styles.text2}>{formatted}</Text>
                 </View>
                 <RenderHtml
                   contentWidth={WIDTH}

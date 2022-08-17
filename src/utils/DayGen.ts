@@ -38,3 +38,32 @@ const DateAndDayGenerator = (date: Date) => {
 };
 
 export default DateAndDayGenerator;
+
+const dateFormatter = (unformattedDate: any) => {
+  const formattedDate = unformattedDate.split(' ')[0].split('-');
+  const date = formattedDate[2];
+  const month = formattedDate[1];
+  const withoutLeading0 = parseInt(month, 10) - 1;
+  const year = formattedDate[0];
+  const monthName = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  return {
+    date: date,
+    month: monthName[withoutLeading0],
+    year: year,
+  };
+};
+
+export {dateFormatter};
