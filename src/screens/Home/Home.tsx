@@ -29,7 +29,7 @@ const HomeScreen = () => {
       <CustomSwitch
         selectionMode={1}
         option1="Provinces"
-        option2="Trending"
+        option2="Featured"
         onSelectSwitch={onSelectSwitch}
       />
       <View>
@@ -42,6 +42,7 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.mainContainer}>
       <FlatList
         data={emptyData}
+        showsVerticalScrollIndicator={false}
         renderItem={renderNullItems}
         ListFooterComponent={ListComponent}
       />

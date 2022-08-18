@@ -41,10 +41,11 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
   const navigation: any = useNavigation();
   const cms_title = {html: item.title};
+  const imageUri = BASE_URL + item.image;
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
       id: item.id,
-      image: item.image,
+      image: imageUri,
       title: item.title,
       name: item.source_title,
       date: item.published_date,
@@ -60,10 +61,10 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
 
   const mixedStyle = {
     ...styles.title,
-    fontSize: titleCharactersCounter(item.title) > 70 ? Metrics.h6 : Metrics.h5,
+    fontSize: titleCharactersCounter(item.title) > 70 ? Metrics.h5 : Metrics.h6,
   };
   const formatted = `${newMonth} ${newDate}, ${newYear}`;
-  const imageUri = BASE_URL + item.image;
+
   return (
     <>
       <TouchableOpacity onPress={handleOnPress}>
