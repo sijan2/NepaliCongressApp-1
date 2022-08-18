@@ -13,6 +13,7 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
+import Fonts from '@constants/fonts/fonts';
 
 /**
  * @author Nitesh Raj Khanal
@@ -177,17 +178,23 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: '#fff',
     opacity: 0.9,
-    elevation: 4,
     borderRadius: 8,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    elevation: 5,
+    shadowColor: Colors.black,
+    shadowOffset: {width: 0, height: 10},
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
   },
   btnText: {
+    fontFamily: Fonts.type.montBold,
     color: Colors.red,
     fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: 14,
     textAlign: 'center',
+    letterSpacing: 1,
   },
   cardView: {
     width: WIDTH * 0.92,

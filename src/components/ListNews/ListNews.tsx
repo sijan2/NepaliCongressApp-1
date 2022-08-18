@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 10,
     width: '100%',
+    resizeMode: 'contain',
   },
   textView: {
     width: WIDTH * 0.46,

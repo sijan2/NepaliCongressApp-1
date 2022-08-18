@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React, {FC} from 'react';
 import Colors from '@constants/colors/colors';
 import {useNavigation} from '@react-navigation/native';
@@ -68,9 +62,8 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
   return (
     <>
       <TouchableOpacity onPress={handleOnPress}>
-        <ImageBackground
-          style={[styles.image, styles.cardView]}
-          source={{uri: imageUri}}>
+        <View style={styles.cardView}>
+          <Image style={styles.image} source={{uri: imageUri}} />
           <View style={styles.textView}>
             <RenderHTML
               contentWidth={WIDTH}
@@ -85,7 +78,7 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
               </View>
             </View>
           </View>
-        </ImageBackground>
+        </View>
       </TouchableOpacity>
     </>
   );
@@ -99,6 +92,7 @@ const styles = StyleSheet.create({
     marginHorizontal: WIDTH * 0.04,
     marginVertical: WIDTH * 0.04,
     alignItems: 'center',
+    borderRadius: 10,
   },
   textView: {
     position: 'absolute',
@@ -107,6 +101,7 @@ const styles = StyleSheet.create({
     opacity: 0.87,
     backgroundColor: Colors.white,
     width: '94.5%',
+    zIndex: 2,
   },
   image: {
     zIndex: 1,
