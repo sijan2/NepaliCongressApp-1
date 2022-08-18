@@ -12,9 +12,6 @@ import Colors from '@constants/colors/colors';
 import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
-
-import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
-import {HEIGHT, WIDTH} from '@utils/Dimensions';
 import Fonts from '@constants/fonts/fonts';
 
 /**
@@ -27,8 +24,6 @@ const LatestNews = React.memo(function LatestNews({}) {
   const [loading, setLoading] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const [news, setNews] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [isLoading, setIsLoading] = React.useState(true);
   const [carouselNews, setCarouselNews] = React.useState([]);
   const [page, setPage] = React.useState(10);
   const user = 'congress-mobile-apiuser';
@@ -199,46 +194,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     letterSpacing: 1,
-  },
-  cardView: {
-    width: WIDTH * 0.92,
-    height: HEIGHT * 0.28,
-    backgroundColor: Colors.red,
-    marginHorizontal: WIDTH * 0.04,
-    marginVertical: WIDTH * 0.04,
-    alignItems: 'center',
-    borderRadius: 8,
-  },
-  list: {
-    height: 90,
-    borderRadius: 10,
-    backgroundColor: Colors.red,
-    marginRight: 10,
-    width: WIDTH * 0.92,
-    marginLeft: 10,
-    marginTop: 10,
-  },
-  footer: {
-    padding: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-  },
-  loadMoreBtn: {
-    padding: 10,
-    backgroundColor: '#fff',
-    opacity: 0.9,
-    elevation: 4,
-    borderRadius: 8,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  btnText: {
-    color: Colors.red,
-    fontWeight: 'bold',
-    fontSize: 12,
-    textAlign: 'center',
   },
   cardView: {
     width: WIDTH * 0.92,

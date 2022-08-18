@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import {View, StyleSheet, Animated} from 'react-native';
+import {WIDTH} from '@utils/Dimensions';
 
 interface list {
   defaultImageSource?: any;
@@ -50,6 +51,9 @@ export default ProgressiveImage;
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#e1e4e8',
+    height: 100,
+    borderRadius: 8,
+    width: WIDTH * 0.43,
   },
   imageOverlay: {
     position: 'absolute',
@@ -57,5 +61,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    resizeMode: 'cover',
+    borderRadius: 8,
   },
 });
