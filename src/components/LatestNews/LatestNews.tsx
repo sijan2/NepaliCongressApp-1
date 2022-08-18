@@ -16,7 +16,7 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
  **/
 
 /* A functional component that is returning a view with a carousel and a flatlist. */
-const LatestNews = () => {
+const LatestNews = React.memo(function LatestNews({}) {
   const [news, setNews] = React.useState([]);
   const [carouselNews, setCarouselNews] = React.useState([]);
   const user = 'congress-mobile-apiuser';
@@ -90,7 +90,7 @@ const LatestNews = () => {
       </View>
     </>
   );
-};
+});
 
 const styles = StyleSheet.create({
   first: {
