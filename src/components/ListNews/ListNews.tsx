@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import Colors from '@constants/colors/colors';
@@ -8,6 +8,8 @@ import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 import RenderHTML from 'react-native-render-html';
 import {dateFormatter} from '@utils/DayGen';
+import {titleCharactersCounter} from '@utils/titleCharCounter';
+import ProgressiveImage from '@components/ProgressiveImage/ProgressiveImage';
 
 /**
  * @author Nitesh Raj Khanal
@@ -53,6 +55,7 @@ const ListNews: FC<list> = React.memo(function ListNews({
   };
   const mixedStyle = {
     ...styles.title,
+    fontSize: titleCharactersCounter(title) > 65 ? Metrics.h7 : Metrics.h6,
   };
 
   const formattedDate = dateFormatter(date);
@@ -66,11 +69,16 @@ const ListNews: FC<list> = React.memo(function ListNews({
     <TouchableOpacity onPress={handleOnPress}>
       <View style={styles.mainContainer}>
         <View style={styles.list}>
-          <Image
+          {/* <Image
             style={styles.image}
             source={{
               uri: image,
             }}
+          /> */}
+          <ProgressiveImage
+            defaultImageSource={require('../../assets/images/NCLogo.png')}
+            source={{uri: image}}
+            style={styles.image}
           />
         </View>
         <View style={styles.textView}>
@@ -100,7 +108,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   list: {
-    height: 90,
+    height: 100,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginRight: 10,
@@ -111,6 +119,7 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 10,
     width: '100%',
+    resizeMode: 'contain',
   },
   textView: {
     width: WIDTH * 0.46,
@@ -119,10 +128,9 @@ const styles = StyleSheet.create({
   },
   title: {
     color: Colors.black,
-    fontSize: Metrics.body5,
     fontFamily: Fonts.type.montBold,
-    lineHeight: 14,
-    fontWeight: '700',
+    lineHeight: 19,
+    fontWeight: '500',
     letterSpacing: 0.3,
   },
   name: {

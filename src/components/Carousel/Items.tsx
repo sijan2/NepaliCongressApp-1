@@ -1,10 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  TouchableOpacity,
-  ImageBackground,
-} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
 import React, {FC} from 'react';
 import Colors from '@constants/colors/colors';
 import {useNavigation} from '@react-navigation/native';
@@ -41,10 +35,11 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
   const navigation: any = useNavigation();
   const cms_title = {html: item.title};
+  const imageUri = BASE_URL + item.image;
   const handleOnPress = () => {
     return navigation.navigate('DetailScreen', {
       id: item.id,
-      image: item.image,
+      image: imageUri,
       title: item.title,
       name: item.source_title,
       date: item.published_date,
@@ -60,16 +55,15 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
 
   const mixedStyle = {
     ...styles.title,
-    fontSize: titleCharactersCounter(item.title) > 70 ? Metrics.h6 : Metrics.h5,
+    fontSize: titleCharactersCounter(item.title) > 70 ? Metrics.h5 : Metrics.h6,
   };
   const formatted = `${newMonth} ${newDate}, ${newYear}`;
-  const imageUri = BASE_URL + item.image;
+
   return (
     <>
       <TouchableOpacity onPress={handleOnPress}>
-        <ImageBackground
-          style={[styles.image, styles.cardView]}
-          source={{uri: imageUri}}>
+        <View style={styles.cardView}>
+          <Image style={styles.image} source={{uri: imageUri}} />
           <View style={styles.textView}>
             <RenderHTML
               contentWidth={WIDTH}
@@ -84,7 +78,7 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
               </View>
             </View>
           </View>
-        </ImageBackground>
+        </View>
       </TouchableOpacity>
     </>
   );
@@ -98,6 +92,7 @@ const styles = StyleSheet.create({
     marginHorizontal: WIDTH * 0.04,
     marginVertical: WIDTH * 0.04,
     alignItems: 'center',
+    borderRadius: 10,
   },
   textView: {
     position: 'absolute',
@@ -106,6 +101,7 @@ const styles = StyleSheet.create({
     opacity: 0.87,
     backgroundColor: Colors.white,
     width: '94.5%',
+    zIndex: 2,
   },
   image: {
     zIndex: 1,

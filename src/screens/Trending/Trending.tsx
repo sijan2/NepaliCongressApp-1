@@ -1,4 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// /* eslint-disable react-native/no-inline-styles */
 import React, {useContext, useRef, useState} from 'react';
 import {FlatList, ScrollView, StyleSheet} from 'react-native';
 import {View} from 'react-native';
@@ -24,7 +25,7 @@ const TrendingScreen = () => {
   return (
     <View style={styles.parent}>
       <ScrollView style={styles.mainContainer}>
-        <FlatList
+        {/* <FlatList
           ref={ref}
           data={data}
           initialScrollIndex={index}
@@ -38,7 +39,7 @@ const TrendingScreen = () => {
             return <Button text={item.name} onPress={setTrending} />;
           }}
           style={styles.container}
-        />
+        /> */}
         <TrendingNews />
       </ScrollView>
     </View>

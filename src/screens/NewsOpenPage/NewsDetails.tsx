@@ -7,6 +7,7 @@ import {
   Text,
   View,
   Alert,
+  Linking,
 } from 'react-native';
 
 import {Surface} from 'react-native-paper';
@@ -71,7 +72,10 @@ const DetailScreen = ({route}: any) => {
     const updatedNews = saved.filter((item: any) => item.id !== id);
     setSaved(updatedNews);
     AsyncStorage.setItem('saved', JSON.stringify(updatedNews));
-    Alert.alert('Removed Successfully');
+    Alert.alert(
+      'Removed Successfully',
+      'You can view your saved news in the Saved tab',
+    );
   };
 
   const savedNews = saved.find((item: any) => item.id === id);
@@ -91,6 +95,11 @@ const DetailScreen = ({route}: any) => {
   const newYear = formattedDate.year;
 
   const formatted = `${newMonth} ${newDate}, ${newYear}`;
+
+  const redirectToUrl = () => {
+    const url = route.params.sourceLink;
+    Linking.openURL(url);
+  };
 
   return (
     <>
@@ -152,6 +161,13 @@ const DetailScreen = ({route}: any) => {
             </View>
           </View>
         </ScrollView>
+        <View style={styles.footer}>
+          <TouchableOpacity
+            onPress={redirectToUrl}
+            style={styles.redirectButton}>
+            <Text style={styles.redirectButtonText}>Read Full news</Text>
+          </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </>
   );
@@ -177,6 +193,7 @@ const styles = StyleSheet.create({
     marginTop: 15,
     fontSize: Metrics.h3,
     lineHeight: 28,
+    letterSpacing: 0.4,
     fontFamily: Fonts.type.montRegular,
     fontWeight: '600',
     color: Colors.black,
@@ -208,8 +225,9 @@ const styles = StyleSheet.create({
     color: Colors.offBlack,
     fontSize: Metrics.body4,
     lineHeight: 19,
+    letterSpacing: 0.4,
     textAlign: 'justify',
-    fontWeight: '500',
+    fontWeight: '600',
   },
   header: {
     height: HEIGHT * 0.075,
@@ -249,9 +267,28 @@ const styles = StyleSheet.create({
   footer: {
     height: HEIGHT * 0.075,
     width: WIDTH,
+    backgroundColor: Colors.white,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  footerText: {
-    color: Colors.black,
+  redirectButton: {
+    backgroundColor: Colors.offWhite,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
+    height: HEIGHT * 0.05,
+    width: WIDTH * 0.4,
+    elevation: 5,
+    shadowColor: Colors.black,
+    shadowOffset: {width: 0, height: 10},
+    shadowOpacity: 0.25,
+    shadowRadius: 5,
+  },
+  redirectButtonText: {
+    fontSize: Metrics.body3,
+    fontFamily: 'Mont-Bold',
+    color: Colors.red,
+    textAlign: 'center',
   },
 });
 
