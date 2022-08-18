@@ -13,8 +13,6 @@ const fetchNewsList = async () => {
 
 function* workNewsFetch(): any {
   try {
-    // const pageNo = yield select((state: any) => state.newsList.pageNo);
-    // const pageSize = yield select((state: any) => state.newsList.pageSize);
     const response = yield call(fetchNewsList);
     yield put({type: RECEIVE_NEWS_LIST_SUCCESS, payload: response});
     console.log('RESPONSE => ', response);

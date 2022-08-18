@@ -29,7 +29,7 @@ interface list {
  * @param  - id, image, title, name, date, description
  * @returns A TouchableOpacity component that navigates to the DetailScreen when pressed.
  */
-const ListNews: FC<list> = ({
+const ListNews: FC<list> = React.memo(function ListNews({
   id,
   image,
   title,
@@ -37,7 +37,7 @@ const ListNews: FC<list> = ({
   date,
   description,
   sourceLink,
-}) => {
+}) {
   const navigation: any = useNavigation();
   const cms_title = {html: title};
   const handleOnPress = () => {
@@ -87,7 +87,7 @@ const ListNews: FC<list> = ({
       </View>
     </TouchableOpacity>
   );
-};
+});
 
 export default ListNews;
 

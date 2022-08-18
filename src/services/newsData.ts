@@ -1,17 +1,26 @@
-import axios from 'axios';
 import {btoa} from 'react-native-quick-base64';
 
-import {baseUrl, url} from '@constants/baseUrl/baseUrl';
+import {baseUrl} from '@constants/baseUrl/baseUrl';
 import {PASSWORD, USERNAME} from '@constants/userInfo/userInfo';
 
-const user = USERNAME;
-const pass = PASSWORD;
-const auth = btoa(`${user}:${pass}`);
-export const GET = async () => {
-  const response = await axios.get(`${baseUrl}${url}/1/10`, {
-    headers: {
-      Authorization: `Basic ${auth}`,
-    },
-  });
-  return response.data;
+export const GET = async (url: any) => {
+  const user = USERNAME;
+  const pass = PASSWORD;
+  // base-64 encryption
+  const auth = btoa(`${user}:${pass}`);
+
+  const getNews = async () => {
+    try {
+      const response = await fetch(`${baseUrl}${url}`, {
+        headers: {
+          Authorization: `Basic ${auth}`,
+        },
+      });
+      const responseJson = await response.json();
+      return responseJson;
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  return await getNews();
 };

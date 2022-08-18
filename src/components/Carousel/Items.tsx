@@ -38,7 +38,7 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
  * @param  - FC<Ilist> = ({item}) => {
  * @returns A TouchableOpacity component that navigates to the DetailScreen when pressed.
  */
-const Carouselitem: FC<Ilist> = ({item}) => {
+const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
   const navigation: any = useNavigation();
   const cms_title = {html: item.title};
   const handleOnPress = () => {
@@ -88,7 +88,7 @@ const Carouselitem: FC<Ilist> = ({item}) => {
       </TouchableOpacity>
     </>
   );
-};
+});
 
 const styles = StyleSheet.create({
   cardView: {
