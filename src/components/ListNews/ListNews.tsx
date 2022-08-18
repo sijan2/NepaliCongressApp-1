@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {FC} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
@@ -8,6 +9,7 @@ import Metrics from '@constants/metrics/Metrics';
 import Fonts from '@constants/fonts/fonts';
 import RenderHTML from 'react-native-render-html';
 import {dateFormatter} from '@utils/DayGen';
+import ProgressiveImage from '@components/ProgressiveImage';
 
 /**
  * @author Nitesh Raj Khanal
@@ -66,11 +68,17 @@ const ListNews: FC<list> = React.memo(function ListNews({
     <TouchableOpacity onPress={handleOnPress}>
       <View style={styles.mainContainer}>
         <View style={styles.list}>
-          <Image
+          {/* <Image
             style={styles.image}
             source={{
               uri: image,
             }}
+          /> */}
+
+          <ProgressiveImage
+            defaultImageSource={require('../../assets/images/NCLogo.png')}
+            source={{uri: image}}
+            style={styles.image}
           />
         </View>
         <View style={styles.textView}>

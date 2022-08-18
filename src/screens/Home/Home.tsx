@@ -42,6 +42,7 @@ const HomeScreen = () => {
     <SafeAreaView style={styles.mainContainer}>
       <FlatList
         data={emptyData}
+        showsVerticalScrollIndicator={false}
         renderItem={renderNullItems}
         ListFooterComponent={ListComponent}
       />
