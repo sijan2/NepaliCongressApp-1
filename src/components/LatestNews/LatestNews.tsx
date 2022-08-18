@@ -13,6 +13,9 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
+import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
+import {HEIGHT, WIDTH} from '@utils/Dimensions';
+
 /**
  * @author Nitesh Raj Khanal
  * @function @LatestNews
@@ -20,6 +23,8 @@ import {HEIGHT, WIDTH} from '@utils/Dimensions';
 
 /* A functional component that is returning a view with a carousel and a flatlist. */
 const LatestNews = React.memo(function LatestNews({}) {
+  const [loading, setLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
   const [news, setNews] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
@@ -72,7 +77,7 @@ const LatestNews = React.memo(function LatestNews({}) {
   const getCarouselNews = async () => {
     try {
       const response = await fetch(
-        'https://congress-api.server247.info/api/news/all-news/1/7',
+        'https://congress-api.server247.info/api/news/breaking',
         {
           headers: {
             Authorization: `Basic ${auth}`,
@@ -99,7 +104,7 @@ const LatestNews = React.memo(function LatestNews({}) {
     setLoading(true);
   };
 
-  const ItemView = ({item}) => {
+  const ItemView = ({item}: any) => {
     return (
       // Flat List Item
       <ListNews
@@ -164,7 +169,47 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   secondFlatlist: {
-    marginBottom: 70,
+    marginBottom: 60,
+  },
+  footer: {
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  loadMoreBtn: {
+    padding: 10,
+    backgroundColor: '#fff',
+    opacity: 0.9,
+    elevation: 4,
+    borderRadius: 8,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  btnText: {
+    color: Colors.red,
+    fontWeight: 'bold',
+    fontSize: 12,
+    textAlign: 'center',
+  },
+  cardView: {
+    width: WIDTH * 0.92,
+    height: HEIGHT * 0.28,
+    backgroundColor: Colors.red,
+    marginHorizontal: WIDTH * 0.04,
+    marginVertical: WIDTH * 0.04,
+    alignItems: 'center',
+    borderRadius: 8,
+  },
+  list: {
+    height: 90,
+    borderRadius: 10,
+    backgroundColor: Colors.red,
+    marginRight: 10,
+    width: WIDTH * 0.92,
+    marginLeft: 10,
+    marginTop: 10,
   },
   footer: {
     padding: 10,
