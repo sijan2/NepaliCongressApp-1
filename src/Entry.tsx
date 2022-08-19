@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
-import globalStore from '@redux/store/globalStore';
+import {PersistGate} from 'redux-persist/integration/react';
+import {store, persistor} from '@redux/store/globalStore';
 import AuthProvider from '@components/ContextStore/AuthContext/AuthContext';
 import EntryNavigator from '@navigation/EntryNavigator';
 import SaveProvider from '@components/ContextStore/SavedProvider/SavedProvider';
@@ -20,10 +21,12 @@ interface IProps {}
 const Entry: FC<IProps> = () => {
   return (
     <AuthProvider>
-      <Provider store={globalStore}>
-        <SaveProvider>
-          <EntryNavigator />
-        </SaveProvider>
+      <Provider store={store}>
+        <PersistGate persistor={persistor} loading={null}>
+          <SaveProvider>
+            <EntryNavigator />
+          </SaveProvider>
+        </PersistGate>
       </Provider>
     </AuthProvider>
   );

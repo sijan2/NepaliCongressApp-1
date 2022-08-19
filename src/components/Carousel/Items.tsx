@@ -1,4 +1,10 @@
-import {StyleSheet, Text, View, TouchableOpacity, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  ImageBackground,
+} from 'react-native';
 import React, {FC} from 'react';
 import Colors from '@constants/colors/colors';
 import {useNavigation} from '@react-navigation/native';
@@ -53,32 +59,45 @@ const Carouselitem: FC<Ilist> = React.memo(function Carouselitem({item}) {
   const newMonth = formattedDate.month;
   const newYear = formattedDate.year;
 
+  const defaultImage = require('../../assets/images/NCImage.jpeg');
+  const [isLoading, setIsLoading] = React.useState(true);
+
   const mixedStyle = {
     ...styles.title,
     fontSize: titleCharactersCounter(item.title) > 70 ? Metrics.h5 : Metrics.h6,
   };
   const formatted = `${newMonth} ${newDate}, ${newYear}`;
 
+  const onLoad = () => {
+    setIsLoading(false);
+  };
+
   return (
     <>
       <TouchableOpacity onPress={handleOnPress}>
-        <View style={styles.cardView}>
-          <Image style={styles.image} source={{uri: imageUri}} />
-          <View style={styles.textView}>
-            <RenderHTML
-              contentWidth={WIDTH}
-              source={cms_title}
-              baseStyle={mixedStyle}
-            />
-            <View style={styles.detailsContainer}>
-              <View style={styles.nested}>
-                <Text style={styles.text}>{item.source_title}</Text>
-                <Text style={styles.text}>{formatted}</Text>
-                <Text style={styles.text}>{item.state}</Text>
+        <ImageBackground
+          style={[styles.image, styles.cardView]}
+          source={isLoading ? defaultImage : null}>
+          <ImageBackground
+            style={[styles.image, styles.cardView1]}
+            source={{uri: imageUri}}
+            onLoad={onLoad}>
+            <View style={styles.textView}>
+              <RenderHTML
+                contentWidth={WIDTH}
+                source={cms_title}
+                baseStyle={mixedStyle}
+              />
+              <View style={styles.detailsContainer}>
+                <View style={styles.nested}>
+                  <Text style={styles.text}>{item.source_title}</Text>
+                  <Text style={styles.text}>{formatted}</Text>
+                  <Text style={styles.text}>{item.state}</Text>
+                </View>
               </View>
             </View>
-          </View>
-        </View>
+          </ImageBackground>
+        </ImageBackground>
       </TouchableOpacity>
     </>
   );
@@ -88,11 +107,14 @@ const styles = StyleSheet.create({
   cardView: {
     width: WIDTH * 0.92,
     height: HEIGHT * 0.28,
-    backgroundColor: Colors.red,
     marginHorizontal: WIDTH * 0.04,
     marginVertical: WIDTH * 0.04,
     alignItems: 'center',
-    borderRadius: 10,
+  },
+  cardView1: {
+    width: WIDTH * 0.92,
+    height: HEIGHT * 0.28,
+    alignItems: 'center',
   },
   textView: {
     position: 'absolute',
@@ -101,7 +123,6 @@ const styles = StyleSheet.create({
     opacity: 0.87,
     backgroundColor: Colors.white,
     width: '94.5%',
-    zIndex: 2,
   },
   image: {
     zIndex: 1,
@@ -138,5 +159,4 @@ const styles = StyleSheet.create({
     marginRight: 55,
   },
 });
-
 export default Carouselitem;
