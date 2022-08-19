@@ -77,8 +77,13 @@ const TrendingNews = () => {
       {isLoading ? (
         <SkeletonPlaceholder>
           <View
-            style={{flexDirection: 'column', alignItems: 'center', padding: 8}}>
-            <View style={{marginTop: 20}}>
+            style={{
+              flexDirection: 'column',
+              alignItems: 'center',
+              padding: 8,
+              paddingTop: 0,
+            }}>
+            <View style={{marginTop: 0}}>
               <View style={styles.lists} />
               <View style={styles.lists} />
               <View style={styles.lists} />
@@ -108,7 +113,8 @@ const TrendingNews = () => {
 const styles = StyleSheet.create({
   secondFlatlist: {
     backgroundColor: Colors.offWhite,
-    // marginTop: 10,
+    minHeight: HEIGHT * 0.75,
+    marginBottom: 60,
     width: '100%',
     flex: 1,
   },
@@ -125,7 +131,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
   },
   lists: {
-    height: 90,
+    height: 100,
     borderRadius: 10,
     backgroundColor: Colors.red,
     marginRight: 10,
