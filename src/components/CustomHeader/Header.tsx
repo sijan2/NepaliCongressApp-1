@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useContext, useRef} from 'react';
 import {
   StyleSheet,
@@ -170,8 +169,7 @@ const Header: React.FC<Props> = () => {
               </Animated.View>
               <TextInput
                 ref={inputRef}
-                placeholder="Search"
-                placeholderTextColor="#000"
+                placeholder="Enter title, description or date of news"
                 clearButtonMode="while-editing"
                 onFocus={handleFocus}
                 value={value}
@@ -284,7 +282,14 @@ const styles = StyleSheet.create({
     borderRadius: 80,
     paddingHorizontal: 16,
     fontSize: 13,
-    color: Colors.black,
+  },
+  input_text1: {
+    flex: 1,
+    height: 37,
+    backgroundColor: '#e4e6e8',
+    borderRadius: 80,
+    paddingHorizontal: 16,
+    fontSize: 13,
   },
   content: {
     position: 'absolute',
