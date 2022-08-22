@@ -139,7 +139,7 @@ const DetailScreen = ({route}: any) => {
             </View>
           </Surface>
         </SafeAreaView>
-        <ScrollView style={styles.scroll}>
+        <ScrollView showsVerticalScrollIndicator={false} style={styles.scroll}>
           <View>
             <View style={styles.mainContainer}>
               <View style={styles.container}>
