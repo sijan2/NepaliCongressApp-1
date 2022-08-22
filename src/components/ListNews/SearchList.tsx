@@ -12,7 +12,7 @@ interface list {
 const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
   const {saved} = useSaved();
   const ItemView = ({item}: any) => {
-    const formattedDate = dateFormatter(route.params.date);
+    const formattedDate = dateFormatter(item.date);
     const newDate = formattedDate.date;
     const newMonth = formattedDate.month;
     const newYear = formattedDate.year;
