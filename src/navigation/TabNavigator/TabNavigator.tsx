@@ -37,10 +37,11 @@ const TabNavigator = () => {
           component={HomeScreen}
           options={{
             tabBarLabel: '',
-            tabBarIcon: () => (
+            tabBarIcon: ({focused}) => (
               <View style={styles.tabBar}>
                 <Svg
                   width={23}
+                  fill={focused ? Colors.red : Colors.white}
                   style={styles.icon}
                   height={23}
                   stroke={Colors.red}>
@@ -56,11 +57,12 @@ const TabNavigator = () => {
           component={SavedScreen}
           options={{
             tabBarLabel: '',
-            tabBarIcon: () => (
+            tabBarIcon: ({focused}) => (
               <View style={styles.tabBar1}>
                 <Svg
                   width={23}
                   style={styles.icon1}
+                  fill={focused ? Colors.red : Colors.white}
                   height={23}
                   stroke={Colors.red}>
                   <Path d="M16.0183 17.9142L10.1849 14.5809L4.35159 17.9142V4.58085C4.35159 4.13882 4.52719 3.7149 4.83975 3.40234C5.15231 3.08978 5.57623 2.91418 6.01826 2.91418H14.3516C14.7936 2.91418 15.2175 3.08978 15.5301 3.40234C15.8427 3.7149 16.0183 4.13882 16.0183 4.58085V17.9142Z" />

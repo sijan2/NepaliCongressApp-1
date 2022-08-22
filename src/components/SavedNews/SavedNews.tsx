@@ -34,6 +34,7 @@ const SavedNews = (data: any) => {
                   name={item.name}
                   date={item.date}
                   description={item.description}
+                  sourceLink={item.sourceLink}
                 />
               );
             }}
