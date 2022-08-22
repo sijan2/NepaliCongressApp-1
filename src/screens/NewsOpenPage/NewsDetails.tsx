@@ -56,9 +56,9 @@ const DetailScreen = ({route}: any) => {
   };
 
   const {saved, setSaved} = useSaved();
-  const {id, title, description, date, image, name} = route.params;
+  const {id, title, description, date, image, name, sourceLink} = route.params;
   const saveNews = () => {
-    const save = {id, title, description, date, image, name};
+    const save = {id, title, description, date, image, name, sourceLink};
     const updatedNews = [...saved, save];
     setSaved(updatedNews);
     AsyncStorage.setItem('saved', JSON.stringify(updatedNews));
