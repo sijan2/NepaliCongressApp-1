@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, {useContext, useRef} from 'react';
 import {
   StyleSheet,
@@ -48,6 +49,10 @@ const Header: React.FC<Props> = () => {
   const backButtonOpacity = useRef(new Animated.Value(0)).current;
   const contentTranslateY = useRef(new Animated.Value(HEIGHT)).current;
   const contentOpacity = useRef(new Animated.Value(0)).current;
+
+  const handleClear = () => {
+    setValue('');
+  };
 
   const handleBlur = () => {
     setFocused(false);
@@ -170,6 +175,7 @@ const Header: React.FC<Props> = () => {
               <TextInput
                 ref={inputRef}
                 placeholder="Enter title, description or date of news"
+                placeholderTextColor="#000"
                 clearButtonMode="while-editing"
                 onFocus={handleFocus}
                 value={value}
@@ -178,6 +184,11 @@ const Header: React.FC<Props> = () => {
                 }}
                 style={styles.input_text}
               />
+              <TouchableOpacity
+                onPress={handleClear}
+                style={styles.clearButton}>
+                <Text style={styles.clear}>X</Text>
+              </TouchableOpacity>
             </Animated.View>
           </View>
         </View>
@@ -274,6 +285,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginRight: 5,
+    transform: [{rotate: '180deg'}],
   },
   input_text: {
     flex: 1,
@@ -282,6 +294,7 @@ const styles = StyleSheet.create({
     borderRadius: 80,
     paddingHorizontal: 16,
     fontSize: 13,
+    color: Colors.black,
   },
   input_text1: {
     flex: 1,
@@ -317,6 +330,21 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#e6e4eb',
     marginLeft: 16,
+  },
+  clearButton: {
+    width: 30,
+    height: 30,
+    borderRadius: 80,
+    marginLeft: 10,
+    backgroundColor: Colors.red,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  clear: {
+    fontSize: 14,
+    color: Colors.black,
+    fontWeight: 'bold',
   },
 });
 

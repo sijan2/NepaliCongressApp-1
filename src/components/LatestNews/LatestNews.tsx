@@ -7,13 +7,14 @@ import ListNews from '@components/ListNews/ListNews';
 
 import Carouselitem from '@components/Carousel/Carousel';
 import {AuthContext} from '@components/ContextStore/AuthContext/AuthContext';
-
+import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
 import Colors from '@constants/colors/colors';
 import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 import SkeletonPlaceholder from 'react-native-skeleton-placeholder';
 import {HEIGHT, WIDTH} from '@utils/Dimensions';
 import Fonts from '@constants/fonts/fonts';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import NetInfo from '@react-native-community/netinfo';
 /**
  * @author Nitesh Raj Khanal
  * @function @LatestNews
@@ -26,11 +27,13 @@ const LatestNews = React.memo(function LatestNews({}) {
   const [news, setNews] = React.useState([]);
   const [carouselNews, setCarouselNews] = React.useState([]);
   const [page, setPage] = React.useState(10);
+  const [isConnected, setIsConnected] = React.useState(true);
   const user = 'congress-mobile-apiuser';
   const pass = 'N3p@l!C0ngr355@2022';
   // base-64 encryption
   const auth = btoa(`${user}:${pass}`);
   const {myProvince} = useContext(AuthContext);
+  const {setSearch, setCarouselData, search, carouselData} = useSaved();
 
   const getNews = async () => {
     try {
@@ -86,7 +89,12 @@ const LatestNews = React.memo(function LatestNews({}) {
       console.error(error);
     }
   };
-
+  const savedNewsInAsyncStorage = () => {
+    AsyncStorage.setItem('save', JSON.stringify(news));
+    AsyncStorage.setItem('saves', JSON.stringify(carouselNews));
+    setSearch(news);
+    setCarouselData(carouselNews);
+  };
   React.useLayoutEffect(() => {
     getCarouselNews();
     getNews();
@@ -98,6 +106,7 @@ const LatestNews = React.memo(function LatestNews({}) {
 
   const loadMore = () => {
     setLoading(true);
+    savedNewsInAsyncStorage();
   };
 
   const ItemView = ({item}: any) => {
@@ -115,7 +124,36 @@ const LatestNews = React.memo(function LatestNews({}) {
     );
   };
 
-  return (
+  const renderSaved = ({item}: any) => {
+    return (
+      <ListNews
+        id={item.id}
+        image={BASE_URL + item.image}
+        title={item.title}
+        name={item.source_title}
+        date={item.published_date}
+        description={item.description}
+        sourceLink={item.source_link}
+      />
+    );
+  };
+
+  const isInternetConnected = () => {
+    NetInfo.fetch().then(state => {
+      if (state.isConnected) {
+        setIsConnected(true);
+        console.log('Internet is connected');
+      } else {
+        setIsConnected(false);
+        console.log('Internet is not connected');
+      }
+    });
+  };
+  React.useEffect(() => {
+    isInternetConnected();
+  }, [isConnected]);
+
+  const renderWhenConnected = (
     <>
       {isLoading ? (
         <SkeletonPlaceholder>
@@ -156,6 +194,23 @@ const LatestNews = React.memo(function LatestNews({}) {
       )}
     </>
   );
+
+  const renderWhenNotConnected = (
+    <>
+      <Carouselitem data={carouselData} />
+      <View style={styles.first}>
+        <View style={styles.secondFlatlist}>
+          <FlatList
+            data={search}
+            keyExtractor={(show, index) => 'key' + index}
+            renderItem={renderSaved}
+          />
+        </View>
+      </View>
+    </>
+  );
+
+  return <>{isConnected ? renderWhenConnected : renderWhenNotConnected}</>;
 });
 
 const styles = StyleSheet.create({

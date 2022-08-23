@@ -3,6 +3,7 @@ import ListNews from '@components/ListNews/ListNews';
 import {FlatList} from 'react-native';
 import {useSaved} from '@components/ContextStore/SavedProvider/SavedProvider';
 import {dateFormatter} from '@utils/DayGen';
+import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 
 interface list {
   searchPhrase?: any;
@@ -10,9 +11,9 @@ interface list {
 }
 
 const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
-  const {saved} = useSaved();
+  const {search, saved, carouselData} = useSaved();
   const ItemView = ({item}: any) => {
-    const formattedDate = dateFormatter(item.date);
+    const formattedDate = dateFormatter(item.published_date);
     const newDate = formattedDate.date;
     const newMonth = formattedDate.month;
     const newYear = formattedDate.year;
@@ -23,24 +24,24 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
       return (
         <ListNews
           id={item.id}
-          image={item.image}
+          image={BASE_URL + item.image}
           title={item.title}
           name={item.name}
-          date={item.date}
+          date={item.published_date}
           description={item.description}
           sourceLink={item.sourceLink}
         />
       );
     }
     // if search value is not empty then show news that match name with search value
-    if (item.name.toUpperCase().includes(searchPhrase.toUpperCase())) {
+    if (item.description.toUpperCase().includes(searchPhrase.toUpperCase())) {
       return (
         <ListNews
           id={item.id}
           image={item.image}
           title={item.title}
           name={item.name}
-          date={item.date}
+          date={item.published_date}
           description={item.description}
           sourceLink={item.sourceLink}
         />
@@ -54,20 +55,22 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
           image={item.image}
           title={item.title}
           name={item.name}
-          date={item.date}
+          date={item.published_date}
           description={item.description}
           sourceLink={item.sourceLink}
         />
       );
     }
     if (formatted.toUpperCase().includes(searchPhrase.toUpperCase())) {
+      console.log('Search Phrase =>', searchPhrase);
+      console.log('Formatted UpperCase =>', formatted.toUpperCase());
       return (
         <ListNews
           id={item.id}
           image={item.image}
           title={item.title}
           name={item.name}
-          date={item.date}
+          date={item.published_date}
           description={item.description}
           sourceLink={item.sourceLink}
         />
@@ -79,7 +82,7 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
 
   return (
     <FlatList
-      data={saved} // passing saved data instead of actual api news data
+      data={search || saved || carouselData} // passing saved data instead of actual api news data
       keyExtractor={(show, index) => 'key' + index}
       renderItem={ItemView}
     />
