@@ -7,7 +7,6 @@ import {BASE_URL} from '@constants/NewsConstant/NewsConstants';
 
 interface list {
   searchPhrase?: any;
-  news?: any;
 }
 
 const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
@@ -29,7 +28,7 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
           name={item.name}
           date={item.published_date}
           description={item.description}
-          sourceLink={item.sourceLink}
+          sourceLink={item.source_link}
         />
       );
     }
@@ -38,12 +37,12 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
       return (
         <ListNews
           id={item.id}
-          image={item.image}
+          image={BASE_URL + item.image}
           title={item.title}
           name={item.name}
           date={item.published_date}
           description={item.description}
-          sourceLink={item.sourceLink}
+          sourceLink={item.source_link}
         />
       );
     }
@@ -52,12 +51,12 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
       return (
         <ListNews
           id={item.id}
-          image={item.image}
+          image={BASE_URL + item.image}
           title={item.title}
           name={item.name}
           date={item.published_date}
           description={item.description}
-          sourceLink={item.sourceLink}
+          sourceLink={item.source_link}
         />
       );
     }
@@ -67,12 +66,12 @@ const SearchList: FC<list> = React.memo(function SearchList({searchPhrase}) {
       return (
         <ListNews
           id={item.id}
-          image={item.image}
+          image={BASE_URL + item.image}
           title={item.title}
           name={item.name}
           date={item.published_date}
           description={item.description}
-          sourceLink={item.sourceLink}
+          sourceLink={item.source_link}
         />
       );
     }

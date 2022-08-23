@@ -203,6 +203,22 @@ const Header: React.FC<Props> = () => {
         ]}>
         <SafeAreaView style={styles.content_safe}>
           <View style={styles.content_inner}>
+            <View style={styles.textfield}>
+              <TextInput
+                ref={inputRef}
+                placeholder="Enter description of news"
+                placeholderTextColor="#000"
+                clearButtonMode="while-editing"
+                style={styles.input_text1}
+              />
+              <TextInput
+                ref={inputRef}
+                placeholder="Enter date of news"
+                placeholderTextColor="#000"
+                clearButtonMode="while-editing"
+                style={styles.input_text1}
+              />
+            </View>
             <View style={styles.separator} />
             <SearchList searchPhrase={value} />
           </View>
@@ -302,7 +318,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#e4e6e8',
     borderRadius: 80,
     paddingHorizontal: 16,
+    marginTop: 10,
     fontSize: 13,
+    color: Colors.black,
+  },
+  textfield: {
+    paddingHorizontal: 55,
+    height: HEIGHT * 0.12,
   },
   content: {
     position: 'absolute',
