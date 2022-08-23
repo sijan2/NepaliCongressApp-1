@@ -23,8 +23,8 @@ const SavedNews = (data: any) => {
       <View style={styles.first}>
         <View style={styles.secondFlatlist}>
           <FlatList
+            showsVerticalScrollIndicator={false}
             data={test.data}
-            keyExtractor={item => item.id.toString()}
             renderItem={({item}) => {
               return (
                 <ListNews
@@ -51,7 +51,9 @@ const styles = StyleSheet.create({
     marginTop: 5,
     width: '100%',
   },
-  secondFlatlist: {},
+  secondFlatlist: {
+    marginBottom: 100,
+  },
   semiContainer: {
     marginHorizontal: 20,
   },
